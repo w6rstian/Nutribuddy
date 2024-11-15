@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Nutribuddy.Core.Interfaces
 {
-	internal class TestInterface
+	internal interface IView
 	{
+		void Run();
 	}
 }
