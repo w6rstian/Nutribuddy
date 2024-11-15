@@ -1,5 +1,6 @@
 ﻿using Nutribuddy.UI.Console;
 using Nutribuddy.Core.Controllers;
+using Nutribuddy.Core.Interfaces;
 
 namespace Nutribuddy
 {
@@ -7,8 +8,12 @@ namespace Nutribuddy
     {
         static void Main(string[] args)
         {
+            IView consoleUI;
+            consoleUI = new IntroSequence();
+            consoleUI.Run();
+
 			var taskService = new TaskController();
-            var consoleUI = new TaskConsoleUI(taskService);
+            consoleUI = new TaskConsoleUI(taskService);
 
             consoleUI.Run();
         }
