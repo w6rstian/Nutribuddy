@@ -1,4 +1,5 @@
 ﻿using Nutribuddy.UI.Console;
+using Nutribuddy.Core.Controllers;
 
 namespace Nutribuddy
 {
@@ -6,7 +7,7 @@ namespace Nutribuddy
     {
         static void Main(string[] args)
         {
-			var taskService = new Core.Services.TaskService();
+			var taskService = new TaskController();
             var consoleUI = new TaskConsoleUI(taskService);
 
             consoleUI.Run();

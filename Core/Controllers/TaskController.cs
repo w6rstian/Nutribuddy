@@ -1,6 +1,6 @@
-﻿namespace Nutribuddy.Core.Services
+﻿namespace Nutribuddy.Core.Controllers
 {
-	internal class TaskService
+	internal class TaskController
 	{
 		private readonly List<Models.Task> _tasks = new();
 
