@@ -5,18 +5,6 @@ VisualStudioVersion = 17.12.35506.116 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutribuddy", "Nutribuddy.csproj", "{B1F4B418-5475-478E-9CD3-3453B161887D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{31C11A95-F4B5-49A8-98E1-7FAC178311D7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A09C1D6A-B7E0-43B4-B71B-E63BB1D064F4}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{2587E690-E690-4B15-923B-4A2D5A4FD85D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI.Console", "UI.Console", "{E9EFEA2E-5A53-46BF-8512-072A909A9C7C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{04D8212A-23F4-4CBE-96DE-DD78CC37A79F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{E82657B4-4806-4F21-B0AD-63BC5BB2B121}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,10 +18,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{A09C1D6A-B7E0-43B4-B71B-E63BB1D064F4} = {31C11A95-F4B5-49A8-98E1-7FAC178311D7}
-		{2587E690-E690-4B15-923B-4A2D5A4FD85D} = {31C11A95-F4B5-49A8-98E1-7FAC178311D7}
-		{E82657B4-4806-4F21-B0AD-63BC5BB2B121} = {31C11A95-F4B5-49A8-98E1-7FAC178311D7}
 	EndGlobalSection
 EndGlobal
