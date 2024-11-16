@@ -1,5 +1,4 @@
-﻿using Nutribuddy.Core.Interfaces;
-using Spectre.Console;
+﻿using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +7,16 @@ using System.Threading.Tasks;
 
 namespace Nutribuddy.UI.Console
 {
-	internal class IntroSequence : IView
+	internal class IntroSequenceView : IView
 	{
-		public void Run()
+		private readonly Action _navigateToMainMenu;
+	
+		public IntroSequenceView(Action navigateToMainMenu)
+		{
+			_navigateToMainMenu = navigateToMainMenu;
+		}
+
+		public void Show()
 		{
 			AnsiConsole.Clear();
 
@@ -35,12 +41,13 @@ namespace Nutribuddy.UI.Console
 					while(!ctx.IsFinished)
 					{
 						Thread.Sleep(50);
-						task.Increment(1);
+						task.Increment(1.5);
 					}
 
 					if(ctx.IsFinished)
 					{
 						Thread.Sleep(1000);
+						_navigateToMainMenu();
 					}
 				});
 		}

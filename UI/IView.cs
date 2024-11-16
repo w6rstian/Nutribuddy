@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutribuddy.Core.Interfaces
+namespace Nutribuddy.UI
 {
 	internal interface IView
 	{
-		void Run();
+		void Show();
 	}
 }

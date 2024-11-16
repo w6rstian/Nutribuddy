@@ -24,6 +24,7 @@
     <None Update="Data\FoodData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+	<Folder Include="Core\Interfaces\" />
   </ItemGroup>
 
 </Project>
