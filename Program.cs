@@ -1,4 +1,6 @@
-﻿using Nutribuddy.UI.Console;
+﻿using Nutribuddy.Core.Services;
+using Nutribuddy.UI.Console;
+using System;
 
 namespace Nutribuddy
 {
@@ -6,10 +8,14 @@ namespace Nutribuddy
     {
         static void Main(string[] args)
         {
-			var taskService = new Core.Services.TaskService();
+            var taskService = new Core.Services.TaskService();
             var consoleUI = new TaskConsoleUI(taskService);
 
-            consoleUI.Run();
+            //consoleUI.Run();
+
+            var foodService = new FoodService("Data/FoodData.json");
+            var foodConsoleUI = new TestFoodConsoleUI(foodService);
+            foodConsoleUI.Run();
         }
     }
 }
