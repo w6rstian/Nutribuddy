@@ -12,7 +12,7 @@ namespace Nutribuddy
 			viewManager.RegisterView("IntroSequence", new IntroSequenceView(() => viewManager.ShowView("MainMenu")));
 			viewManager.RegisterView("MainMenu", new MainMenuView());
 
-			viewManager.ShowView("IntroSequence");
+			//viewManager.ShowView("IntroSequence");
 			//viewManager.ShowView("MainMenu");
 
 			var foodController = new FoodController("Data/FoodData.json");
