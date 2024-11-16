@@ -21,13 +21,11 @@ namespace Nutribuddy.UI.Console
 			AnsiConsole.Clear();
 
 			AnsiConsole.Write(
-				new FigletText("Loading")
-				.Centered());
+				new FigletText("Nutribuddy")
+				.Centered()
+				.Color(Color.MediumPurple));
 
 			AnsiConsole.Progress()
-				.AutoRefresh(true)
-				.AutoClear(true)
-				.HideCompleted(true)
 				.Columns(
 				[
 					new SpinnerColumn(),
@@ -48,9 +46,8 @@ namespace Nutribuddy.UI.Console
 
 					if(ctx.IsFinished)
 					{
-						Thread.Sleep(50);
+						Thread.Sleep(1000);
 						_navigateToMainMenu();
-						return;
 					}
 				});
 		}
