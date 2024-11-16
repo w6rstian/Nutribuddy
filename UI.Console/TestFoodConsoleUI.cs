@@ -1,5 +1,5 @@
-﻿using Nutribuddy.Core.Models;
-using Nutribuddy.Core.Services;
+﻿using Nutribuddy.Core.Controllers;
+using Nutribuddy.Core.Models;
 using Spectre.Console;
 using System;
 using System.Collections.Generic;
@@ -11,11 +11,11 @@ namespace Nutribuddy.UI.Console
 {
     internal class TestFoodConsoleUI
     {
-        private readonly FoodService _foodService;
+        private readonly FoodController _foodController;
 
-        public TestFoodConsoleUI(FoodService foodService)
+        public TestFoodConsoleUI(FoodController foodController)
         {
-            _foodService = foodService;
+            _foodController = foodController;
         }
 
         public void Run()
@@ -24,27 +24,53 @@ namespace Nutribuddy.UI.Console
 
             while (true)
             {
-                // Ask user for a food item
-                var searchQuery = AnsiConsole.Ask<string>("Enter the [green]description[/] of the food item (or type [red]exit[/] to quit):");
-
-                if (searchQuery.Equals("exit", StringComparison.OrdinalIgnoreCase))
+                // Display menu
+                var options = new List<string>
                 {
-                    AnsiConsole.MarkupLine("[bold yellow]Goodbye![/]");
-                    break;
-                }
+                    "View all food items",
+                    "Exit"
+                };
 
-                // Find the food item
-                var foodItem = _foodService.GetFoodByDescription(searchQuery);
+                var choice = AnsiConsole.Prompt(
+                    new SelectionPrompt<string>()
+                        .Title("[green]Choose an option:[/]")
+                        .AddChoices(options)
+                );
 
-                if (foodItem == null)
+                switch (choice)
                 {
-                    AnsiConsole.MarkupLine("[bold red]Food item not found.[/]");
+                    case "View all food items":
+                        DisplayFoodList();
+                        break;
+
+                    case "Exit":
+                        AnsiConsole.MarkupLine("[bold yellow]Goodbye![/]");
+                        return;
                 }
-                else
-                {
-                    // Display nutrient details
-                    DisplayNutrientTable(foodItem);
-                }
+            }
+        }
+
+        private void DisplayFoodList()
+        {
+            var foodItems = _foodController.GetAllFoods();
+
+            if (foodItems.Count == 0)
+            {
+                AnsiConsole.MarkupLine("[bold red]No food items available.[/]");
+                return;
+            }
+
+            var descriptions = foodItems.ConvertAll(f => f.Description);
+            var selectedFood = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("[green]Select a food item to view its nutritional values:[/]")
+                    .AddChoices(descriptions)
+            );
+
+            var foodItem = foodItems.Find(f => f.Description == selectedFood);
+            if (foodItem != null)
+            {
+                DisplayNutrientTable(foodItem);
             }
         }
 

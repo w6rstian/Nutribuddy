@@ -8,19 +8,12 @@ namespace Nutribuddy
     {
         static void Main(string[] args)
         {
-
             IView consoleUI;
             consoleUI = new IntroSequence();
             consoleUI.Run();
 
-			      var taskService = new TaskController();
-            consoleUI = new TaskConsoleUI(taskService);
-
-
-            //consoleUI.Run();
-
-            var foodService = new FoodService("Data/FoodData.json");
-            var foodConsoleUI = new TestFoodConsoleUI(foodService);
+            var foodController = new FoodController("Data/FoodData.json");
+            var foodConsoleUI = new TestFoodConsoleUI(foodController);
             foodConsoleUI.Run();
         }
     }

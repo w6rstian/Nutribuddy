@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nutribuddy.Core.Services
+namespace Nutribuddy.Core.Controllers
 {
-    internal class FoodService
+    internal class FoodController
     {
         private readonly List<FoodItem> _foodItems;
 
-        public FoodService(string filePath)
+        public FoodController(string filePath)
         {
             try
             {
@@ -24,11 +24,6 @@ namespace Nutribuddy.Core.Services
                 Console.WriteLine($"Error loading data: {ex.Message}");
                 _foodItems = new List<FoodItem>();
             }
-        }
-
-        public FoodItem GetFoodByDescription(string description)
-        {
-            return _foodItems.FirstOrDefault(f => f.Description.Contains(description, StringComparison.OrdinalIgnoreCase));
         }
 
         public List<FoodItem> GetAllFoods()
