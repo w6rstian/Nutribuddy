@@ -13,43 +13,33 @@ namespace Nutribuddy.UI.Console
 		{
 			AnsiConsole.Clear();
 
-			var layout = new Layout("Root")
-				.SplitRows(
-					new Layout("Logo"),
-					new Layout("Menu"));
-
-			layout["Logo"].Update(
-				new Panel(
+			AnsiConsole.Write(new Panel(
 					Align.Center(
 						new FigletText("Nutribuddy").Color(Color.MediumPurple),
 						VerticalAlignment.Middle))
-				.Expand());
+				.Expand().Padding(new Padding(0, 2)));
 
-			layout["Menu"].Update(
-				new Grid()
+			AnsiConsole.Write(new Grid()
 					.AddColumn()
 					.AddColumn()
 					.AddRow(
 					[
-						Align.Center(new Panel("Opcja1")),
-						Align.Center(new Panel("Opcja2"))
+						Align.Center(new Panel("Opcja1").Padding(new Padding(5, 1))),
+						Align.Center(new Panel("Opcja2").Padding(new Padding(5, 1)))
 					])
 					.AddRow(
 					[
-						Align.Center(new Panel("Opcja3")),
-						Align.Center(new Panel("Opcja4"))
-					]
-					).Expand());
-			
-			AnsiConsole.Write(layout);
-
+						Align.Center(new Panel("Opcja3").Padding(new Padding(5, 1))),
+						Align.Center(new Panel("Opcja4").Padding(new Padding(5, 1)))
+					]).Expand());
+			AnsiConsole.Write(Align.Center(new Grid().AddColumn().Width(90).AddRow(new Rule())));
 			var selected = AnsiConsole.Prompt(
 				new SelectionPrompt<string>()
-				.MoreChoicesText("[grey](Move up and down to reveal more options)[/]")
 				.AddChoices(
 				[
 					"Opcja1", "Opcja2", "Opcja3", "Opcja4"
-				]));
+				])
+				.HighlightStyle(new Style(foreground: Color.MediumPurple)));
 		}
 	}
 }
