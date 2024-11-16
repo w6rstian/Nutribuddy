@@ -13,7 +13,15 @@ namespace Nutribuddy
 			viewManager.RegisterView("MainMenu", new MainMenuView());
 
 			//viewManager.ShowView("IntroSequence");
-			viewManager.ShowView("MainMenu");
-		}
+			//viewManager.ShowView("MainMenu");
+
+			var foodController = new FoodController("Data/FoodData.json");
+			var foodUI = new TestFoodView(foodController);
+            //foodUI.Run();
+
+            var dishController = new DishController("Data/DishData.json");
+            var dishUI = new TestDishView(foodController, dishController);
+            dishUI.Run();
+        }
     }
 }

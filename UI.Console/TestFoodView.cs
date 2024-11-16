@@ -9,22 +9,19 @@ using System.Threading.Tasks;
 
 namespace Nutribuddy.UI.Console
 {
-    internal class TestFoodConsoleUI
+    internal class TestFoodView
     {
         private readonly FoodController _foodController;
 
-        public TestFoodConsoleUI(FoodController foodController)
+        public TestFoodView(FoodController foodController)
         {
             _foodController = foodController;
         }
 
         public void Run()
         {
-            AnsiConsole.MarkupLine("[bold yellow]Welcome to the NutriBuddy Calorie Tracker![/]");
-
             while (true)
             {
-                // Display menu
                 var options = new List<string>
                 {
                     "View all food items",

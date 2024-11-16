@@ -21,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Data\DishData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Data\FoodData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
