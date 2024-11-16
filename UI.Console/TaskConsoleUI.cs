@@ -1,13 +1,14 @@
 ﻿using Spectre.Console;
-using Nutribuddy.Core.Services;
+using Nutribuddy.Core.Controllers;
+using Nutribuddy.Core.Interfaces;
 
 namespace Nutribuddy.UI.Console
 {
-	internal class TaskConsoleUI
+	internal class TaskConsoleUI : IView
 	{
-		private readonly TaskService _taskService;
+		private readonly TaskController _taskService;
 
-		public TaskConsoleUI(TaskService taskService)
+		public TaskConsoleUI(TaskController taskService)
 		{
 			_taskService = taskService;
 		}
