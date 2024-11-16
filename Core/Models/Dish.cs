@@ -20,14 +20,18 @@ namespace Nutribuddy.Core.Models
 
         public void CalculateTotalNutrients()
         {
+            TotalNutrients.Clear(); //wyczyszczenie buforu
+
             foreach (var food in Ingredients)
             {
                 foreach (var nutrient in food.Nutrients)
                 {
+                    double quantity = (nutrient.Value * food.QuantityInGrams) / 100; //przeliczenie ilości składnika potrzebnego do dania
+
                     if (TotalNutrients.ContainsKey(nutrient.Key))
-                        TotalNutrients[nutrient.Key] += nutrient.Value;
+                        TotalNutrients[nutrient.Key] += quantity;
                     else
-                        TotalNutrients[nutrient.Key] = nutrient.Value;
+                        TotalNutrients[nutrient.Key] = quantity;
                 }
             }
         }

@@ -10,5 +10,6 @@ namespace Nutribuddy.Core.Models
     {
         public string Description { get; set; }
         public Dictionary<string, double> Nutrients { get; set; }
+        public double QuantityInGrams { get; set; } // ilość danego skłdanika w gramach
     }
 }

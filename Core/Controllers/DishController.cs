@@ -33,6 +33,20 @@ namespace Nutribuddy.Core.Controllers
             return _dishes;
         }
 
+        public void SetIngredientQuantity(Dish dish, string foodDescription, double quantityInGrams)
+        {
+            var ingredient = dish.Ingredients.FirstOrDefault(f => f.Description == foodDescription);
+            if (ingredient != null)
+            {
+                ingredient.QuantityInGrams = quantityInGrams;
+                dish.CalculateTotalNutrients();
+            }
+            else
+            {
+                Console.WriteLine($"Ingredient '{foodDescription}' not found in the dish.");
+            }
+        }
+
         public void AddDish(Dish dish)
         {
             dish.CalculateTotalNutrients();
