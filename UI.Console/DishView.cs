@@ -80,6 +80,7 @@ namespace Nutribuddy.UI.Console
                 var addDishOptions = new List<string>
                 {
                     "Add an ingredient",
+                    "Search for an ingredient",
                     "Finish and save dish",
                     "Exit without saving"
                 };
@@ -94,7 +95,11 @@ namespace Nutribuddy.UI.Console
                 switch (choice)
                 {
                     case "Add an ingredient":
-                        AddIngredientToDish(newDish);
+                        AddIngredientToDish(newDish, "");
+                        break;
+
+                    case "Search for an ingredient":
+                        AddIngredientToDish(newDish, SearchForAnIngredient());
                         break;
 
                     case "Finish and save dish":
@@ -111,7 +116,7 @@ namespace Nutribuddy.UI.Console
             }
         }
 
-        private void AddIngredientToDish(Dish newDish)
+        private void AddIngredientToDish(Dish newDish, string searchPhrase)
         {
             var foods = _foodController.GetAllFoods();
 
@@ -121,7 +126,20 @@ namespace Nutribuddy.UI.Console
                 return;
             }
 
-            var foodDescriptions = foods.Select(f => f.Description).ToList();
+            List<string> foodDescriptions;
+            if (searchPhrase == null)
+            {
+                foodDescriptions = foods.Select(f => f.Description).ToList();
+            }
+            else
+            {
+				foodDescriptions = foods
+	                .Where(f => f.Description.Contains(searchPhrase, StringComparison.OrdinalIgnoreCase))
+	                .Select(f => f.Description)
+	                .ToList();
+			}
+
+            
             var choice = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                     .Title("[pink1]Select an ingredient to add:[/]")
@@ -146,6 +164,22 @@ namespace Nutribuddy.UI.Console
 
             AnsiConsole.Markup($"[bold pink1]Added {quantity}g of {selectedFood.Description}.[/]\n");
         }
+
+        private string SearchForAnIngredient()
+        {
+			var foods = _foodController.GetAllFoods();
+
+			if (!foods.Any())
+			{
+				AnsiConsole.MarkupLine("[bold red]No food items available to add as ingredients.[/]");
+				return "";
+			}
+
+			var lookingFor = AnsiConsole.Ask<string>(
+				$"What do you want to look for? ");
+
+            return lookingFor;
+		}
 
         private void FinalizeDish(Dish newDish)
         {
