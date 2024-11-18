@@ -33,7 +33,6 @@ namespace Nutribuddy.Core.Controllers
             return _dishes;
         }
 
-        //pewnie edycja dojdzie to na przyszłość ale na razie nie ma bazy z daniami :((
         public void SetIngredientQuantity(Dish dish, string foodDescription, double quantityInGrams)
         {
             var ingredient = dish.Ingredients.FirstOrDefault(f => f.Description == foodDescription);
@@ -55,8 +54,8 @@ namespace Nutribuddy.Core.Controllers
             SaveDishes();
         }
 
-        private void SaveDishes() //nie dziala zapis do pliku
-        {
+        private void SaveDishes() //zapis do pliku działa tylko przy podaniu sciezki absolutnej :(
+        {   
             try
             {
                 var jsonData = JsonConvert.SerializeObject(_dishes, Formatting.Indented);

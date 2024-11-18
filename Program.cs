@@ -19,13 +19,13 @@ namespace Nutribuddy
 			var foodUI = new TestFoodView(foodController);
             //foodUI.Run();
 
-            var dishController = new DishController("Data/DishData.json");
+            var dishController = new DishController("Data/DishData.json");  
             var dishUI = new TestDishView(foodController, dishController);
-            //dishUI.Run();
+            dishUI.Run();
 
             var userController = new UserController();
             var userUI = new TestUserView(userController);
-            userUI.Run();
+            //userUI.Run();
         }
     }
 }
