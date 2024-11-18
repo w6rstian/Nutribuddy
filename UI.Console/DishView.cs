@@ -1,0 +1,224 @@
+﻿using Nutribuddy.Core.Controllers;
+using Nutribuddy.Core.Models;
+using Spectre.Console;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Nutribuddy.UI.Console
+{
+    internal class DishView : IView
+    {
+        private readonly FoodController _foodController;
+        private readonly DishController _dishController;
+        private readonly Action _navigateToMainMenu;
+		private readonly static Panel foodFigletText = new Panel(
+					Align.Center(
+						new FigletText("Dishes").Color(Color.MediumPurple),
+						VerticalAlignment.Middle))
+				.Expand().Padding(new Padding(0, 2));
+
+		public DishView(FoodController foodController, DishController dishController, Action navigateToMainMenu)
+        {
+            _foodController = foodController;
+            _dishController = dishController;
+            _navigateToMainMenu = navigateToMainMenu;
+        }
+
+        public void Show()
+        {
+			AnsiConsole.Clear();
+			AnsiConsole.Write(foodFigletText);
+			while (true)
+            {
+                // Top-level menu
+                var mainMenuOptions = new List<string>
+                {
+                    "Add a Dish",
+                    "Show Dishes",
+                    "Return to main menu"
+                };
+
+                var mainChoice = AnsiConsole.Prompt(
+                    new SelectionPrompt<string>()
+                        .Title("[bold gold1]What do you want to do?[/]")
+                        .AddChoices(mainMenuOptions)
+						.HighlightStyle(new Style(foreground: Color.MediumPurple))
+				);
+
+                switch (mainChoice)
+                {
+                    case "Add a Dish":
+                        AddDishMenu();
+                        break;
+
+                    case "Show Dishes":
+                        AnsiConsole.Clear();
+                        AnsiConsole.Write(foodFigletText);
+                        ShowDishes();
+                        break;
+
+                    case "Return to main menu":
+                        _navigateToMainMenu();
+                        return;
+                }
+            }
+        }
+
+        private void AddDishMenu()
+        {
+            AnsiConsole.Markup("[bold gold1]=== Add a Dish ===[/]\n");
+
+            var dishName = AnsiConsole.Ask<string>("Enter the name of the dish:");
+            var newDish = new Dish { Name = dishName };
+
+            while (true)
+            {
+                // Sub-menu for adding ingredients and finalizing dish
+                var addDishOptions = new List<string>
+                {
+                    "Add an ingredient",
+                    "Finish and save dish",
+                    "Exit without saving"
+                };
+
+                var choice = AnsiConsole.Prompt(
+                    new SelectionPrompt<string>()
+                        .Title("[gold1]Is this all?[/]")
+                        .AddChoices(addDishOptions)
+						.HighlightStyle(new Style(foreground: Color.MediumPurple))
+				);
+
+                switch (choice)
+                {
+                    case "Add an ingredient":
+                        AddIngredientToDish(newDish);
+                        break;
+
+                    case "Finish and save dish":
+                        FinalizeDish(newDish);
+                        return;
+
+                    case "Exit without saving":
+                        AnsiConsole.MarkupLine("[bold red]Dish creation canceled. Exiting...[/]");
+                        Thread.Sleep(500);
+                        AnsiConsole.Clear();
+                        AnsiConsole.Write(foodFigletText);
+                        return;
+                }
+            }
+        }
+
+        private void AddIngredientToDish(Dish newDish)
+        {
+            var foods = _foodController.GetAllFoods();
+
+            if (!foods.Any())
+            {
+                AnsiConsole.MarkupLine("[bold red]No food items available to add as ingredients.[/]");
+                return;
+            }
+
+            var foodDescriptions = foods.Select(f => f.Description).ToList();
+            var choice = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("[pink1]Select an ingredient to add:[/]")
+                    .AddChoices(foodDescriptions)
+					.HighlightStyle(new Style(foreground: Color.MediumPurple))
+                    );
+
+
+            var selectedFood = foods.First(f => f.Description == choice);
+
+            var quantity = AnsiConsole.Ask<double>(
+                $"Enter the quantity of [pink1]{selectedFood.Description}[/] in grams:");
+
+            var foodWithQuantity = new FoodItem
+            {
+                Description = selectedFood.Description,
+                Nutrients = new Dictionary<string, double>(selectedFood.Nutrients),
+                QuantityInGrams = quantity
+            };
+
+            newDish.Ingredients.Add(foodWithQuantity);
+
+            AnsiConsole.Markup($"[bold pink1]Added {quantity}g of {selectedFood.Description}.[/]\n");
+        }
+
+        private void FinalizeDish(Dish newDish)
+        {
+            if (!newDish.Ingredients.Any())
+            {
+                AnsiConsole.MarkupLine("[bold red]No ingredients added. Cannot save an empty dish.[/]");
+                return;
+            }
+
+            newDish.CalculateTotalNutrients();
+            _dishController.AddDish(newDish);
+
+            AnsiConsole.Markup($"\n[bold gold1]Dish '{newDish.Name}' has been added![/]\n");
+            AnsiConsole.Markup("[pink1]Total Nutritional Values:[/]\n");
+
+            foreach (var nutrient in newDish.TotalNutrients)
+            {
+                AnsiConsole.Markup($"- {nutrient.Key}: {nutrient.Value}\n");
+            }
+			AnsiConsole.Prompt(
+	            new TextPrompt<string>("Press Enter to continue")
+		        .AllowEmpty());
+
+			AnsiConsole.Clear();
+            AnsiConsole.Write(foodFigletText);
+		}
+
+        private void ShowDishes()
+        {
+            var dishes = _dishController.GetAllDishes();
+
+            if (!dishes.Any())
+            {
+                AnsiConsole.MarkupLine("[bold red]No dishes available.[/]");
+                return;
+            }
+
+            foreach (var dish in dishes)
+            {
+                var dishNamePanel = Align.Center(new Panel($"[#FFC8DD]{dish.Name}[/]").BorderColor(new Spectre.Console.Color(255, 200, 221)).Padding(5, 1));
+                var tableIngredients = new Table().BorderColor(new Color(162, 210, 255));
+                tableIngredients.HideHeaders().Centered();
+                tableIngredients.AddColumn("").AddColumn("");
+				foreach (var ingredient in dish.Ingredients)
+				{
+                    tableIngredients.AddRow($"[#BDE0FE]{ingredient.Description}[/]", $"[#BDE0FE]{ingredient.QuantityInGrams}g[/]");
+				}
+                tableIngredients.Caption("Ingredients");
+
+                var tableNutrients = new Table().BorderColor(new Color(162, 210, 255));
+				tableNutrients.HideHeaders().Centered();
+				tableNutrients.AddColumn("").AddColumn("");
+				foreach (var nutrient in dish.TotalNutrients)
+				{
+                    tableNutrients.AddRow($"[#BDE0FE]{nutrient.Key}[/]", $"[#BDE0FE]{nutrient.Value}[/]");
+				}
+                tableNutrients.Caption("Total nutritional values");
+                AnsiConsole.Write(dishNamePanel);
+                AnsiConsole.Write(tableIngredients);
+                AnsiConsole.Write(tableNutrients);
+                AnsiConsole.Write("\n\n\n");
+				/*AnsiConsole.MarkupLine($"\n[bold gold1]Dish:[/] {dish.Name}");
+                AnsiConsole.MarkupLine("[pink1]Ingredients:[/]");
+                foreach (var ingredient in dish.Ingredients)
+                {
+                    AnsiConsole.MarkupLine($"- {ingredient.Description}: {ingredient.QuantityInGrams}g");
+                }
+                AnsiConsole.MarkupLine("[pink1]Total Nutritional Values:[/]");
+                foreach (var nutrient in dish.TotalNutrients)
+                {
+                    AnsiConsole.MarkupLine($"- {nutrient.Key}: {nutrient.Value}");
+                }*/
+			}
+        }
+    }
+}
