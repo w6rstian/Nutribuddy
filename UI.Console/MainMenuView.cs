@@ -21,6 +21,12 @@ namespace Nutribuddy.UI.Console
 		}
 		public void Show()
 		{
+			string[] menuOptions = [
+				"View my profile",
+				"Browse food",
+				"Browse dishes",
+				"Opcja4"
+			];
 			AnsiConsole.Clear();
 
 			AnsiConsole.Write(new Panel(
@@ -34,13 +40,13 @@ namespace Nutribuddy.UI.Console
 					.AddColumn()
 					.AddRow(
 					[
-						Align.Center(new Panel("User Details").Padding(menuPad)),
-						Align.Center(new Panel("Opcja2").Padding(menuPad))
+						Align.Center(new Panel(menuOptions[0]).Padding(menuPad)),
+						Align.Center(new Panel(menuOptions[1]).Padding(menuPad))
 					])
 					.AddRow(
 					[
-						Align.Center(new Panel("Opcja3").Padding(menuPad)),
-						Align.Center(new Panel("Opcja4").Padding(menuPad))
+						Align.Center(new Panel(menuOptions[2]).Padding(menuPad)),
+						Align.Center(new Panel(menuOptions[3]).Padding(menuPad))
 					]).Expand());
 
 			AnsiConsole.Write(
@@ -55,13 +61,23 @@ namespace Nutribuddy.UI.Console
 				new SelectionPrompt<string>()
 				.AddChoices(
 				[
-					"User Details", "Browse food", "Browse dishes", "Opcja4"
+					menuOptions[0], menuOptions[1], menuOptions[2], menuOptions[3]
 				])
 				.HighlightStyle(new Style(foreground: Color.MediumPurple)));
 
+			/* REMINDER:
+			 * 
+			 * string[] menuOptions = [
+			 * "View my profile",
+			 * "Browse food",
+			 * "Browse dishes",
+			 * "Opcja4"
+			 * ];
+			 */
+
 			switch (selected)
 			{
-				case "User Details":
+				case "View my profile":
 					_navigateToUserDetails();
 					break;
 
