@@ -11,6 +11,11 @@ namespace Nutribuddy.Core.Controllers
             _user = new User();
         }
 
+        public User GetUser()
+        {
+            return _user;
+        }
+
         public void UpdateUser(double weight, double height, int age, string gender)
         {
             if (weight > 0) _user.Weight = weight;
