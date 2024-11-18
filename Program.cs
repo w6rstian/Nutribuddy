@@ -17,8 +17,8 @@ namespace Nutribuddy
 			viewManager.RegisterView("UserConfig", new UserConfigView(userController, () => viewManager.ShowView("UserDetails")));
 
             //viewManager.ShowView("IntroSequence");
-            //viewManager.ShowView("MainMenu");
-            viewManager.ShowView("UserDetails");
+            viewManager.ShowView("MainMenu");
+            //viewManager.ShowView("UserDetails");
 			var foodController = new FoodController("Data/FoodData.json");
 			var foodUI = new TestFoodView(foodController);
             //foodUI.Run();
