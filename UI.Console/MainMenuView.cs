@@ -10,9 +10,14 @@ namespace Nutribuddy.UI.Console
 	internal class MainMenuView : IView
 	{
 		public Action _navigateToUserDetails;
-		public MainMenuView(Action navigateToUserDetails)
+		public Action _navigateToFoodView;
+		public Action _navigateToDishView;
+		private readonly Padding menuPad = new Padding(5, 1);
+		public MainMenuView(Action navigateToUserDetails, Action navigateToFoodView, Action navigateToDishView)
 		{
 			_navigateToUserDetails = navigateToUserDetails;
+			_navigateToFoodView = navigateToFoodView;
+			_navigateToDishView = navigateToDishView;
 		}
 		public void Show()
 		{
@@ -29,20 +34,28 @@ namespace Nutribuddy.UI.Console
 					.AddColumn()
 					.AddRow(
 					[
-						Align.Center(new Panel("User Details").Padding(new Padding(5, 1))),
-						Align.Center(new Panel("Opcja2").Padding(new Padding(5, 1)))
+						Align.Center(new Panel("User Details").Padding(menuPad)),
+						Align.Center(new Panel("Opcja2").Padding(menuPad))
 					])
 					.AddRow(
 					[
-						Align.Center(new Panel("Opcja3").Padding(new Padding(5, 1))),
-						Align.Center(new Panel("Opcja4").Padding(new Padding(5, 1)))
+						Align.Center(new Panel("Opcja3").Padding(menuPad)),
+						Align.Center(new Panel("Opcja4").Padding(menuPad))
 					]).Expand());
-			AnsiConsole.Write(Align.Center(new Grid().AddColumn().Width(90).AddRow(new Rule())));
+
+			AnsiConsole.Write(
+				Align.Center(
+					new Grid()
+						.AddColumn()
+						.Width(90)
+						.AddRow(new Rule())
+						));
+
 			var selected = AnsiConsole.Prompt(
 				new SelectionPrompt<string>()
 				.AddChoices(
 				[
-					"User Details", "Opcja2", "Opcja3", "Opcja4"
+					"User Details", "Browse food", "Browse dishes", "Opcja4"
 				])
 				.HighlightStyle(new Style(foreground: Color.MediumPurple)));
 
@@ -50,6 +63,14 @@ namespace Nutribuddy.UI.Console
 			{
 				case "User Details":
 					_navigateToUserDetails();
+					break;
+
+				case "Browse food":
+					_navigateToFoodView();
+					break;
+
+				case "Browse dishes":
+					_navigateToDishView();
 					break;
 			}
 		}
