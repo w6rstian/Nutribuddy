@@ -49,10 +49,10 @@ namespace Nutribuddy.UI.Console
 					if(ctx.IsFinished)
 					{
 						Thread.Sleep(50);
-						_navigateToMainMenu();
-						return;
 					}
 				});
+			AnsiConsole.Clear();
+			_navigateToMainMenu();
 		}
 	}
 }
