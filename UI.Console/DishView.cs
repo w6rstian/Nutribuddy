@@ -158,13 +158,26 @@ namespace Nutribuddy.UI.Console
             newDish.CalculateTotalNutrients();
             _dishController.AddDish(newDish);
 
-            AnsiConsole.Markup($"\n[bold gold1]Dish '{newDish.Name}' has been added![/]\n");
-            AnsiConsole.Markup("[pink1]Total Nutritional Values:[/]\n");
-
-            foreach (var nutrient in newDish.TotalNutrients)
+            // OLD NOTIFICATION
+			//AnsiConsole.Markup($"\n[bold gold1]Dish '{newDish.Name}' has been added![/]\n");
+			//AnsiConsole.Markup("[pink1]Total Nutritional Values:[/]\n");
+			/*foreach (var nutrient in newDish.TotalNutrients)
             {
                 AnsiConsole.Markup($"- {nutrient.Key}: {nutrient.Value}\n");
-            }
+            }*/
+
+			var dishAddedPanel = Align.Center(new Panel($"[#FFC8DD] Dish '{newDish.Name}' has been added![/]").BorderColor(new Spectre.Console.Color(255, 200, 221)).Padding(5, 1));
+			var tableNutrients = new Table().BorderColor(new Color(162, 210, 255));
+			tableNutrients.HideHeaders().Centered();
+			tableNutrients.AddColumn("").AddColumn("");
+			foreach (var nutrient in newDish.TotalNutrients)
+			{
+				tableNutrients.AddRow($"[#BDE0FE]{nutrient.Key}[/]", $"[#BDE0FE]{nutrient.Value}[/]");
+			}
+			tableNutrients.Caption("Total nutritional values");
+			AnsiConsole.Write(dishAddedPanel);
+			AnsiConsole.Write(tableNutrients);
+
 			AnsiConsole.Prompt(
 	            new TextPrompt<string>("Press Enter to continue")
 		        .AllowEmpty());
