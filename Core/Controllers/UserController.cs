@@ -36,7 +36,7 @@ namespace Nutribuddy.Core.Controllers
             //wzor Mifflina-St Jeora
             if (_user.Gender == "Male")
             {
-                return 10 * _user.Weight + 6.25 * _user.Height - 5 * this._user.Age + 5; //chop
+                return 10 * _user.Weight + 6.25 * _user.Height - 5 * _user.Age + 5; //chop
             }
             else
             {
