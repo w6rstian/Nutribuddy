@@ -112,9 +112,20 @@ namespace Nutribuddy.UI.Console
                     .AddChoices(foodDescriptions));
 
             var selectedFood = foods.First(f => f.Description == choice);
-            newDish.Ingredients.Add(selectedFood);
 
-            AnsiConsole.Markup($"[bold yellow]Added ingredient:[/] {selectedFood.Description}\n");
+            var quantity = AnsiConsole.Ask<double>(
+                $"Enter the quantity of [yellow]{selectedFood.Description}[/] in grams:");
+
+            var foodWithQuantity = new FoodItem
+            {
+                Description = selectedFood.Description,
+                Nutrients = new Dictionary<string, double>(selectedFood.Nutrients),
+                QuantityInGrams = quantity
+            };
+
+            newDish.Ingredients.Add(foodWithQuantity);
+
+            AnsiConsole.Markup($"[bold yellow]Added {quantity}g of {selectedFood.Description}.[/]\n");
         }
 
         private void FinalizeDish(Dish newDish)
@@ -153,7 +164,7 @@ namespace Nutribuddy.UI.Console
                 AnsiConsole.MarkupLine("[blue]Ingredients:[/]");
                 foreach (var ingredient in dish.Ingredients)
                 {
-                    AnsiConsole.MarkupLine($"- {ingredient.Description}");
+                    AnsiConsole.MarkupLine($"- {ingredient.Description}: {ingredient.QuantityInGrams}g");
                 }
                 AnsiConsole.MarkupLine("[blue]Total Nutritional Values:[/]");
                 foreach (var nutrient in dish.TotalNutrients)
