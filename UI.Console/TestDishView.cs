@@ -164,7 +164,7 @@ namespace Nutribuddy.UI.Console
                 AnsiConsole.MarkupLine("[blue]Ingredients:[/]");
                 foreach (var ingredient in dish.Ingredients)
                 {
-                    AnsiConsole.MarkupLine($"- {ingredient.Description}");
+                    AnsiConsole.MarkupLine($"- {ingredient.Description}: {ingredient.QuantityInGrams}g");
                 }
                 AnsiConsole.MarkupLine("[blue]Total Nutritional Values:[/]");
                 foreach (var nutrient in dish.TotalNutrients)
