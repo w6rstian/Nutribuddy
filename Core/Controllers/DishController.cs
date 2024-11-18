@@ -33,6 +33,27 @@ namespace Nutribuddy.Core.Controllers
             return _dishes;
         }
 
+        public Dictionary<string, double> GetForeverNutrients()
+        {
+		    // ta funkcja na razie zlicza wszystkie dania.
+		    // TODO: zliczanie dań tylko z dzisiejszego dnia
+            Dictionary<string, double> totalNutrients = new();
+            foreach (var dish in _dishes)
+            {
+                foreach (var nutrient in dish.TotalNutrients)
+                {
+                    var exists = !totalNutrients.TryAdd(nutrient.Key, nutrient.Value);
+
+                    if (exists)
+                    {
+                        totalNutrients[nutrient.Key] += nutrient.Value;
+                    }
+                }
+            }
+
+            return totalNutrients;
+		}
+
         public void SetIngredientQuantity(Dish dish, string foodDescription, double quantityInGrams)
         {
             var ingredient = dish.Ingredients.FirstOrDefault(f => f.Description == foodDescription);
