@@ -18,7 +18,8 @@ namespace Nutribuddy
                 () => viewManager.ShowView("UserDetails"),
                 () => viewManager.ShowView("Food"),
                 () => viewManager.ShowView("Dish")));
-			viewManager.RegisterView("UserDetails", new UserDetailsView(userController, 
+			viewManager.RegisterView("UserDetails", new UserDetailsView(userController,
+                dishController,
                 () => viewManager.ShowView("MainMenu"), 
                 () => viewManager.ShowView("UserConfig")));
 			viewManager.RegisterView("UserConfig", new UserConfigView(userController, () => viewManager.ShowView("UserDetails")));
