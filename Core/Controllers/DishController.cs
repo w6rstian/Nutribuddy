@@ -24,7 +24,7 @@ namespace Nutribuddy.Core.Controllers
             catch (Exception ex)
             {
                 Console.WriteLine($"Error loading dishes: {ex.Message}");
-                _dishes = new List<Dish>();
+                _dishes = [];
             }
         }
 
