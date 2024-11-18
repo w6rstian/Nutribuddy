@@ -33,6 +33,7 @@ namespace Nutribuddy.Core.Controllers
             return _dishes;
         }
 
+        //pewnie edycja dojdzie to na przyszłość ale na razie nie ma bazy z daniami :((
         public void SetIngredientQuantity(Dish dish, string foodDescription, double quantityInGrams)
         {
             var ingredient = dish.Ingredients.FirstOrDefault(f => f.Description == foodDescription);
