@@ -112,9 +112,20 @@ namespace Nutribuddy.UI.Console
                     .AddChoices(foodDescriptions));
 
             var selectedFood = foods.First(f => f.Description == choice);
-            newDish.Ingredients.Add(selectedFood);
 
-            AnsiConsole.Markup($"[bold yellow]Added ingredient:[/] {selectedFood.Description}\n");
+            var quantity = AnsiConsole.Ask<double>(
+                $"Enter the quantity of [yellow]{selectedFood.Description}[/] in grams:");
+
+            var foodWithQuantity = new FoodItem
+            {
+                Description = selectedFood.Description,
+                Nutrients = new Dictionary<string, double>(selectedFood.Nutrients),
+                QuantityInGrams = quantity
+            };
+
+            newDish.Ingredients.Add(foodWithQuantity);
+
+            AnsiConsole.Markup($"[bold yellow]Added ingredient:[/] {selectedFood.Description} with [blue]{quantity}g[/]\n");
         }
 
         private void FinalizeDish(Dish newDish)
