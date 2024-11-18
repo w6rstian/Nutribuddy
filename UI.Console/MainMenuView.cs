@@ -9,6 +9,11 @@ namespace Nutribuddy.UI.Console
 {
 	internal class MainMenuView : IView
 	{
+		public Action _navigateToUserDetails;
+		public MainMenuView(Action navigateToUserDetails)
+		{
+			_navigateToUserDetails = navigateToUserDetails;
+		}
 		public void Show()
 		{
 			AnsiConsole.Clear();
@@ -24,7 +29,7 @@ namespace Nutribuddy.UI.Console
 					.AddColumn()
 					.AddRow(
 					[
-						Align.Center(new Panel("Opcja1").Padding(new Padding(5, 1))),
+						Align.Center(new Panel("User Details").Padding(new Padding(5, 1))),
 						Align.Center(new Panel("Opcja2").Padding(new Padding(5, 1)))
 					])
 					.AddRow(
@@ -37,9 +42,16 @@ namespace Nutribuddy.UI.Console
 				new SelectionPrompt<string>()
 				.AddChoices(
 				[
-					"Opcja1", "Opcja2", "Opcja3", "Opcja4"
+					"User Details", "Opcja2", "Opcja3", "Opcja4"
 				])
 				.HighlightStyle(new Style(foreground: Color.MediumPurple)));
+
+			switch (selected)
+			{
+				case "User Details":
+					_navigateToUserDetails();
+					break;
+			}
 		}
 	}
 }
