@@ -22,6 +22,9 @@ namespace Nutribuddy.Core.Controllers
             if (height > 0) _user.Height = height;
             if (age > 0) _user.Age = age;
             if (gender == "Male" || gender == "Female") _user.Gender = gender;
+            _user.BMI = CalculateBMI();
+            _user.CaloricNeeds = CalculateCaloricNeeds();
+
         }
 
         public double CalculateBMI()
