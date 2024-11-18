@@ -8,14 +8,16 @@ namespace Nutribuddy.Core.Models
 {
     internal class Dish
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = String.Empty;
         public List<FoodItem> Ingredients { get; set; }
         public Dictionary<string, double> TotalNutrients { get; set; }
+        public DateTime date { get; set; }
 
         public Dish()
         {
             Ingredients = new List<FoodItem>();
             TotalNutrients = new Dictionary<string, double>();
+            date = DateTime.Now;
         }
 
         public void CalculateTotalNutrients()
