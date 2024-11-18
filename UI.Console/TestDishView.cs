@@ -125,7 +125,7 @@ namespace Nutribuddy.UI.Console
 
             newDish.Ingredients.Add(foodWithQuantity);
 
-            AnsiConsole.Markup($"[bold yellow]Added ingredient:[/] {selectedFood.Description} with [blue]{quantity}g[/]\n");
+            AnsiConsole.Markup($"[bold yellow]Added {quantity}g of {selectedFood.Description}.[/]\n");
         }
 
         private void FinalizeDish(Dish newDish)
