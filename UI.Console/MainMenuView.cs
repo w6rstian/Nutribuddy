@@ -49,7 +49,7 @@ namespace Nutribuddy.UI.Console
 
             AnsiConsole.Write(new Rule());
 
-			var selected = AnsiConsole.Prompt(
+            var selected = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                 .Title("[#A2D2FF]What do you want to do?[/]")
                 .AddChoices(

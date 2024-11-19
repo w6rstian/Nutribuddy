@@ -1,7 +1,6 @@
 ﻿using Nutribuddy.Core.Controllers;
 using Nutribuddy.Core.Models;
 using Spectre.Console;
-using System;
 
 namespace Nutribuddy.UI.Console
 {
@@ -156,13 +155,13 @@ namespace Nutribuddy.UI.Console
                     .ToList();
             }
 
-			if (foodDescriptions.Count == 0)
-			{
-				return;
-			}
+            if (foodDescriptions.Count == 0)
+            {
+                return;
+            }
 
 
-			var choice = AnsiConsole.Prompt(
+            var choice = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                     .Title("[pink1]Select an ingredient to add:[/]")
                     .AddChoices(foodDescriptions)
@@ -218,29 +217,29 @@ namespace Nutribuddy.UI.Console
 
             if (confirmation)
             {
-				AnsiConsole.Progress()
-					.AutoClear(true)
-					.HideCompleted(true)
-				.Start(ctx =>
-				{
-					// Define tasks
-					var task1 = ctx.AddTask("[#9381FF]Adding dish...[/]");
+                AnsiConsole.Progress()
+                    .AutoClear(true)
+                    .HideCompleted(true)
+                .Start(ctx =>
+                {
+                    // Define tasks
+                    var task1 = ctx.AddTask("[#9381FF]Adding dish...[/]");
 
-					while (!ctx.IsFinished)
-					{
-						Thread.Sleep(50);
-						task1.Increment(5);
-					}
+                    while (!ctx.IsFinished)
+                    {
+                        Thread.Sleep(50);
+                        task1.Increment(5);
+                    }
 
-					if (ctx.IsFinished)
-					{
-						Thread.Sleep(500);
-					}
-				});
-				DateTime date = DateTime.Now;
-				_eatHistoryController.AddDishToHistory(date, newDish);
-				//_eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, newDish));
-			}
+                    if (ctx.IsFinished)
+                    {
+                        Thread.Sleep(500);
+                    }
+                });
+                DateTime date = DateTime.Now;
+                _eatHistoryController.AddDishToHistory(date, newDish);
+                //_eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, newDish));
+            }
 
             // OLD NOTIFICATION
             //AnsiConsole.Markup($"\n[bold gold1]Dish '{newDish.Name}' has been added![/]\n");
@@ -297,11 +296,11 @@ namespace Nutribuddy.UI.Console
 
             if (dishes.Count == 0)
             {
-				AnsiConsole.MarkupLine("[bold red]No dishes found.[/]\n");
+                AnsiConsole.MarkupLine("[bold red]No dishes found.[/]\n");
                 Thread.Sleep(1000);
-				AnsiConsole.Clear();
-				AnsiConsole.Write(foodFigletText);
-				return;
+                AnsiConsole.Clear();
+                AnsiConsole.Write(foodFigletText);
+                return;
             }
 
             foreach (var dish in dishes)

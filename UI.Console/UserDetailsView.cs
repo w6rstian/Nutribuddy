@@ -36,44 +36,44 @@ namespace Nutribuddy.UI.Console
             table.AddColumn("").Centered();
             table.HideHeaders();
 
-			AnsiConsole.Live(table)
-	        .Start(ctx =>
-	        {
-				table.AddRow("Gender", $"{user.Gender}");
-				ctx.Refresh();
-		        Thread.Sleep(100);
+            AnsiConsole.Live(table)
+            .Start(ctx =>
+            {
+                table.AddRow("Gender", $"{user.Gender}");
+                ctx.Refresh();
+                Thread.Sleep(100);
 
-				table.AddRow("Age", $"{user.Age}");
-				ctx.Refresh();
-		        Thread.Sleep(100);
+                table.AddRow("Age", $"{user.Age}");
+                ctx.Refresh();
+                Thread.Sleep(100);
 
                 table.AddRow("Height (cm)", $"{user.Height}");
-				ctx.Refresh();
-				Thread.Sleep(100);
+                ctx.Refresh();
+                Thread.Sleep(100);
 
-				table.AddRow("Weight (kg)", $"{user.Weight}");
-				ctx.Refresh();
-				Thread.Sleep(100);
+                table.AddRow("Weight (kg)", $"{user.Weight}");
+                ctx.Refresh();
+                Thread.Sleep(100);
 
-				table.AddRow("BMI", $"{Math.Truncate(user.BMI * 100) / 100}");
-				ctx.Refresh();
-				Thread.Sleep(100);
+                table.AddRow("BMI", $"{Math.Truncate(user.BMI * 100) / 100}");
+                ctx.Refresh();
+                Thread.Sleep(100);
 
-				table.AddRow("Your caloric needs", $"{Math.Truncate(user.CaloricNeeds * 100) / 100}"); 
+                table.AddRow("Your caloric needs", $"{Math.Truncate(user.CaloricNeeds * 100) / 100}");
 
                 ctx.Refresh();
-				Thread.Sleep(100);
+                Thread.Sleep(100);
 
-				table.AddRow("Activity Level", $"{user.PhysicalActivityLevel}");
-				ctx.Refresh();
-				Thread.Sleep(100);
+                table.AddRow("Activity Level", $"{user.PhysicalActivityLevel}");
+                ctx.Refresh();
+                Thread.Sleep(100);
 
-				table.AddRow("Goal", $"{user.Goal}");
-				ctx.Refresh();
-				Thread.Sleep(100);
-			});
-			
-            
+                table.AddRow("Goal", $"{user.Goal}");
+                ctx.Refresh();
+                Thread.Sleep(100);
+            });
+
+
 
             //AnsiConsole.Write(table);
 
@@ -169,26 +169,26 @@ namespace Nutribuddy.UI.Console
             var chartCarbs = new BarChart().Width(100);
             chartCarbs.MaxValue = user.CaloricNeeds * 0.5;
 
-			var chartFat = new BarChart().Width(100);
+            var chartFat = new BarChart().Width(100);
             chartFat.MaxValue = user.CaloricNeeds * 0.25;
 
-			var chartProtein = new BarChart().Width(100);
+            var chartProtein = new BarChart().Width(100);
             chartProtein.MaxValue = user.Weight;
 
-			var chartSodium = new BarChart().Width(100);
+            var chartSodium = new BarChart().Width(100);
             chartSodium.MaxValue = 1750;
 
-			var chartFiber = new BarChart().Width(100);
+            var chartFiber = new BarChart().Width(100);
             if (user.Gender == "Male")
             {
                 chartFiber.MaxValue = 38;
-			}
+            }
             else
             {
-				chartFiber.MaxValue = 25;
-			}
-            
-			var todayNutrients = _eatHistoryController.GetTotalNutrientsFromDay(DateTime.Now);
+                chartFiber.MaxValue = 25;
+            }
+
+            var todayNutrients = _eatHistoryController.GetTotalNutrientsFromDay(DateTime.Now);
 
             if (todayNutrients.Count == 0)
             {
@@ -231,11 +231,11 @@ namespace Nutribuddy.UI.Console
 
             AnsiConsole.Write(Align.Center(new Panel("[#A2D2FF]Nutrients for today[/]").BorderColor(new Color(162, 210, 255))));
             AnsiConsole.Write(Align.Center(new Padder(chartEnergy)));
-			AnsiConsole.Write(Align.Center(new Padder(chartCarbs)));
-			AnsiConsole.Write(Align.Center(new Padder(chartFat)));
-			AnsiConsole.Write(Align.Center(new Padder(chartProtein)));
-			AnsiConsole.Write(Align.Center(new Padder(chartSodium)));
-			AnsiConsole.Write(Align.Center(new Padder(chartFiber)));
-		}
+            AnsiConsole.Write(Align.Center(new Padder(chartCarbs)));
+            AnsiConsole.Write(Align.Center(new Padder(chartFat)));
+            AnsiConsole.Write(Align.Center(new Padder(chartProtein)));
+            AnsiConsole.Write(Align.Center(new Padder(chartSodium)));
+            AnsiConsole.Write(Align.Center(new Padder(chartFiber)));
+        }
     }
 }

@@ -1,9 +1,6 @@
 using Nutribuddy.Core.Controllers;
-using Nutribuddy.Core.Models;
 using Nutribuddy.UI;
 using Nutribuddy.UI.Console;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Runtime.ConstrainedExecution;
 
 namespace Nutribuddy
 {
