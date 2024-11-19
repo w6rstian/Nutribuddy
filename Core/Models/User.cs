@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Nutribuddy.Core.Models
+﻿namespace Nutribuddy.Core.Models
 {
     internal class User
     {
@@ -20,12 +14,12 @@ namespace Nutribuddy.Core.Models
             BMI = Weight / ((Height / 100) * (Height / 100));
             if (Gender == "Male")
             {
-				CaloricNeeds = 10 * Weight + 6.25 * Height - 5 * Age + 5; //chop
-			}
+                CaloricNeeds = 10 * Weight + 6.25 * Height - 5 * Age + 5; //chop
+            }
             else
             {
-				CaloricNeeds = 10 * Weight + 6.25 * Height - 5 * Age - 161; //baba
-			}
-		}
+                CaloricNeeds = 10 * Weight + 6.25 * Height - 5 * Age - 161; //baba
+            }
+        }
     }
 }

@@ -1,10 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Nutribuddy.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nutribuddy.Core.Controllers
 {
@@ -33,11 +28,11 @@ namespace Nutribuddy.Core.Controllers
             return _dishes;
         }
 
-            
+
         public Dictionary<string, double> GetForeverNutrients() // NIE KORZYSTAĆ - DEPRECATED
-		{
-		    // ta funkcja na razie zlicza wszystkie dania.
-		    // INNA IMPLEMENTACJA W EatHistoryController, BIORĄCA NUTRIENTS TYLKO Z JEDNEGO DNIA
+        {
+            // ta funkcja na razie zlicza wszystkie dania.
+            // INNA IMPLEMENTACJA W EatHistoryController, BIORĄCA NUTRIENTS TYLKO Z JEDNEGO DNIA
             Dictionary<string, double> totalNutrients = new();
             foreach (var dish in _dishes)
             {
@@ -53,7 +48,7 @@ namespace Nutribuddy.Core.Controllers
             }
 
             return totalNutrients;
-		}
+        }
 
         public void SetIngredientQuantity(Dish dish, string foodDescription, double quantityInGrams)
         {
@@ -106,7 +101,7 @@ namespace Nutribuddy.Core.Controllers
         }
 
         private void SaveDishes() //zapis do pliku działa tylko przy podaniu sciezki absolutnej :(
-        {   
+        {
             try
             {
                 var jsonData = JsonConvert.SerializeObject(_dishes, Formatting.Indented);

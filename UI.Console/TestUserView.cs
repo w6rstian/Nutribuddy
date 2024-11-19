@@ -1,11 +1,5 @@
 ﻿using Nutribuddy.Core.Controllers;
-using Nutribuddy.Core.Models;
 using Spectre.Console;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nutribuddy.UI.Console
 {
