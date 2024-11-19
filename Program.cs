@@ -13,8 +13,8 @@ namespace Nutribuddy
         {
             var userController = new UserController();
             var foodController = new FoodController("Data/FoodData.json");
-            var dishController = new DishController("Data/DishData");
-            var eatHistoryController = new EatHistoryController("Data/FoodHistory", "Data/DishHistory");
+            var dishController = new DishController("Data/DishData.json");
+            var eatHistoryController = new EatHistoryController("Data/FoodHistory.json", "Data/DishHistory.json");
             var viewManager = new ViewManager();
             viewManager.RegisterView("IntroSequence", new IntroSequenceView(() => viewManager.ShowView("MainMenu")));
             viewManager.RegisterView("MainMenu", new MainMenuView(
