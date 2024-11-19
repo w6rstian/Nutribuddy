@@ -14,7 +14,7 @@
         public User()
         {
             BMI = Weight / ((Height / 100) * (Height / 100));
-            CaloricNeeds = 0;
+            CaloricNeeds = 2076;
         }
     }
 }
