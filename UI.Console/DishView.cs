@@ -43,7 +43,7 @@ namespace Nutribuddy.UI.Console
 
                 var mainChoice = AnsiConsole.Prompt(
                     new SelectionPrompt<string>()
-                        .Title("[bold gold1]What do you want to do?[/]")
+                        .Title("[bold #A2D2FF]What do you want to do?[/]")
                         .AddChoices(mainMenuOptions)
                                     .HighlightStyle(new Style(foreground: Color.MediumPurple))
                 );
