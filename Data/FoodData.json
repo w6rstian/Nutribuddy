@@ -13,7 +13,7 @@
   {
     "description": "Tomatoes, grape, raw",
     "nutrients": {
-      "Energy (kcal)": 113,
+      "Energy (kcal)": 27.0,
       "Carbohydrate, by difference (g)": 5.51,
       "Total lipid (fat) (g)": 0.63,
       "Protein (g)": 0.83,
@@ -24,27 +24,29 @@
   {
     "description": "Beans, snap, green, canned, regular pack, drained solids",
     "nutrients": {
-      "Energy (kcal)": 86.0,
+      "Energy (kcal)": 21.0,
       "Carbohydrate, by difference (g)": 4.11,
       "Total lipid (fat) (g)": 0.39,
       "Protein (g)": 1.04,
-      "Sodium, Na (mg)": 282
+      "Sodium, Na (mg)": 282,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Frankfurter, beef, unheated",
     "nutrients": {
-      "Energy (kcal)": 1310.0,
+      "Energy (kcal)": 314,
       "Carbohydrate, by difference (g)": 2.89,
       "Total lipid (fat) (g)": 28.0,
       "Protein (g)": 11.7,
-      "Sodium, Na (mg)": 872
+      "Sodium, Na (mg)": 872,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Nuts, almonds, dry roasted, with salt added",
     "nutrients": {
-      "Energy (kcal)": 2590.0,
+      "Energy (kcal)": 620,
       "Carbohydrate, by difference (g)": 16.2,
       "Total lipid (fat) (g)": 57.8,
       "Protein (g)": 20.4,
@@ -70,17 +72,19 @@
       "Carbohydrate, by difference (g)": 0.91,
       "Total lipid (fat) (g)": 10.3,
       "Protein (g)": 12.3,
-      "Sodium, Na (mg)": 121
+      "Sodium, Na (mg)": 121,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Egg, white, raw, frozen, pasteurized",
     "nutrients": {
-      "Energy (kcal)": 201,
+      "Energy (kcal)": 48.0,
       "Carbohydrate, by difference (g)": 0.74,
       "Total lipid (fat) (g)": 0.16,
       "Protein (g)": 10.1,
-      "Sodium, Na (mg)": 144
+      "Sodium, Na (mg)": 144,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -90,13 +94,14 @@
       "Carbohydrate, by difference (g)": 6.02,
       "Total lipid (fat) (g)": 0.65,
       "Protein (g)": 79.9,
-      "Sodium, Na (mg)": 1250.0
+      "Sodium, Na (mg)": 1250.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Onion rings, breaded, par fried, frozen, prepared, heated in oven",
     "nutrients": {
-      "Energy (kcal)": 1210.0,
+      "Energy (kcal)": 288,
       "Carbohydrate, by difference (g)": 36.3,
       "Total lipid (fat) (g)": 14.4,
       "Protein (g)": 4.52,
@@ -118,11 +123,12 @@
   {
     "description": "Cheese, parmesan, grated",
     "nutrients": {
-      "Energy (kcal)": 1760.0,
+      "Energy (kcal)": 421,
       "Carbohydrate, by difference (g)": 12.4,
       "Total lipid (fat) (g)": 28.0,
       "Protein (g)": 29.6,
-      "Sodium, Na (mg)": 1750.0
+      "Sodium, Na (mg)": 1750.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -132,7 +138,8 @@
       "Carbohydrate, by difference (g)": 5.27,
       "Total lipid (fat) (g)": 30.6,
       "Protein (g)": 18.0,
-      "Sodium, Na (mg)": 1660.0
+      "Sodium, Na (mg)": 1660.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -149,7 +156,7 @@
   {
     "description": "Peaches, yellow, raw",
     "nutrients": {
-      "Energy (kcal)": 174,
+      "Energy (kcal)": 42.0,
       "Carbohydrate, by difference (g)": 10.1,
       "Total lipid (fat) (g)": 0.27,
       "Protein (g)": 0.91,
@@ -160,7 +167,7 @@
   {
     "description": "Seeds, sunflower seed kernels, dry roasted, with salt added",
     "nutrients": {
-      "Energy (kcal)": 2560.0,
+      "Energy (kcal)": 612,
       "Carbohydrate, by difference (g)": 17.1,
       "Total lipid (fat) (g)": 56.1,
       "Protein (g)": 21.0,
@@ -171,7 +178,7 @@
   {
     "description": "Bread, white, commercially prepared",
     "nutrients": {
-      "Energy (kcal)": 1130.0,
+      "Energy (kcal)": 270,
       "Carbohydrate, by difference (g)": 49.2,
       "Total lipid (fat) (g)": 3.59,
       "Protein (g)": 9.43,
@@ -182,11 +189,12 @@
   {
     "description": "Kale, frozen, cooked, boiled, drained, without salt",
     "nutrients": {
-      "Energy (kcal)": 151,
+      "Energy (kcal)": 36.0,
       "Carbohydrate, by difference (g)": 5.3,
       "Total lipid (fat) (g)": 1.21,
       "Protein (g)": 2.94,
-      "Sodium, Na (mg)": 16.0
+      "Sodium, Na (mg)": 16.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -203,7 +211,7 @@
   {
     "description": "Kiwifruit, green, raw",
     "nutrients": {
-      "Energy (kcal)": 241,
+      "Energy (kcal)": 58.0,
       "Carbohydrate, by difference (g)": 14.0,
       "Total lipid (fat) (g)": 0.44,
       "Protein (g)": 1.06,
@@ -225,21 +233,23 @@
   {
     "description": "Cheese, cheddar",
     "nutrients": {
-      "Energy (kcal)": 1710.0,
+      "Energy (kcal)": 408,
       "Carbohydrate, by difference (g)": 2.44,
       "Total lipid (fat) (g)": 34.0,
       "Protein (g)": 23.3,
-      "Sodium, Na (mg)": 654
+      "Sodium, Na (mg)": 654,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, cottage, lowfat, 2% milkfat",
     "nutrients": {
-      "Energy (kcal)": 352,
+      "Energy (kcal)": 84.0,
       "Carbohydrate, by difference (g)": 4.31,
       "Total lipid (fat) (g)": 2.3,
       "Protein (g)": 11.0,
-      "Sodium, Na (mg)": 321
+      "Sodium, Na (mg)": 321,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -249,7 +259,8 @@
       "Carbohydrate, by difference (g)": 4.44,
       "Total lipid (fat) (g)": 20.4,
       "Protein (g)": 23.7,
-      "Sodium, Na (mg)": 699
+      "Sodium, Na (mg)": 699,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -259,27 +270,30 @@
       "Carbohydrate, by difference (g)": 1.87,
       "Total lipid (fat) (g)": 39.8,
       "Protein (g)": 48.1,
-      "Sodium, Na (mg)": 485
+      "Sodium, Na (mg)": 485,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Egg, yolk, raw, frozen, pasteurized",
     "nutrients": {
-      "Energy (kcal)": 1240.0,
+      "Energy (kcal)": 296,
       "Carbohydrate, by difference (g)": 0.59,
       "Total lipid (fat) (g)": 25.1,
       "Protein (g)": 15.6,
-      "Sodium, Na (mg)": 66.0
+      "Sodium, Na (mg)": 66.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Egg, yolk, dried",
     "nutrients": {
-      "Energy (kcal)": 2740.0,
+      "Energy (kcal)": 654,
       "Carbohydrate, by difference (g)": 1.07,
       "Total lipid (fat) (g)": 55.5,
       "Protein (g)": 34.2,
-      "Sodium, Na (mg)": 149
+      "Sodium, Na (mg)": 149,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -289,13 +303,14 @@
       "Carbohydrate, by difference (g)": 3.64,
       "Total lipid (fat) (g)": 0.37,
       "Protein (g)": 10.3,
-      "Sodium, Na (mg)": 36.0
+      "Sodium, Na (mg)": 36.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Yogurt, Greek, strawberry, nonfat",
     "nutrients": {
-      "Energy (kcal)": 347,
+      "Energy (kcal)": 83.0,
       "Carbohydrate, by difference (g)": 12.2,
       "Total lipid (fat) (g)": 0.15,
       "Protein (g)": 8.06,
@@ -310,7 +325,8 @@
       "Carbohydrate, by difference (g)": 0.84,
       "Total lipid (fat) (g)": 99.1,
       "Protein (g)": 0.0,
-      "Sodium, Na (mg)": 0.0
+      "Sodium, Na (mg)": 0.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -320,23 +336,25 @@
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 5.95,
       "Protein (g)": 23.9,
-      "Sodium, Na (mg)": 117
+      "Sodium, Na (mg)": 117,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, cooked, braised",
     "nutrients": {
-      "Energy (kcal)": 695,
+      "Energy (kcal)": 166,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 3.24,
       "Protein (g)": 32.1,
-      "Sodium, Na (mg)": 47.0
+      "Sodium, Na (mg)": 47.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Sauce, pasta, spaghetti/marinara, ready-to-serve",
     "nutrients": {
-      "Energy (kcal)": 186,
+      "Energy (kcal)": 45.0,
       "Carbohydrate, by difference (g)": 8.05,
       "Total lipid (fat) (g)": 1.48,
       "Protein (g)": 1.41,
@@ -351,13 +369,14 @@
       "Carbohydrate, by difference (g)": 0.27,
       "Total lipid (fat) (g)": 3.73,
       "Protein (g)": 16.7,
-      "Sodium, Na (mg)": 1040.0
+      "Sodium, Na (mg)": 1040.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Olives, green, Manzanilla, stuffed with pimiento",
     "nutrients": {
-      "Energy (kcal)": 543,
+      "Energy (kcal)": 130,
       "Carbohydrate, by difference (g)": 4.96,
       "Total lipid (fat) (g)": 12.9,
       "Protein (g)": 1.15,
@@ -368,7 +387,7 @@
   {
     "description": "Cookies, oatmeal, soft, with raisins",
     "nutrients": {
-      "Energy (kcal)": 1800.0,
+      "Energy (kcal)": 430,
       "Carbohydrate, by difference (g)": 69.6,
       "Total lipid (fat) (g)": 14.3,
       "Protein (g)": 5.79,
@@ -379,51 +398,56 @@
   {
     "description": "Tomatoes, canned, red, ripe, diced",
     "nutrients": {
-      "Energy (kcal)": 76.0,
+      "Energy (kcal)": 18.0,
       "Carbohydrate, by difference (g)": 3.32,
       "Total lipid (fat) (g)": 0.5,
       "Protein (g)": 0.84,
-      "Sodium, Na (mg)": 125
+      "Sodium, Na (mg)": 125,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Fish, haddock, raw",
     "nutrients": {
-      "Energy (kcal)": 308,
+      "Energy (kcal)": 74.0,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 0.45,
       "Protein (g)": 16.3,
-      "Sodium, Na (mg)": 213
+      "Sodium, Na (mg)": 213,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Fish, pollock, raw",
     "nutrients": {
-      "Energy (kcal)": 235,
+      "Energy (kcal)": 56.0,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 0.41,
       "Protein (g)": 12.3,
-      "Sodium, Na (mg)": 333
+      "Sodium, Na (mg)": 333,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Fish, tuna, light, canned in water, drained solids",
     "nutrients": {
-      "Energy (kcal)": 376,
+      "Energy (kcal)": 90.0,
       "Carbohydrate, by difference (g)": 0.08,
       "Total lipid (fat) (g)": 0.94,
       "Protein (g)": 19.0,
-      "Sodium, Na (mg)": 219
+      "Sodium, Na (mg)": 219,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Restaurant, Chinese, fried rice, without meat",
     "nutrients": {
-      "Energy (kcal)": 729,
+      "Energy (kcal)": 174,
       "Carbohydrate, by difference (g)": 32.5,
       "Total lipid (fat) (g)": 3.19,
       "Protein (g)": 3.84,
-      "Sodium, Na (mg)": 361
+      "Sodium, Na (mg)": 361,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -451,7 +475,7 @@
   {
     "description": "Bread, whole-wheat, commercially prepared",
     "nutrients": {
-      "Energy (kcal)": 1060.0,
+      "Energy (kcal)": 254,
       "Carbohydrate, by difference (g)": 43.1,
       "Total lipid (fat) (g)": 3.55,
       "Protein (g)": 12.3,
@@ -462,21 +486,23 @@
   {
     "description": "Beef, loin, tenderloin roast, separable lean only, boneless, trimmed to 0\" fat, select, cooked, roasted",
     "nutrients": {
-      "Energy (kcal)": 735,
+      "Energy (kcal)": 176,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 6.36,
       "Protein (g)": 27.7,
-      "Sodium, Na (mg)": 54.0
+      "Sodium, Na (mg)": 54.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beef, loin, top loin steak, boneless, lip-on, separable lean only, trimmed to 1/8\" fat, choice, raw",
     "nutrients": {
-      "Energy (kcal)": 648,
+      "Energy (kcal)": 155,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 6.39,
       "Protein (g)": 22.8,
-      "Sodium, Na (mg)": 45.0
+      "Sodium, Na (mg)": 45.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -486,27 +512,30 @@
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 2.48,
       "Protein (g)": 23.4,
-      "Sodium, Na (mg)": 50.0
+      "Sodium, Na (mg)": 50.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beef, round, top round roast, boneless, separable lean only, trimmed to 0\" fat, select, raw",
     "nutrients": {
-      "Energy (kcal)": 514,
+      "Energy (kcal)": 123,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 2.41,
       "Protein (g)": 23.7,
-      "Sodium, Na (mg)": 55.0
+      "Sodium, Na (mg)": 55.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beef, short loin, porterhouse steak, separable lean only, trimmed to 1/8\" fat, select, raw",
     "nutrients": {
-      "Energy (kcal)": 606,
+      "Energy (kcal)": 145,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 5.32,
       "Protein (g)": 22.7,
-      "Sodium, Na (mg)": 43.0
+      "Sodium, Na (mg)": 43.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -516,13 +545,14 @@
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 11.4,
       "Protein (g)": 27.3,
-      "Sodium, Na (mg)": 67.0
+      "Sodium, Na (mg)": 67.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Carrots, frozen, unprepared",
     "nutrients": {
-      "Energy (kcal)": 153,
+      "Energy (kcal)": 37.0,
       "Carbohydrate, by difference (g)": 7.92,
       "Total lipid (fat) (g)": 0.47,
       "Protein (g)": 0.81,
@@ -537,7 +567,8 @@
       "Carbohydrate, by difference (g)": 2.07,
       "Total lipid (fat) (g)": 24.3,
       "Protein (g)": 24.5,
-      "Sodium, Na (mg)": 1810.0
+      "Sodium, Na (mg)": 1810.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -547,17 +578,19 @@
       "Carbohydrate, by difference (g)": 6.86,
       "Total lipid (fat) (g)": 11.0,
       "Protein (g)": 7.81,
-      "Sodium, Na (mg)": 105
+      "Sodium, Na (mg)": 105,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, swiss",
     "nutrients": {
-      "Energy (kcal)": 1640.0,
+      "Energy (kcal)": 393,
       "Carbohydrate, by difference (g)": 1.44,
       "Total lipid (fat) (g)": 31.0,
       "Protein (g)": 27.0,
-      "Sodium, Na (mg)": 185
+      "Sodium, Na (mg)": 185,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -574,17 +607,18 @@
   {
     "description": "Lettuce, cos or romaine, raw",
     "nutrients": {
-      "Energy (kcal)": 70.0,
+      "Energy (kcal)": 17.0,
       "Carbohydrate, by difference (g)": 3.24,
       "Total lipid (fat) (g)": 0.26,
       "Protein (g)": 1.24,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 1.8
     }
   },
   {
     "description": "Melons, cantaloupe, raw",
     "nutrients": {
-      "Energy (kcal)": 141,
+      "Energy (kcal)": 34.0,
       "Carbohydrate, by difference (g)": 8.16,
       "Total lipid (fat) (g)": 0.18,
       "Protein (g)": 0.82,
@@ -595,7 +629,7 @@
   {
     "description": "Oranges, raw, navels",
     "nutrients": {
-      "Energy (kcal)": 196,
+      "Energy (kcal)": 47.0,
       "Carbohydrate, by difference (g)": 11.8,
       "Total lipid (fat) (g)": 0.15,
       "Protein (g)": 0.91,
@@ -610,7 +644,8 @@
       "Carbohydrate, by difference (g)": 5.18,
       "Total lipid (fat) (g)": 0.95,
       "Protein (g)": 3.38,
-      "Sodium, Na (mg)": 39.0
+      "Sodium, Na (mg)": 39.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -638,17 +673,23 @@
   {
     "description": "Salt, table, iodized",
     "nutrients": {
-      "Sodium, Na (mg)": 38700.0
+      "Energy (kcal)": 0,
+      "Carbohydrate, by difference (g)": null,
+      "Total lipid (fat) (g)": null,
+      "Protein (g)": null,
+      "Sodium, Na (mg)": 38700.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)",
     "nutrients": {
-      "Energy (kcal)": 144,
+      "Energy (kcal)": 34.0,
       "Carbohydrate, by difference (g)": 4.92,
       "Total lipid (fat) (g)": 0.08,
       "Protein (g)": 3.43,
-      "Sodium, Na (mg)": 41.0
+      "Sodium, Na (mg)": 41.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -669,47 +710,52 @@
       "Carbohydrate, by difference (g)": 4.9,
       "Total lipid (fat) (g)": 1.9,
       "Protein (g)": 3.36,
-      "Sodium, Na (mg)": 39.0
+      "Sodium, Na (mg)": 39.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Sausage, breakfast sausage, beef, pre-cooked, unprepared",
     "nutrients": {
-      "Energy (kcal)": 1370.0,
+      "Energy (kcal)": 328,
       "Carbohydrate, by difference (g)": 3.37,
       "Total lipid (fat) (g)": 28.7,
       "Protein (g)": 13.3,
-      "Sodium, Na (mg)": 866
+      "Sodium, Na (mg)": 866,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Sausage, Italian, pork, mild, cooked, pan-fried",
     "nutrients": {
-      "Energy (kcal)": 1350.0,
+      "Energy (kcal)": 322,
       "Carbohydrate, by difference (g)": 2.15,
       "Total lipid (fat) (g)": 26.2,
       "Protein (g)": 18.2,
-      "Sodium, Na (mg)": 766
+      "Sodium, Na (mg)": 766,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Sausage, pork, chorizo, link or ground, cooked, pan-fried",
     "nutrients": {
-      "Energy (kcal)": 1450.0,
+      "Energy (kcal)": 346,
       "Carbohydrate, by difference (g)": 2.63,
       "Total lipid (fat) (g)": 28.1,
       "Protein (g)": 19.3,
-      "Sodium, Na (mg)": 983
+      "Sodium, Na (mg)": 983,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
     "nutrients": {
-      "Energy (kcal)": 251,
+      "Energy (kcal)": 60.0,
       "Carbohydrate, by difference (g)": 4.63,
       "Total lipid (fat) (g)": 3.2,
       "Protein (g)": 3.27,
-      "Sodium, Na (mg)": 38.0
+      "Sodium, Na (mg)": 38.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -719,7 +765,8 @@
       "Carbohydrate, by difference (g)": 0.93,
       "Total lipid (fat) (g)": 10.4,
       "Protein (g)": 16.7,
-      "Sodium, Na (mg)": 599
+      "Sodium, Na (mg)": 599,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -729,172 +776,227 @@
       "Carbohydrate, by difference (g)": 99.6,
       "Total lipid (fat) (g)": 0.32,
       "Protein (g)": 0.0,
-      "Sodium, Na (mg)": 1.0
+      "Sodium, Na (mg)": 1.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Turkey, ground, 93% lean, 7% fat, pan-broiled crumbles",
     "nutrients": {
-      "Energy (kcal)": 922,
+      "Energy (kcal)": 220,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 11.6,
       "Protein (g)": 27.1,
-      "Sodium, Na (mg)": 90.0
+      "Sodium, Na (mg)": 90.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Ham, sliced, restaurant",
     "nutrients": {
-      "Energy (kcal)": 507,
+      "Energy (kcal)": 121,
       "Carbohydrate, by difference (g)": 2.36,
       "Total lipid (fat) (g)": 3.68,
       "Protein (g)": 19.6,
-      "Sodium, Na (mg)": 1030.0
+      "Sodium, Na (mg)": 1030.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, American, restaurant",
     "nutrients": {
-      "Energy (kcal)": 1570.0,
+      "Energy (kcal)": 375,
       "Carbohydrate, by difference (g)": 6.35,
       "Total lipid (fat) (g)": 31.1,
       "Protein (g)": 17.5,
-      "Sodium, Na (mg)": 1600.0
+      "Sodium, Na (mg)": 1600.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beans, Dry, Medium Red (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 111.36,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.04,
       "Protein (g)": 25.5,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.3
     }
   },
   {
     "description": "Beans, Dry, Red (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 95.64,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.16,
       "Protein (g)": 21.3,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.0
     }
   },
   {
     "description": "Beans, Dry, Flor de Mayo (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 100.94,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 0.86,
       "Protein (g)": 23.3,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.0
     }
   },
   {
     "description": "Beans, Dry, Brown (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 112.48,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.12,
       "Protein (g)": 25.6,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.1
     }
   },
   {
     "description": "Beans, Dry, Tan (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 117.46,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.14,
       "Protein (g)": 26.8,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.4
     }
   },
   {
     "description": "Beans, Dry, Light Tan (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 109.92,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.28,
       "Protein (g)": 24.6,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.3
     }
   },
   {
     "description": "Beans, Dry, Carioca (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 113.76,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.44,
       "Protein (g)": 25.2,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.5
     }
   },
   {
     "description": "Beans, Dry, Cranberry (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 108.67,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.23,
       "Protein (g)": 24.4,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.3
     }
   },
   {
     "description": "Beans, Dry, Light Red Kidney (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 109.27,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.03,
       "Protein (g)": 25.0,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.5
     }
   },
   {
     "description": "Beans, Dry, Pink (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 104.4,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.2,
       "Protein (g)": 23.4,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.1
     }
   },
   {
     "description": "Beans, Dry, Dark Red Kidney (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 115.39,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.31,
       "Protein (g)": 25.9,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.3
     }
   },
   {
     "description": "Beans, Dry, Navy (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 109.99,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.51,
       "Protein (g)": 24.1,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.3
     }
   },
   {
     "description": "Beans, Dry, Small White (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 109.88,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.32,
       "Protein (g)": 24.5,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.3
     }
   },
   {
     "description": "Beans, Dry, Small Red (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 105.52,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.28,
       "Protein (g)": 23.5,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.1
     }
   },
   {
     "description": "Beans, Dry, Black (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 110.65,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.45,
       "Protein (g)": 24.4,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.2
     }
   },
   {
     "description": "Beans, Dry, Pinto (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 105.96,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.24,
       "Protein (g)": 23.7,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.1
     }
   },
   {
     "description": "Beans, Dry, Great Northern (0% moisture)",
     "nutrients": {
+      "Energy (kcal)": 109.96,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 1.24,
       "Protein (g)": 24.7,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 4.3
     }
   },
@@ -912,11 +1014,12 @@
   {
     "description": "Ketchup, restaurant",
     "nutrients": {
-      "Energy (kcal)": 488,
+      "Energy (kcal)": 117,
       "Carbohydrate, by difference (g)": 26.8,
       "Total lipid (fat) (g)": 0.55,
       "Protein (g)": 1.11,
-      "Sodium, Na (mg)": 949
+      "Sodium, Na (mg)": 949,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -925,38 +1028,70 @@
       "Energy (kcal)": 55.0,
       "Carbohydrate, by difference (g)": 2.36,
       "Total lipid (fat) (g)": 0.0,
-      "Protein (g)": 10.7
+      "Protein (g)": 10.7,
+      "Sodium, Na (mg)": null,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Eggs, Grade A, Large, egg yolk",
     "nutrients": {
-      "Energy (kcal)": 1400.0,
+      "Energy (kcal)": 334,
       "Carbohydrate, by difference (g)": 1.02,
       "Total lipid (fat) (g)": 28.8,
-      "Protein (g)": 16.2
+      "Protein (g)": 16.2,
+      "Sodium, Na (mg)": null,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Oil, canola",
-    "nutrients": {}
+    "nutrients": {
+      "Energy (kcal)": 0,
+      "Carbohydrate, by difference (g)": null,
+      "Total lipid (fat) (g)": null,
+      "Protein (g)": null,
+      "Sodium, Na (mg)": null,
+      "Fiber, total dietary (g)": null
+    }
   },
   {
     "description": "Oil, corn",
-    "nutrients": {}
+    "nutrients": {
+      "Energy (kcal)": 0,
+      "Carbohydrate, by difference (g)": null,
+      "Total lipid (fat) (g)": null,
+      "Protein (g)": null,
+      "Sodium, Na (mg)": null,
+      "Fiber, total dietary (g)": null
+    }
   },
   {
     "description": "Oil, soybean",
-    "nutrients": {}
+    "nutrients": {
+      "Energy (kcal)": 0,
+      "Carbohydrate, by difference (g)": null,
+      "Total lipid (fat) (g)": null,
+      "Protein (g)": null,
+      "Sodium, Na (mg)": null,
+      "Fiber, total dietary (g)": null
+    }
   },
   {
     "description": "Oil, olive, extra virgin",
-    "nutrients": {}
+    "nutrients": {
+      "Energy (kcal)": 0,
+      "Carbohydrate, by difference (g)": null,
+      "Total lipid (fat) (g)": null,
+      "Protein (g)": null,
+      "Sodium, Na (mg)": null,
+      "Fiber, total dietary (g)": null
+    }
   },
   {
     "description": "Eggs, Grade A, Large, egg whole",
     "nutrients": {
-      "Energy (kcal)": 617,
+      "Energy (kcal)": 148,
       "Carbohydrate, by difference (g)": 0.96,
       "Total lipid (fat) (g)": 9.96,
       "Protein (g)": 12.4,
@@ -967,18 +1102,23 @@
   {
     "description": "Pork, cured, bacon, cooked, restaurant",
     "nutrients": {
-      "Energy (kcal)": 2090.0,
+      "Energy (kcal)": 500,
       "Carbohydrate, by difference (g)": 2.1,
       "Total lipid (fat) (g)": 36.5,
       "Protein (g)": 40.9,
-      "Sodium, Na (mg)": 1830.0
+      "Sodium, Na (mg)": 1830.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Butter, stick, unsalted",
     "nutrients": {
+      "Energy (kcal)": 733.5,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 81.5,
-      "Sodium, Na (mg)": 10.0
+      "Protein (g)": null,
+      "Sodium, Na (mg)": 10.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -988,7 +1128,8 @@
       "Carbohydrate, by difference (g)": 77.3,
       "Total lipid (fat) (g)": 1.48,
       "Protein (g)": 10.9,
-      "Sodium, Na (mg)": 2.0
+      "Sodium, Na (mg)": 2.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -998,13 +1139,14 @@
       "Carbohydrate, by difference (g)": 73.2,
       "Total lipid (fat) (g)": 1.48,
       "Protein (g)": 13.1,
-      "Sodium, Na (mg)": 4.0
+      "Sodium, Na (mg)": 4.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Flour, wheat, all-purpose, unenriched, unbleached",
     "nutrients": {
-      "Energy (kcal)": 1510.0,
+      "Energy (kcal)": 362,
       "Carbohydrate, by difference (g)": 74.6,
       "Total lipid (fat) (g)": 1.7,
       "Protein (g)": 12.0,
@@ -1015,7 +1157,7 @@
   {
     "description": "Flour, whole wheat, unenriched",
     "nutrients": {
-      "Energy (kcal)": 1550.0,
+      "Energy (kcal)": 370,
       "Carbohydrate, by difference (g)": 71.2,
       "Total lipid (fat) (g)": 2.73,
       "Protein (g)": 15.1,
@@ -1026,11 +1168,12 @@
   {
     "description": "Flour, bread, white, enriched, unbleached",
     "nutrients": {
-      "Energy (kcal)": 1520.0,
+      "Energy (kcal)": 363,
       "Carbohydrate, by difference (g)": 72.8,
       "Total lipid (fat) (g)": 1.65,
       "Protein (g)": 14.3,
-      "Sodium, Na (mg)": 3.0
+      "Sodium, Na (mg)": 3.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -1047,7 +1190,7 @@
   {
     "description": "Flour, corn, yellow, fine meal, enriched",
     "nutrients": {
-      "Energy (kcal)": 1520.0,
+      "Energy (kcal)": 364,
       "Carbohydrate, by difference (g)": 80.8,
       "Total lipid (fat) (g)": 1.74,
       "Protein (g)": 6.2,
@@ -1058,14 +1201,18 @@
   {
     "description": "Butter, stick, salted",
     "nutrients": {
+      "Energy (kcal)": 739.8,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 82.2,
-      "Sodium, Na (mg)": 524
+      "Protein (g)": null,
+      "Sodium, Na (mg)": 524,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Onions, red, raw",
     "nutrients": {
-      "Energy (kcal)": 186,
+      "Energy (kcal)": 44.0,
       "Carbohydrate, by difference (g)": 9.93,
       "Total lipid (fat) (g)": 0.1,
       "Protein (g)": 0.94,
@@ -1076,7 +1223,7 @@
   {
     "description": "Onions, yellow, raw",
     "nutrients": {
-      "Energy (kcal)": 160,
+      "Energy (kcal)": 38.0,
       "Carbohydrate, by difference (g)": 8.61,
       "Total lipid (fat) (g)": 0.05,
       "Protein (g)": 0.83,
@@ -1087,31 +1234,34 @@
   {
     "description": "Garlic, raw",
     "nutrients": {
-      "Energy (kcal)": 597,
+      "Energy (kcal)": 143,
       "Carbohydrate, by difference (g)": 28.2,
       "Total lipid (fat) (g)": 0.38,
       "Protein (g)": 6.62,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 2.7
     }
   },
   {
     "description": "Flour, soy, defatted",
     "nutrients": {
-      "Energy (kcal)": 1530.0,
+      "Energy (kcal)": 366,
       "Carbohydrate, by difference (g)": 32.9,
       "Total lipid (fat) (g)": 3.33,
       "Protein (g)": 51.1,
-      "Sodium, Na (mg)": 2.0
+      "Sodium, Na (mg)": 2.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Flour, soy, full-fat",
     "nutrients": {
-      "Energy (kcal)": 1890.0,
+      "Energy (kcal)": 452,
       "Carbohydrate, by difference (g)": 27.9,
       "Total lipid (fat) (g)": 20.7,
       "Protein (g)": 38.6,
-      "Sodium, Na (mg)": 2.0
+      "Sodium, Na (mg)": 2.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
@@ -1121,33 +1271,36 @@
       "Carbohydrate, by difference (g)": 75.5,
       "Total lipid (fat) (g)": 3.85,
       "Protein (g)": 7.19,
-      "Sodium, Na (mg)": 1.0
+      "Sodium, Na (mg)": 1.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Flour, rice, glutinous",
     "nutrients": {
-      "Energy (kcal)": 1500.0,
+      "Energy (kcal)": 358,
       "Carbohydrate, by difference (g)": 80.1,
       "Total lipid (fat) (g)": 1.16,
       "Protein (g)": 6.69,
-      "Sodium, Na (mg)": 6.0
+      "Sodium, Na (mg)": 6.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Flour, pastry, unenriched, unbleached",
     "nutrients": {
-      "Energy (kcal)": 1500.0,
+      "Energy (kcal)": 358,
       "Carbohydrate, by difference (g)": 77.2,
       "Total lipid (fat) (g)": 1.64,
       "Protein (g)": 8.75,
-      "Sodium, Na (mg)": 1.0
+      "Sodium, Na (mg)": 1.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Onions, white, raw",
     "nutrients": {
-      "Energy (kcal)": 148,
+      "Energy (kcal)": 35.0,
       "Carbohydrate, by difference (g)": 7.68,
       "Total lipid (fat) (g)": 0.13,
       "Protein (g)": 0.89,
@@ -1158,10 +1311,11 @@
   {
     "description": "Bananas, overripe, raw",
     "nutrients": {
-      "Energy (kcal)": 357,
+      "Energy (kcal)": 85.0,
       "Carbohydrate, by difference (g)": 20.1,
       "Total lipid (fat) (g)": 0.22,
       "Protein (g)": 0.73,
+      "Sodium, Na (mg)": null,
       "Fiber, total dietary (g)": 1.7
     }
   },
@@ -1179,6 +1333,7 @@
   {
     "description": "Apples, red delicious, with skin, raw",
     "nutrients": {
+      "Energy (kcal)": 61.86,
       "Carbohydrate, by difference (g)": 14.8,
       "Total lipid (fat) (g)": 0.212,
       "Protein (g)": 0.188,
@@ -1189,6 +1344,7 @@
   {
     "description": "Apples, fuji, with skin, raw",
     "nutrients": {
+      "Energy (kcal)": 64.85,
       "Carbohydrate, by difference (g)": 15.7,
       "Total lipid (fat) (g)": 0.162,
       "Protein (g)": 0.148,
@@ -1199,6 +1355,7 @@
   {
     "description": "Apples, gala, with skin, raw",
     "nutrients": {
+      "Energy (kcal)": 61.08,
       "Carbohydrate, by difference (g)": 14.8,
       "Total lipid (fat) (g)": 0.15,
       "Protein (g)": 0.133,
@@ -1209,6 +1366,7 @@
   {
     "description": "Apples, granny smith, with skin, raw",
     "nutrients": {
+      "Energy (kcal)": 58.71,
       "Carbohydrate, by difference (g)": 14.1,
       "Total lipid (fat) (g)": 0.138,
       "Protein (g)": 0.266,
@@ -1219,6 +1377,7 @@
   {
     "description": "Apples, honeycrisp, with skin, raw",
     "nutrients": {
+      "Energy (kcal)": 60.11,
       "Carbohydrate, by difference (g)": 14.7,
       "Total lipid (fat) (g)": 0.1,
       "Protein (g)": 0.102,
@@ -1228,23 +1387,52 @@
   },
   {
     "description": "Oil, peanut",
-    "nutrients": {}
+    "nutrients": {
+      "Energy (kcal)": 0,
+      "Carbohydrate, by difference (g)": null,
+      "Total lipid (fat) (g)": null,
+      "Protein (g)": null,
+      "Sodium, Na (mg)": null,
+      "Fiber, total dietary (g)": null
+    }
   },
   {
     "description": "Oil, sunflower",
-    "nutrients": {}
+    "nutrients": {
+      "Energy (kcal)": 0,
+      "Carbohydrate, by difference (g)": null,
+      "Total lipid (fat) (g)": null,
+      "Protein (g)": null,
+      "Sodium, Na (mg)": null,
+      "Fiber, total dietary (g)": null
+    }
   },
   {
     "description": "Oil, safflower",
-    "nutrients": {}
+    "nutrients": {
+      "Energy (kcal)": 0,
+      "Carbohydrate, by difference (g)": null,
+      "Total lipid (fat) (g)": null,
+      "Protein (g)": null,
+      "Sodium, Na (mg)": null,
+      "Fiber, total dietary (g)": null
+    }
   },
   {
     "description": "Oil, olive, extra light",
-    "nutrients": {}
+    "nutrients": {
+      "Energy (kcal)": 0,
+      "Carbohydrate, by difference (g)": null,
+      "Total lipid (fat) (g)": null,
+      "Protein (g)": null,
+      "Sodium, Na (mg)": null,
+      "Fiber, total dietary (g)": null
+    }
   },
   {
     "description": "Mushroom, lion's mane",
     "nutrients": {
+      "Energy (kcal)": 42.66,
       "Carbohydrate, by difference (g)": 7.59,
       "Total lipid (fat) (g)": 0.256,
       "Protein (g)": 2.5,
@@ -1255,6 +1443,7 @@
   {
     "description": "Mushroom, oyster",
     "nutrients": {
+      "Energy (kcal)": 41.05,
       "Carbohydrate, by difference (g)": 6.94,
       "Total lipid (fat) (g)": 0.188,
       "Protein (g)": 2.9,
@@ -1265,6 +1454,7 @@
   {
     "description": "Mushrooms, shiitake",
     "nutrients": {
+      "Energy (kcal)": 44.08,
       "Carbohydrate, by difference (g)": 8.17,
       "Total lipid (fat) (g)": 0.195,
       "Protein (g)": 2.41,
@@ -1275,6 +1465,7 @@
   {
     "description": "Mushrooms, white button",
     "nutrients": {
+      "Energy (kcal)": 31.22,
       "Carbohydrate, by difference (g)": 4.08,
       "Total lipid (fat) (g)": 0.371,
       "Protein (g)": 2.89,
@@ -1285,6 +1476,7 @@
   {
     "description": "Soy milk, unsweetened, plain, shelf stable",
     "nutrients": {
+      "Energy (kcal)": 38.44,
       "Carbohydrate, by difference (g)": 1.29,
       "Total lipid (fat) (g)": 2.12,
       "Protein (g)": 3.55,
@@ -1295,6 +1487,7 @@
   {
     "description": "Almond milk, unsweetened, plain, shelf stable",
     "nutrients": {
+      "Energy (kcal)": 14.55,
       "Carbohydrate, by difference (g)": 0.337,
       "Total lipid (fat) (g)": 1.22,
       "Protein (g)": 0.555,
@@ -1305,6 +1498,7 @@
   {
     "description": "Spinach, baby",
     "nutrients": {
+      "Energy (kcal)": 26.61,
       "Carbohydrate, by difference (g)": 2.41,
       "Total lipid (fat) (g)": 0.619,
       "Protein (g)": 2.85,
@@ -1315,6 +1509,7 @@
   {
     "description": "Spinach, mature",
     "nutrients": {
+      "Energy (kcal)": 27.64,
       "Carbohydrate, by difference (g)": 2.64,
       "Total lipid (fat) (g)": 0.604,
       "Protein (g)": 2.91,
@@ -1325,6 +1520,7 @@
   {
     "description": "Tomato, roma",
     "nutrients": {
+      "Energy (kcal)": 21.97,
       "Carbohydrate, by difference (g)": 3.84,
       "Total lipid (fat) (g)": 0.425,
       "Protein (g)": 0.696,
@@ -1335,6 +1531,7 @@
   {
     "description": "Flour, 00",
     "nutrients": {
+      "Energy (kcal)": 356.88,
       "Carbohydrate, by difference (g)": 74.4,
       "Total lipid (fat) (g)": 1.52,
       "Protein (g)": 11.4,
@@ -1345,6 +1542,7 @@
   {
     "description": "Flour, spelt, whole grain",
     "nutrients": {
+      "Energy (kcal)": 363.66,
       "Carbohydrate, by difference (g)": 70.7,
       "Total lipid (fat) (g)": 2.54,
       "Protein (g)": 14.5,
@@ -1355,6 +1553,7 @@
   {
     "description": "Flour, semolina, coarse and semi-coarse",
     "nutrients": {
+      "Energy (kcal)": 356.4,
       "Carbohydrate, by difference (g)": 73.8,
       "Total lipid (fat) (g)": 1.6,
       "Protein (g)": 11.7,
@@ -1365,6 +1564,7 @@
   {
     "description": "Flour, semolina, fine",
     "nutrients": {
+      "Energy (kcal)": 357.76,
       "Carbohydrate, by difference (g)": 72.0,
       "Total lipid (fat) (g)": 1.84,
       "Protein (g)": 13.3,
@@ -1375,78 +1575,95 @@
   {
     "description": "Apple juice, with added vitamin C, from concentrate, shelf stable",
     "nutrients": {
+      "Energy (kcal)": 48.52,
       "Carbohydrate, by difference (g)": 11.4,
       "Total lipid (fat) (g)": 0.286,
       "Protein (g)": 0.086,
-      "Sodium, Na (mg)": 4.87
+      "Sodium, Na (mg)": 4.87,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Orange juice, no pulp, not fortified, from concentrate, refrigerated",
     "nutrients": {
+      "Energy (kcal)": 47.06,
       "Carbohydrate, by difference (g)": 10.3,
       "Total lipid (fat) (g)": 0.325,
       "Protein (g)": 0.734,
-      "Sodium, Na (mg)": 5.23
+      "Sodium, Na (mg)": 5.23,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Grape juice, purple, with added vitamin C, from concentrate, shelf stable",
     "nutrients": {
+      "Energy (kcal)": 66.02,
       "Carbohydrate, by difference (g)": 15.6,
       "Total lipid (fat) (g)": 0.288,
       "Protein (g)": 0.258,
-      "Sodium, Na (mg)": 4.02
+      "Sodium, Na (mg)": 4.02,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Grape juice, white, with added vitamin C, from concentrate, shelf stable",
     "nutrients": {
+      "Energy (kcal)": 65.96,
       "Carbohydrate, by difference (g)": 15.8,
       "Total lipid (fat) (g)": 0.265,
       "Protein (g)": 0.094,
-      "Sodium, Na (mg)": 7.19
+      "Sodium, Na (mg)": 7.19,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cranberry juice, not fortified, from concentrate, shelf stable",
     "nutrients": {
+      "Energy (kcal)": 32.08,
       "Carbohydrate, by difference (g)": 7.26,
       "Total lipid (fat) (g)": 0.338,
       "Protein (g)": 0.0,
-      "Sodium, Na (mg)": 6.34
+      "Sodium, Na (mg)": 6.34,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Grapefruit juice, red, not fortified, not from concentrate, refrigerated",
     "nutrients": {
+      "Energy (kcal)": 41.08,
       "Carbohydrate, by difference (g)": 9.1,
       "Total lipid (fat) (g)": 0.267,
       "Protein (g)": 0.57,
-      "Sodium, Na (mg)": 1.03
+      "Sodium, Na (mg)": 1.03,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Tomato juice, with added ingredients, from concentrate, shelf stable",
     "nutrients": {
+      "Energy (kcal)": 23.31,
       "Carbohydrate, by difference (g)": 4.32,
       "Total lipid (fat) (g)": 0.288,
       "Protein (g)": 0.859,
-      "Sodium, Na (mg)": 236
+      "Sodium, Na (mg)": 236,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Orange juice, no pulp, not fortified, not from concentrate, refrigerated",
     "nutrients": {
+      "Energy (kcal)": 46.45,
       "Carbohydrate, by difference (g)": 10.0,
       "Total lipid (fat) (g)": 0.356,
       "Protein (g)": 0.812,
-      "Sodium, Na (mg)": 0.075
+      "Sodium, Na (mg)": 0.075,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Mushroom, portabella",
     "nutrients": {
+      "Energy (kcal)": 32.45,
       "Carbohydrate, by difference (g)": 4.66,
       "Total lipid (fat) (g)": 0.312,
       "Protein (g)": 2.75,
@@ -1457,6 +1674,7 @@
   {
     "description": "Mushroom, king oyster",
     "nutrients": {
+      "Energy (kcal)": 46.41,
       "Carbohydrate, by difference (g)": 8.5,
       "Total lipid (fat) (g)": 0.308,
       "Protein (g)": 2.41,
@@ -1467,6 +1685,7 @@
   {
     "description": "Mushroom, enoki",
     "nutrients": {
+      "Energy (kcal)": 44.45,
       "Carbohydrate, by difference (g)": 8.14,
       "Total lipid (fat) (g)": 0.245,
       "Protein (g)": 2.42,
@@ -1477,6 +1696,7 @@
   {
     "description": "Mushroom, crimini",
     "nutrients": {
+      "Energy (kcal)": 30.17,
       "Carbohydrate, by difference (g)": 4.01,
       "Total lipid (fat) (g)": 0.197,
       "Protein (g)": 3.09,
@@ -1487,6 +1707,7 @@
   {
     "description": "Mushroom, maitake",
     "nutrients": {
+      "Energy (kcal)": 37.59,
       "Carbohydrate, by difference (g)": 6.6,
       "Total lipid (fat) (g)": 0.265,
       "Protein (g)": 2.2,
@@ -1497,6 +1718,7 @@
   {
     "description": "Mushroom, beech",
     "nutrients": {
+      "Energy (kcal)": 39.8,
       "Carbohydrate, by difference (g)": 6.76,
       "Total lipid (fat) (g)": 0.449,
       "Protein (g)": 2.18,
@@ -1507,6 +1729,7 @@
   {
     "description": "Mushroom, pioppini",
     "nutrients": {
+      "Energy (kcal)": 39.2,
       "Carbohydrate, by difference (g)": 5.76,
       "Total lipid (fat) (g)": 0.24,
       "Protein (g)": 3.5,
@@ -1517,6 +1740,7 @@
   {
     "description": "Soy milk, sweetened, plain, refrigerated",
     "nutrients": {
+      "Energy (kcal)": 40.76,
       "Carbohydrate, by difference (g)": 3.0,
       "Total lipid (fat) (g)": 1.96,
       "Protein (g)": 2.78,
@@ -1527,6 +1751,7 @@
   {
     "description": "Almond milk, unsweetened, plain, refrigerated",
     "nutrients": {
+      "Energy (kcal)": 19.35,
       "Carbohydrate, by difference (g)": 0.671,
       "Total lipid (fat) (g)": 1.56,
       "Protein (g)": 0.656,
@@ -1537,6 +1762,7 @@
   {
     "description": "Oat milk, unsweetened, plain, refrigerated",
     "nutrients": {
+      "Energy (kcal)": 48.34,
       "Carbohydrate, by difference (g)": 5.1,
       "Total lipid (fat) (g)": 2.75,
       "Protein (g)": 0.797,
@@ -1547,6 +1773,7 @@
   {
     "description": "Carrots, mature, raw",
     "nutrients": {
+      "Energy (kcal)": 48.12,
       "Carbohydrate, by difference (g)": 10.3,
       "Total lipid (fat) (g)": 0.351,
       "Protein (g)": 0.941,
@@ -1557,6 +1784,7 @@
   {
     "description": "Carrots, baby, raw",
     "nutrients": {
+      "Energy (kcal)": 40.78,
       "Carbohydrate, by difference (g)": 9.08,
       "Total lipid (fat) (g)": 0.138,
       "Protein (g)": 0.805,
@@ -1567,6 +1795,7 @@
   {
     "description": "Peppers, bell, green, raw",
     "nutrients": {
+      "Energy (kcal)": 22.93,
       "Carbohydrate, by difference (g)": 4.78,
       "Total lipid (fat) (g)": 0.106,
       "Protein (g)": 0.715,
@@ -1577,6 +1806,7 @@
   {
     "description": "Peppers, bell, yellow, raw",
     "nutrients": {
+      "Energy (kcal)": 30.77,
       "Carbohydrate, by difference (g)": 6.6,
       "Total lipid (fat) (g)": 0.121,
       "Protein (g)": 0.819,
@@ -1587,6 +1817,7 @@
   {
     "description": "Peppers, bell, red, raw",
     "nutrients": {
+      "Energy (kcal)": 31.32,
       "Carbohydrate, by difference (g)": 6.65,
       "Total lipid (fat) (g)": 0.126,
       "Protein (g)": 0.896,
@@ -1597,6 +1828,7 @@
   {
     "description": "Peppers, bell, orange, raw",
     "nutrients": {
+      "Energy (kcal)": 31.73,
       "Carbohydrate, by difference (g)": 6.7,
       "Total lipid (fat) (g)": 0.156,
       "Protein (g)": 0.882,
@@ -1607,51 +1839,62 @@
   {
     "description": "Buttermilk, low fat",
     "nutrients": {
+      "Energy (kcal)": 42.8,
       "Carbohydrate, by difference (g)": 4.81,
       "Total lipid (fat) (g)": 1.08,
       "Protein (g)": 3.46,
-      "Sodium, Na (mg)": 92.5
+      "Sodium, Na (mg)": 92.5,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Yogurt, plain, whole milk",
     "nutrients": {
+      "Energy (kcal)": 77.88,
       "Carbohydrate, by difference (g)": 5.57,
       "Total lipid (fat) (g)": 4.48,
       "Protein (g)": 3.82,
-      "Sodium, Na (mg)": 41.8
+      "Sodium, Na (mg)": 41.8,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Yogurt, Greek, plain, whole milk",
     "nutrients": {
+      "Energy (kcal)": 93.63,
       "Carbohydrate, by difference (g)": 4.75,
       "Total lipid (fat) (g)": 4.39,
       "Protein (g)": 8.78,
-      "Sodium, Na (mg)": 33.8
+      "Sodium, Na (mg)": 33.8,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, parmesan, grated, refrigerated",
     "nutrients": {
+      "Energy (kcal)": 403.22,
       "Carbohydrate, by difference (g)": 4.33,
       "Total lipid (fat) (g)": 29.5,
       "Protein (g)": 30.1,
-      "Sodium, Na (mg)": 1050.0
+      "Sodium, Na (mg)": 1050.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, feta, whole milk, crumbled",
     "nutrients": {
+      "Energy (kcal)": 273.02,
       "Carbohydrate, by difference (g)": 5.58,
       "Total lipid (fat) (g)": 19.1,
       "Protein (g)": 19.7,
-      "Sodium, Na (mg)": 1030.0
+      "Sodium, Na (mg)": 1030.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Flour, almond",
     "nutrients": {
+      "Energy (kcal)": 621.4,
       "Carbohydrate, by difference (g)": 16.2,
       "Total lipid (fat) (g)": 50.2,
       "Protein (g)": 26.2,
@@ -1662,6 +1905,7 @@
   {
     "description": "Flour, oat, whole grain",
     "nutrients": {
+      "Energy (kcal)": 389.19,
       "Carbohydrate, by difference (g)": 69.9,
       "Total lipid (fat) (g)": 6.31,
       "Protein (g)": 13.2,
@@ -1672,6 +1916,7 @@
   {
     "description": "Flour, potato",
     "nutrients": {
+      "Energy (kcal)": 360.6,
       "Carbohydrate, by difference (g)": 79.9,
       "Total lipid (fat) (g)": 0.951,
       "Protein (g)": 8.11,
@@ -1682,6 +1927,7 @@
   {
     "description": "Peanut butter, creamy",
     "nutrients": {
+      "Energy (kcal)": 631.4,
       "Carbohydrate, by difference (g)": 22.7,
       "Total lipid (fat) (g)": 49.4,
       "Protein (g)": 24.0,
@@ -1692,6 +1938,7 @@
   {
     "description": "Sesame butter, creamy",
     "nutrients": {
+      "Energy (kcal)": 697.2,
       "Carbohydrate, by difference (g)": 14.2,
       "Total lipid (fat) (g)": 62.4,
       "Protein (g)": 19.7,
@@ -1702,6 +1949,7 @@
   {
     "description": "Almond butter, creamy",
     "nutrients": {
+      "Energy (kcal)": 645.0,
       "Carbohydrate, by difference (g)": 21.2,
       "Total lipid (fat) (g)": 53.0,
       "Protein (g)": 20.8,
@@ -1712,6 +1960,7 @@
   {
     "description": "Flaxseed, ground",
     "nutrients": {
+      "Energy (kcal)": 545.3,
       "Carbohydrate, by difference (g)": 34.4,
       "Total lipid (fat) (g)": 37.3,
       "Protein (g)": 18.0,
@@ -1722,78 +1971,95 @@
   {
     "description": "Cottage cheese, full fat, large or small curd",
     "nutrients": {
+      "Energy (kcal)": 102.78,
       "Carbohydrate, by difference (g)": 4.6,
       "Total lipid (fat) (g)": 4.22,
       "Protein (g)": 11.6,
-      "Sodium, Na (mg)": 350
+      "Sodium, Na (mg)": 350,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cream cheese, full fat, block",
     "nutrients": {
+      "Energy (kcal)": 342.9,
       "Carbohydrate, by difference (g)": 4.56,
       "Total lipid (fat) (g)": 33.5,
       "Protein (g)": 5.79,
-      "Sodium, Na (mg)": 368
+      "Sodium, Na (mg)": 368,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cream, heavy",
     "nutrients": {
+      "Energy (kcal)": 343.68,
       "Carbohydrate, by difference (g)": 3.8,
       "Total lipid (fat) (g)": 35.6,
       "Protein (g)": 2.02,
-      "Sodium, Na (mg)": 20.6
+      "Sodium, Na (mg)": 20.6,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cream, sour, full fat",
     "nutrients": {
+      "Energy (kcal)": 196.52,
       "Carbohydrate, by difference (g)": 5.56,
       "Total lipid (fat) (g)": 18.0,
       "Protein (g)": 3.07,
-      "Sodium, Na (mg)": 50.0
+      "Sodium, Na (mg)": 50.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Lettuce, iceberg, raw",
     "nutrients": {
+      "Energy (kcal)": 17.11,
       "Carbohydrate, by difference (g)": 3.37,
       "Total lipid (fat) (g)": 0.074,
       "Protein (g)": 0.742,
-      "Sodium, Na (mg)": 16.1
+      "Sodium, Na (mg)": 16.1,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Lettuce, romaine, green, raw",
     "nutrients": {
+      "Energy (kcal)": 20.79,
       "Carbohydrate, by difference (g)": 4.06,
       "Total lipid (fat) (g)": 0.071,
       "Protein (g)": 0.977,
-      "Sodium, Na (mg)": 23.0
+      "Sodium, Na (mg)": 23.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Lettuce, leaf, red, raw",
     "nutrients": {
+      "Energy (kcal)": 17.53,
       "Carbohydrate, by difference (g)": 3.26,
       "Total lipid (fat) (g)": 0.106,
       "Protein (g)": 0.883,
-      "Sodium, Na (mg)": 24.9
+      "Sodium, Na (mg)": 24.9,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Lettuce, leaf, green, raw",
     "nutrients": {
+      "Energy (kcal)": 22.04,
       "Carbohydrate, by difference (g)": 4.07,
       "Total lipid (fat) (g)": 0.156,
       "Protein (g)": 1.09,
-      "Sodium, Na (mg)": 28.9
+      "Sodium, Na (mg)": 28.9,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Nuts, pine nuts, raw",
     "nutrients": {
+      "Energy (kcal)": 688.9,
       "Carbohydrate, by difference (g)": 18.6,
       "Total lipid (fat) (g)": 61.3,
       "Protein (g)": 15.7,
@@ -1804,6 +2070,7 @@
   {
     "description": "Nuts, almonds, whole, raw",
     "nutrients": {
+      "Energy (kcal)": 625.9,
       "Carbohydrate, by difference (g)": 20.0,
       "Total lipid (fat) (g)": 51.1,
       "Protein (g)": 21.5,
@@ -1814,6 +2081,7 @@
   {
     "description": "Nuts, walnuts, English, halves, raw",
     "nutrients": {
+      "Energy (kcal)": 729.3,
       "Carbohydrate, by difference (g)": 10.9,
       "Total lipid (fat) (g)": 69.7,
       "Protein (g)": 14.6,
@@ -1824,6 +2092,7 @@
   {
     "description": "Nuts, pecans, halves, raw",
     "nutrients": {
+      "Energy (kcal)": 750.34,
       "Carbohydrate, by difference (g)": 12.7,
       "Total lipid (fat) (g)": 73.3,
       "Protein (g)": 9.96,
@@ -1834,24 +2103,29 @@
   {
     "description": "Oats, whole grain, rolled, old fashioned",
     "nutrients": {
+      "Energy (kcal)": 381.81,
       "Carbohydrate, by difference (g)": 68.7,
       "Total lipid (fat) (g)": 5.89,
       "Protein (g)": 13.5,
-      "Sodium, Na (mg)": 0.668
+      "Sodium, Na (mg)": 0.668,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Oats, whole grain, steel cut",
     "nutrients": {
+      "Energy (kcal)": 381.4,
       "Carbohydrate, by difference (g)": 69.8,
       "Total lipid (fat) (g)": 5.8,
       "Protein (g)": 12.5,
-      "Sodium, Na (mg)": 0.311
+      "Sodium, Na (mg)": 0.311,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Pineapple, raw",
     "nutrients": {
+      "Energy (kcal)": 60.14,
       "Carbohydrate, by difference (g)": 14.1,
       "Total lipid (fat) (g)": 0.211,
       "Protein (g)": 0.461,
@@ -1862,15 +2136,18 @@
   {
     "description": "Cherries, sweet, dark red, raw",
     "nutrients": {
+      "Energy (kcal)": 70.69,
       "Carbohydrate, by difference (g)": 16.2,
       "Total lipid (fat) (g)": 0.192,
       "Protein (g)": 1.04,
-      "Sodium, Na (mg)": 0.0
+      "Sodium, Na (mg)": 0.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beans, snap, green, raw",
     "nutrients": {
+      "Energy (kcal)": 40.0,
       "Carbohydrate, by difference (g)": 7.41,
       "Total lipid (fat) (g)": 0.275,
       "Protein (g)": 1.97,
@@ -1881,132 +2158,161 @@
   {
     "description": "Potatoes, russet, without skin, raw",
     "nutrients": {
+      "Energy (kcal)": 83.52,
       "Carbohydrate, by difference (g)": 17.8,
       "Total lipid (fat) (g)": 0.36,
       "Protein (g)": 2.27,
-      "Sodium, Na (mg)": 2.74
+      "Sodium, Na (mg)": 2.74,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Potatoes, red, without skin, raw",
     "nutrients": {
+      "Energy (kcal)": 75.67,
       "Carbohydrate, by difference (g)": 16.3,
       "Total lipid (fat) (g)": 0.248,
       "Protein (g)": 2.06,
-      "Sodium, Na (mg)": 2.86
+      "Sodium, Na (mg)": 2.86,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Potatoes, gold, without skin, raw",
     "nutrients": {
+      "Energy (kcal)": 73.62,
       "Carbohydrate, by difference (g)": 16.0,
       "Total lipid (fat) (g)": 0.264,
       "Protein (g)": 1.81,
-      "Sodium, Na (mg)": 2.24
+      "Sodium, Na (mg)": 2.24,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Sweet potatoes, orange flesh, without skin, raw",
     "nutrients": {
+      "Energy (kcal)": 78.9,
       "Carbohydrate, by difference (g)": 17.3,
       "Total lipid (fat) (g)": 0.375,
       "Protein (g)": 1.58,
-      "Sodium, Na (mg)": 0.0
+      "Sodium, Na (mg)": 0.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Celery, raw",
     "nutrients": {
+      "Energy (kcal)": 16.71,
       "Carbohydrate, by difference (g)": 3.32,
       "Total lipid (fat) (g)": 0.162,
       "Protein (g)": 0.492,
-      "Sodium, Na (mg)": 97.2
+      "Sodium, Na (mg)": 97.2,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cucumber, with peel, raw",
     "nutrients": {
+      "Energy (kcal)": 15.9,
       "Carbohydrate, by difference (g)": 2.95,
       "Total lipid (fat) (g)": 0.178,
       "Protein (g)": 0.625,
-      "Sodium, Na (mg)": 1.52
+      "Sodium, Na (mg)": 1.52,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cabbage, green, raw",
     "nutrients": {
+      "Energy (kcal)": 31.42,
       "Carbohydrate, by difference (g)": 6.38,
       "Total lipid (fat) (g)": 0.228,
       "Protein (g)": 0.961,
-      "Sodium, Na (mg)": 16.1
+      "Sodium, Na (mg)": 16.1,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cabbage, red, raw",
     "nutrients": {
+      "Energy (kcal)": 34.05,
       "Carbohydrate, by difference (g)": 6.79,
       "Total lipid (fat) (g)": 0.214,
       "Protein (g)": 1.24,
-      "Sodium, Na (mg)": 11.7
+      "Sodium, Na (mg)": 11.7,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Strawberries, raw",
     "nutrients": {
+      "Energy (kcal)": 36.38,
       "Carbohydrate, by difference (g)": 7.96,
       "Total lipid (fat) (g)": 0.22,
       "Protein (g)": 0.641,
-      "Sodium, Na (mg)": 0.0
+      "Sodium, Na (mg)": 0.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Raspberries, raw",
     "nutrients": {
+      "Energy (kcal)": 57.33,
       "Carbohydrate, by difference (g)": 12.9,
       "Total lipid (fat) (g)": 0.188,
       "Protein (g)": 1.01,
-      "Sodium, Na (mg)": 0.0
+      "Sodium, Na (mg)": 0.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Blueberries, raw",
     "nutrients": {
+      "Energy (kcal)": 63.97,
       "Carbohydrate, by difference (g)": 14.6,
       "Total lipid (fat) (g)": 0.306,
       "Protein (g)": 0.703,
-      "Sodium, Na (mg)": 0.0
+      "Sodium, Na (mg)": 0.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Grapes, red, seedless, raw",
     "nutrients": {
+      "Energy (kcal)": 85.93,
       "Carbohydrate, by difference (g)": 20.2,
       "Total lipid (fat) (g)": 0.164,
       "Protein (g)": 0.914,
-      "Sodium, Na (mg)": 7.0
+      "Sodium, Na (mg)": 7.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Grapes, green, seedless, raw",
     "nutrients": {
+      "Energy (kcal)": 80.08,
       "Carbohydrate, by difference (g)": 18.6,
       "Total lipid (fat) (g)": 0.232,
       "Protein (g)": 0.899,
-      "Sodium, Na (mg)": 3.17
+      "Sodium, Na (mg)": 3.17,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Applesauce, unsweetened, with added vitamin C",
     "nutrients": {
+      "Energy (kcal)": 51.75,
       "Carbohydrate, by difference (g)": 12.3,
       "Total lipid (fat) (g)": 0.162,
       "Protein (g)": 0.273,
-      "Sodium, Na (mg)": 0.504
+      "Sodium, Na (mg)": 0.504,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Flour, amaranth",
     "nutrients": {
+      "Energy (kcal)": 384.16,
       "Carbohydrate, by difference (g)": 68.8,
       "Total lipid (fat) (g)": 6.24,
       "Protein (g)": 13.2,
@@ -2017,6 +2323,7 @@
   {
     "description": "Flour, quinoa",
     "nutrients": {
+      "Energy (kcal)": 385.0,
       "Carbohydrate, by difference (g)": 69.5,
       "Total lipid (fat) (g)": 6.6,
       "Protein (g)": 11.9,
@@ -2027,6 +2334,7 @@
   {
     "description": "Flour, sorghum",
     "nutrients": {
+      "Energy (kcal)": 374.99,
       "Carbohydrate, by difference (g)": 77.4,
       "Total lipid (fat) (g)": 3.59,
       "Protein (g)": 8.27,
@@ -2037,6 +2345,7 @@
   {
     "description": "Flour, buckwheat",
     "nutrients": {
+      "Energy (kcal)": 357.84,
       "Carbohydrate, by difference (g)": 75.0,
       "Total lipid (fat) (g)": 2.48,
       "Protein (g)": 8.88,
@@ -2047,6 +2356,7 @@
   {
     "description": "Flour, rye",
     "nutrients": {
+      "Energy (kcal)": 359.59,
       "Carbohydrate, by difference (g)": 77.2,
       "Total lipid (fat) (g)": 1.91,
       "Protein (g)": 8.4,
@@ -2057,6 +2367,7 @@
   {
     "description": "Flour, barley",
     "nutrients": {
+      "Energy (kcal)": 366.53,
       "Carbohydrate, by difference (g)": 77.4,
       "Total lipid (fat) (g)": 2.45,
       "Protein (g)": 8.72,
@@ -2067,6 +2378,7 @@
   {
     "description": "Flour, cassava",
     "nutrients": {
+      "Energy (kcal)": 357.32,
       "Carbohydrate, by difference (g)": 87.3,
       "Total lipid (fat) (g)": 0.494,
       "Protein (g)": 0.918,
@@ -2077,6 +2389,7 @@
   {
     "description": "Buckwheat, whole grain",
     "nutrients": {
+      "Energy (kcal)": 356.16,
       "Carbohydrate, by difference (g)": 71.1,
       "Total lipid (fat) (g)": 3.04,
       "Protein (g)": 11.1,
@@ -2087,6 +2400,7 @@
   {
     "description": "Millet, whole grain",
     "nutrients": {
+      "Energy (kcal)": 375.31,
       "Carbohydrate, by difference (g)": 74.4,
       "Total lipid (fat) (g)": 4.19,
       "Protein (g)": 10.0,
@@ -2097,6 +2411,7 @@
   {
     "description": "Rice, brown, long grain, unenriched, raw",
     "nutrients": {
+      "Energy (kcal)": 365.59,
       "Carbohydrate, by difference (g)": 76.7,
       "Total lipid (fat) (g)": 3.31,
       "Protein (g)": 7.25,
@@ -2107,6 +2422,7 @@
   {
     "description": "Rice, white, long grain, unenriched, raw",
     "nutrients": {
+      "Energy (kcal)": 358.63,
       "Carbohydrate, by difference (g)": 80.3,
       "Total lipid (fat) (g)": 1.03,
       "Protein (g)": 7.04,
@@ -2117,51 +2433,62 @@
   {
     "description": "Beef, ground, 90% lean meat / 10% fat, raw",
     "nutrients": {
+      "Energy (kcal)": 188.0,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 12.8,
       "Protein (g)": 18.2,
-      "Sodium, Na (mg)": 61.6
+      "Sodium, Na (mg)": 61.6,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beef, ground, 80% lean meat / 20% fat, raw",
     "nutrients": {
+      "Energy (kcal)": 244.6,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 19.4,
       "Protein (g)": 17.5,
-      "Sodium, Na (mg)": 54.9
+      "Sodium, Na (mg)": 54.9,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Pork, ground, raw",
     "nutrients": {
+      "Energy (kcal)": 228.7,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 17.5,
       "Protein (g)": 17.8,
-      "Sodium, Na (mg)": 53.6
+      "Sodium, Na (mg)": 53.6,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Chicken, ground, with additives, raw",
     "nutrients": {
+      "Energy (kcal)": 136.04,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 7.16,
       "Protein (g)": 17.9,
-      "Sodium, Na (mg)": 63.0
+      "Sodium, Na (mg)": 63.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Turkey, ground, 93% lean/ 7% fat, raw",
     "nutrients": {
+      "Energy (kcal)": 155.51,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 9.59,
       "Protein (g)": 17.3,
-      "Sodium, Na (mg)": 80.2
+      "Sodium, Na (mg)": 80.2,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Nuts, brazilnuts, raw",
     "nutrients": {
+      "Energy (kcal)": 663.0,
       "Carbohydrate, by difference (g)": 21.6,
       "Total lipid (fat) (g)": 57.4,
       "Protein (g)": 15.0,
@@ -2172,6 +2499,7 @@
   {
     "description": "Nuts, cashew nuts, raw",
     "nutrients": {
+      "Energy (kcal)": 564.9,
       "Carbohydrate, by difference (g)": 36.3,
       "Total lipid (fat) (g)": 38.9,
       "Protein (g)": 17.4,
@@ -2182,6 +2510,7 @@
   {
     "description": "Nuts, hazelnuts or filberts, raw",
     "nutrients": {
+      "Energy (kcal)": 641.5,
       "Carbohydrate, by difference (g)": 26.5,
       "Total lipid (fat) (g)": 53.5,
       "Protein (g)": 13.5,
@@ -2192,6 +2521,7 @@
   {
     "description": "Peanuts, raw",
     "nutrients": {
+      "Energy (kcal)": 588.5,
       "Carbohydrate, by difference (g)": 26.5,
       "Total lipid (fat) (g)": 43.3,
       "Protein (g)": 23.2,
@@ -2202,6 +2532,7 @@
   {
     "description": "Flour, chestnut",
     "nutrients": {
+      "Energy (kcal)": 384.92,
       "Carbohydrate, by difference (g)": 80.5,
       "Total lipid (fat) (g)": 4.64,
       "Protein (g)": 5.29,
@@ -2212,6 +2543,7 @@
   {
     "description": "Nuts, macadamia nuts, raw",
     "nutrients": {
+      "Energy (kcal)": 711.66,
       "Carbohydrate, by difference (g)": 24.1,
       "Total lipid (fat) (g)": 64.9,
       "Protein (g)": 7.79,
@@ -2222,6 +2554,7 @@
   {
     "description": "Nuts, pistachio nuts, raw",
     "nutrients": {
+      "Energy (kcal)": 597.8,
       "Carbohydrate, by difference (g)": 27.7,
       "Total lipid (fat) (g)": 45.0,
       "Protein (g)": 20.5,
@@ -2232,6 +2565,7 @@
   {
     "description": "Seeds, pumpkin seeds (pepitas), raw",
     "nutrients": {
+      "Energy (kcal)": 554.4,
       "Carbohydrate, by difference (g)": 18.7,
       "Total lipid (fat) (g)": 40.0,
       "Protein (g)": 29.9,
@@ -2242,6 +2576,7 @@
   {
     "description": "Seeds, sunflower seed, kernel, raw",
     "nutrients": {
+      "Energy (kcal)": 609.2,
       "Carbohydrate, by difference (g)": 24.5,
       "Total lipid (fat) (g)": 48.4,
       "Protein (g)": 18.9,
@@ -2252,6 +2587,7 @@
   {
     "description": "Flour, coconut",
     "nutrients": {
+      "Energy (kcal)": 437.7,
       "Carbohydrate, by difference (g)": 58.9,
       "Total lipid (fat) (g)": 15.3,
       "Protein (g)": 16.1,
@@ -2262,330 +2598,404 @@
   {
     "description": "Beans, cannellini, dry",
     "nutrients": {
+      "Energy (kcal)": 345.4,
       "Carbohydrate, by difference (g)": 59.8,
       "Total lipid (fat) (g)": 2.2,
       "Protein (g)": 21.6,
-      "Sodium, Na (mg)": 0.0
+      "Sodium, Na (mg)": 0.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Chickpeas, (garbanzo beans, bengal gram), dry",
     "nutrients": {
+      "Energy (kcal)": 383.23,
       "Carbohydrate, by difference (g)": 60.4,
       "Total lipid (fat) (g)": 6.27,
       "Protein (g)": 21.3,
-      "Sodium, Na (mg)": 8.78
+      "Sodium, Na (mg)": 8.78,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Lentils, dry",
     "nutrients": {
+      "Energy (kcal)": 360.48,
       "Carbohydrate, by difference (g)": 62.2,
       "Total lipid (fat) (g)": 1.92,
       "Protein (g)": 23.6,
-      "Sodium, Na (mg)": 0.0
+      "Sodium, Na (mg)": 0.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Blackeye pea, dry",
     "nutrients": {
+      "Energy (kcal)": 353.78,
       "Carbohydrate, by difference (g)": 61.8,
       "Total lipid (fat) (g)": 2.42,
       "Protein (g)": 21.2,
-      "Sodium, Na (mg)": 3.46
+      "Sodium, Na (mg)": 3.46,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beans, black, canned, sodium added, drained and rinsed",
     "nutrients": {
+      "Energy (kcal)": 118.27,
       "Carbohydrate, by difference (g)": 19.8,
       "Total lipid (fat) (g)": 1.27,
       "Protein (g)": 6.91,
-      "Sodium, Na (mg)": 218
+      "Sodium, Na (mg)": 218,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beans, navy, canned, sodium added, drained and rinsed",
     "nutrients": {
+      "Energy (kcal)": 118.88,
       "Carbohydrate, by difference (g)": 20.0,
       "Total lipid (fat) (g)": 1.4,
       "Protein (g)": 6.57,
-      "Sodium, Na (mg)": 190
+      "Sodium, Na (mg)": 190,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beans, cannellini, canned, sodium added, drained and rinsed",
     "nutrients": {
+      "Energy (kcal)": 115.37,
       "Carbohydrate, by difference (g)": 18.8,
       "Total lipid (fat) (g)": 1.17,
       "Protein (g)": 7.41,
-      "Sodium, Na (mg)": 164
+      "Sodium, Na (mg)": 164,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Chickpeas (garbanzo beans, bengal gram), canned, sodium added, drained and rinsed",
     "nutrients": {
+      "Energy (kcal)": 137.18,
       "Carbohydrate, by difference (g)": 20.3,
       "Total lipid (fat) (g)": 3.1,
       "Protein (g)": 7.02,
-      "Sodium, Na (mg)": 202
+      "Sodium, Na (mg)": 202,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beans, kidney, dark red, canned, sodium added, sugar added, drained and rinsed",
     "nutrients": {
+      "Energy (kcal)": 126.54,
       "Carbohydrate, by difference (g)": 21.0,
       "Total lipid (fat) (g)": 1.26,
       "Protein (g)": 7.8,
-      "Sodium, Na (mg)": 172
+      "Sodium, Na (mg)": 172,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beans, kidney, light red, canned, sodium added, sugar added, drained and rinsed",
     "nutrients": {
+      "Energy (kcal)": 126.54,
       "Carbohydrate, by difference (g)": 21.4,
       "Total lipid (fat) (g)": 1.3,
       "Protein (g)": 7.31,
-      "Sodium, Na (mg)": 158
+      "Sodium, Na (mg)": 158,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Peas, green, sweet, canned, sodium added, sugar added, drained and rinsed",
     "nutrients": {
+      "Energy (kcal)": 80.07,
       "Carbohydrate, by difference (g)": 12.7,
       "Total lipid (fat) (g)": 1.15,
       "Protein (g)": 4.73,
-      "Sodium, Na (mg)": 207
+      "Sodium, Na (mg)": 207,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beans, pinto, canned, sodium added, drained and rinsed",
     "nutrients": {
+      "Energy (kcal)": 116.59,
       "Carbohydrate, by difference (g)": 19.6,
       "Total lipid (fat) (g)": 1.27,
       "Protein (g)": 6.69,
-      "Sodium, Na (mg)": 202
+      "Sodium, Na (mg)": 202,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Blackeye pea, canned, sodium added, drained and rinsed",
     "nutrients": {
+      "Energy (kcal)": 116.18,
       "Carbohydrate, by difference (g)": 19.2,
       "Total lipid (fat) (g)": 1.3,
       "Protein (g)": 6.92,
-      "Sodium, Na (mg)": 227
+      "Sodium, Na (mg)": 227,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beans, great northern, canned, sodium added, drained and rinsed",
     "nutrients": {
+      "Energy (kcal)": 116.75,
       "Carbohydrate, by difference (g)": 19.3,
       "Total lipid (fat) (g)": 1.27,
       "Protein (g)": 7.03,
-      "Sodium, Na (mg)": 223
+      "Sodium, Na (mg)": 223,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Pork, loin, boneless, raw",
     "nutrients": {
+      "Energy (kcal)": 169.63,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 9.47,
       "Protein (g)": 21.1,
-      "Sodium, Na (mg)": 40.2
+      "Sodium, Na (mg)": 40.2,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Pork, loin, tenderloin, boneless, raw",
     "nutrients": {
+      "Energy (kcal)": 121.5,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 3.9,
       "Protein (g)": 21.6,
-      "Sodium, Na (mg)": 41.4
+      "Sodium, Na (mg)": 41.4,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Chicken, breast, boneless, skinless, raw",
     "nutrients": {
+      "Energy (kcal)": 107.37,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 1.93,
       "Protein (g)": 22.5,
-      "Sodium, Na (mg)": 65.8
+      "Sodium, Na (mg)": 65.8,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Chicken, thigh, boneless, skinless, raw",
     "nutrients": {
+      "Energy (kcal)": 145.68,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 7.92,
       "Protein (g)": 18.6,
-      "Sodium, Na (mg)": 62.3
+      "Sodium, Na (mg)": 62.3,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beef, ribeye, steak, boneless, choice, raw",
     "nutrients": {
+      "Energy (kcal)": 254.8,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 20.0,
       "Protein (g)": 18.7,
-      "Sodium, Na (mg)": 42.5
+      "Sodium, Na (mg)": 42.5,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beef, round, top round, boneless, choice, raw",
     "nutrients": {
+      "Energy (kcal)": 140.71,
       "Carbohydrate, by difference (g)": 0.852,
       "Total lipid (fat) (g)": 5.7,
       "Protein (g)": 21.5,
-      "Sodium, Na (mg)": 45.5
+      "Sodium, Na (mg)": 45.5,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beef, chuck, roast, boneless, choice, raw",
     "nutrients": {
+      "Energy (kcal)": 233.8,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 17.8,
       "Protein (g)": 18.4,
-      "Sodium, Na (mg)": 48.4
+      "Sodium, Na (mg)": 48.4,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Beef, flank, steak, boneless, choice, raw",
     "nutrients": {
+      "Energy (kcal)": 165.0,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 9.4,
       "Protein (g)": 20.1,
-      "Sodium, Na (mg)": 51.3
+      "Sodium, Na (mg)": 51.3,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Yogurt, plain, nonfat",
     "nutrients": {
+      "Energy (kcal)": 50.02,
       "Carbohydrate, by difference (g)": 8.08,
       "Total lipid (fat) (g)": 0.087,
       "Protein (g)": 4.23,
-      "Sodium, Na (mg)": 51.5
+      "Sodium, Na (mg)": 51.5,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, monterey jack, solid",
     "nutrients": {
+      "Energy (kcal)": 391.4,
       "Carbohydrate, by difference (g)": 1.9,
       "Total lipid (fat) (g)": 32.6,
       "Protein (g)": 22.6,
-      "Sodium, Na (mg)": 662
+      "Sodium, Na (mg)": 662,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, pasteurized process cheese food or product, American, singles",
     "nutrients": {
+      "Energy (kcal)": 310.26,
       "Carbohydrate, by difference (g)": 8.19,
       "Total lipid (fat) (g)": 23.9,
       "Protein (g)": 15.6,
-      "Sodium, Na (mg)": 1420.0
+      "Sodium, Na (mg)": 1420.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, provolone, sliced",
     "nutrients": {
+      "Energy (kcal)": 356.7,
       "Carbohydrate, by difference (g)": 2.45,
       "Total lipid (fat) (g)": 28.1,
       "Protein (g)": 23.5,
-      "Sodium, Na (mg)": 601
+      "Sodium, Na (mg)": 601,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, oaxaca, solid",
     "nutrients": {
+      "Energy (kcal)": 296.9,
       "Carbohydrate, by difference (g)": 2.4,
       "Total lipid (fat) (g)": 22.1,
       "Protein (g)": 22.1,
-      "Sodium, Na (mg)": 734
+      "Sodium, Na (mg)": 734,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, queso fresco, solid",
     "nutrients": {
+      "Energy (kcal)": 298.04,
       "Carbohydrate, by difference (g)": 2.96,
       "Total lipid (fat) (g)": 23.4,
       "Protein (g)": 18.9,
-      "Sodium, Na (mg)": 626
+      "Sodium, Na (mg)": 626,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Cheese, cotija, solid",
     "nutrients": {
+      "Energy (kcal)": 350.88,
       "Carbohydrate, by difference (g)": 2.72,
       "Total lipid (fat) (g)": 27.2,
       "Protein (g)": 23.8,
-      "Sodium, Na (mg)": 1620.0
+      "Sodium, Na (mg)": 1620.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Fish, salmon, sockeye, wild caught, raw",
     "nutrients": {
+      "Energy (kcal)": 133.66,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 4.94,
       "Protein (g)": 22.3,
-      "Sodium, Na (mg)": 53.3
+      "Sodium, Na (mg)": 53.3,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Fish, salmon, Atlantic, farm raised, raw",
     "nutrients": {
+      "Energy (kcal)": 199.1,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 13.1,
       "Protein (g)": 20.3,
-      "Sodium, Na (mg)": 49.5
+      "Sodium, Na (mg)": 49.5,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Fish, tilapia, farm raised, raw",
     "nutrients": {
+      "Energy (kcal)": 98.32,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 2.48,
       "Protein (g)": 19.0,
-      "Sodium, Na (mg)": 93.7
+      "Sodium, Na (mg)": 93.7,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Crustaceans, shrimp, farm raised, raw",
     "nutrients": {
+      "Energy (kcal)": 71.55,
       "Carbohydrate, by difference (g)": 0.485,
       "Total lipid (fat) (g)": 0.801,
       "Protein (g)": 15.6,
-      "Sodium, Na (mg)": 475
+      "Sodium, Na (mg)": 475,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Fish, cod, Atlantic, wild caught, raw",
     "nutrients": {
+      "Energy (kcal)": 70.41,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 0.668,
       "Protein (g)": 16.1,
-      "Sodium, Na (mg)": 299
+      "Sodium, Na (mg)": 299,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Fish, catfish, farm raised, raw",
     "nutrients": {
+      "Energy (kcal)": 131.79,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 7.31,
       "Protein (g)": 16.5,
-      "Sodium, Na (mg)": 60.5
+      "Sodium, Na (mg)": 60.5,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Crustaceans, crab, blue swimming, lump, pasteurized, refrigerated",
     "nutrients": {
+      "Energy (kcal)": 81.67,
       "Carbohydrate, by difference (g)": 0.0,
       "Total lipid (fat) (g)": 0.808,
       "Protein (g)": 18.6,
-      "Sodium, Na (mg)": 331
+      "Sodium, Na (mg)": 331,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Squash, summer, green, zucchini, includes skin, raw",
     "nutrients": {
+      "Energy (kcal)": 5.78,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 0.205,
       "Protein (g)": 0.984,
       "Sodium, Na (mg)": 0.0,
@@ -2595,6 +3005,8 @@
   {
     "description": "Squash, summer, yellow, includes skin, raw",
     "nutrients": {
+      "Energy (kcal)": 4.78,
+      "Carbohydrate, by difference (g)": null,
       "Total lipid (fat) (g)": 0.135,
       "Protein (g)": 0.891,
       "Sodium, Na (mg)": 0.0,
@@ -2604,6 +3016,7 @@
   {
     "description": "Squash, winter, butternut, raw",
     "nutrients": {
+      "Energy (kcal)": 48.11,
       "Carbohydrate, by difference (g)": 10.5,
       "Total lipid (fat) (g)": 0.168,
       "Protein (g)": 1.15,
@@ -2614,6 +3027,7 @@
   {
     "description": "Squash, winter, acorn, raw",
     "nutrients": {
+      "Energy (kcal)": 48.64,
       "Carbohydrate, by difference (g)": 10.5,
       "Total lipid (fat) (g)": 0.182,
       "Protein (g)": 1.25,
@@ -2624,6 +3038,7 @@
   {
     "description": "Cabbage, bok choy, raw",
     "nutrients": {
+      "Energy (kcal)": 20.23,
       "Carbohydrate, by difference (g)": 3.51,
       "Total lipid (fat) (g)": 0.234,
       "Protein (g)": 1.02,
@@ -2634,6 +3049,7 @@
   {
     "description": "Cauliflower, raw",
     "nutrients": {
+      "Energy (kcal)": 27.58,
       "Carbohydrate, by difference (g)": 4.72,
       "Total lipid (fat) (g)": 0.238,
       "Protein (g)": 1.64,
@@ -2644,6 +3060,7 @@
   {
     "description": "Collards, raw",
     "nutrients": {
+      "Energy (kcal)": 46.89,
       "Carbohydrate, by difference (g)": 7.02,
       "Total lipid (fat) (g)": 0.77,
       "Protein (g)": 2.97,
@@ -2654,6 +3071,7 @@
   {
     "description": "Brussels sprouts, raw",
     "nutrients": {
+      "Energy (kcal)": 59.48,
       "Carbohydrate, by difference (g)": 9.62,
       "Total lipid (fat) (g)": 0.565,
       "Protein (g)": 3.98,
@@ -2664,6 +3082,7 @@
   {
     "description": "Beets, raw",
     "nutrients": {
+      "Energy (kcal)": 44.64,
       "Carbohydrate, by difference (g)": 8.79,
       "Total lipid (fat) (g)": 0.302,
       "Protein (g)": 1.69,
@@ -2674,6 +3093,7 @@
   {
     "description": "Eggplant, raw",
     "nutrients": {
+      "Energy (kcal)": 26.09,
       "Carbohydrate, by difference (g)": 5.4,
       "Total lipid (fat) (g)": 0.12,
       "Protein (g)": 0.852,
@@ -2684,6 +3104,7 @@
   {
     "description": "Tomatoes, whole, canned, solids and liquids, with salt added",
     "nutrients": {
+      "Energy (kcal)": 22.49,
       "Carbohydrate, by difference (g)": 4.29,
       "Total lipid (fat) (g)": 0.206,
       "Protein (g)": 0.868,
@@ -2694,6 +3115,7 @@
   {
     "description": "Tomato, sauce, canned, with salt added",
     "nutrients": {
+      "Energy (kcal)": 34.16,
       "Carbohydrate, by difference (g)": 6.33,
       "Total lipid (fat) (g)": 0.382,
       "Protein (g)": 1.35,
@@ -2704,6 +3126,7 @@
   {
     "description": "Tomato, paste, canned, without salt added",
     "nutrients": {
+      "Energy (kcal)": 104.31,
       "Carbohydrate, by difference (g)": 20.2,
       "Total lipid (fat) (g)": 0.732,
       "Protein (g)": 4.23,
@@ -2714,6 +3137,7 @@
   {
     "description": "Tomatoes, crushed, canned",
     "nutrients": {
+      "Energy (kcal)": 37.9,
       "Carbohydrate, by difference (g)": 7.14,
       "Total lipid (fat) (g)": 0.398,
       "Protein (g)": 1.44,
@@ -2724,6 +3148,7 @@
   {
     "description": "Tomato, puree, canned",
     "nutrients": {
+      "Energy (kcal)": 40.86,
       "Carbohydrate, by difference (g)": 8.04,
       "Total lipid (fat) (g)": 0.265,
       "Protein (g)": 1.58,
@@ -2734,6 +3159,7 @@
   {
     "description": "Apricot, with skin, raw",
     "nutrients": {
+      "Energy (kcal)": 48.29,
       "Carbohydrate, by difference (g)": 10.2,
       "Total lipid (fat) (g)": 0.405,
       "Protein (g)": 0.961,
@@ -2744,15 +3170,18 @@
   {
     "description": "Melons, honeydew, raw",
     "nutrients": {
+      "Energy (kcal)": 36.67,
       "Carbohydrate, by difference (g)": 8.15,
       "Total lipid (fat) (g)": 0.216,
       "Protein (g)": 0.531,
-      "Sodium, Na (mg)": 21.2
+      "Sodium, Na (mg)": 21.2,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Plantains, ripe, raw",
     "nutrients": {
+      "Energy (kcal)": 136.68,
       "Carbohydrate, by difference (g)": 31.0,
       "Total lipid (fat) (g)": 0.893,
       "Protein (g)": 1.16,
@@ -2763,6 +3192,7 @@
   {
     "description": "Plantains, underripe, raw",
     "nutrients": {
+      "Energy (kcal)": 145.49,
       "Carbohydrate, by difference (g)": 33.6,
       "Total lipid (fat) (g)": 0.685,
       "Protein (g)": 1.23,
@@ -2773,15 +3203,18 @@
   {
     "description": "Chia seeds, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 517.3,
       "Carbohydrate, by difference (g)": 38.3,
       "Total lipid (fat) (g)": 32.9,
       "Protein (g)": 17.0,
-      "Sodium, Na (mg)": 0.0
+      "Sodium, Na (mg)": 0.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Bulgur, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 372.58,
       "Carbohydrate, by difference (g)": 75.9,
       "Total lipid (fat) (g)": 2.42,
       "Protein (g)": 11.8,
@@ -2792,6 +3225,7 @@
   {
     "description": "Wild rice, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 369.3,
       "Carbohydrate, by difference (g)": 75.7,
       "Total lipid (fat) (g)": 1.7,
       "Protein (g)": 12.8,
@@ -2802,6 +3236,7 @@
   {
     "description": "Arugula, baby, raw",
     "nutrients": {
+      "Energy (kcal)": 31.01,
       "Carbohydrate, by difference (g)": 5.37,
       "Total lipid (fat) (g)": 0.325,
       "Protein (g)": 1.65,
@@ -2812,6 +3247,7 @@
   {
     "description": "Asparagus, green, raw",
     "nutrients": {
+      "Energy (kcal)": 28.1,
       "Carbohydrate, by difference (g)": 5.1,
       "Total lipid (fat) (g)": 0.216,
       "Protein (g)": 1.44,
@@ -2822,15 +3258,18 @@
   {
     "description": "Avocado, Hass, peeled, raw",
     "nutrients": {
+      "Energy (kcal)": 223.22,
       "Carbohydrate, by difference (g)": 8.32,
       "Total lipid (fat) (g)": 20.3,
       "Protein (g)": 1.81,
-      "Sodium, Na (mg)": 0.0
+      "Sodium, Na (mg)": 0.0,
+      "Fiber, total dietary (g)": null
     }
   },
   {
     "description": "Rice, black, unenriched, raw",
     "nutrients": {
+      "Energy (kcal)": 370.04,
       "Carbohydrate, by difference (g)": 77.2,
       "Total lipid (fat) (g)": 3.44,
       "Protein (g)": 7.57,
@@ -2839,8 +3278,9 @@
     }
   },
   {
-    "description": "Corn, sweet, yellow and white kernels,  fresh, raw",
+    "description": "Corn, sweet, yellow and white kernels, \u00a0fresh, raw",
     "nutrients": {
+      "Energy (kcal)": 84.63,
       "Carbohydrate, by difference (g)": 14.7,
       "Total lipid (fat) (g)": 1.63,
       "Protein (g)": 2.79,
@@ -2851,6 +3291,7 @@
   {
     "description": "Einkorn, grain, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 369.49,
       "Carbohydrate, by difference (g)": 68.7,
       "Total lipid (fat) (g)": 3.81,
       "Protein (g)": 15.1,
@@ -2861,6 +3302,7 @@
   {
     "description": "Farro, pearled, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 366.7,
       "Carbohydrate, by difference (g)": 72.1,
       "Total lipid (fat) (g)": 3.1,
       "Protein (g)": 12.6,
@@ -2871,6 +3313,7 @@
   {
     "description": "Fonio, grain, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 369.09,
       "Carbohydrate, by difference (g)": 81.3,
       "Total lipid (fat) (g)": 1.69,
       "Protein (g)": 7.17,
@@ -2881,6 +3324,7 @@
   {
     "description": "Khorasan, grain, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 371.6,
       "Carbohydrate, by difference (g)": 71.8,
       "Total lipid (fat) (g)": 2.8,
       "Protein (g)": 14.8,
@@ -2891,6 +3335,7 @@
   {
     "description": "Kiwifruit (kiwi), green, peeled, raw",
     "nutrients": {
+      "Energy (kcal)": 65.0,
       "Carbohydrate, by difference (g)": 13.8,
       "Total lipid (fat) (g)": 0.64,
       "Protein (g)": 1.01,
@@ -2901,6 +3346,7 @@
   {
     "description": "Mandarin, seedless, peeled, raw",
     "nutrients": {
+      "Energy (kcal)": 61.88,
       "Carbohydrate, by difference (g)": 13.4,
       "Total lipid (fat) (g)": 0.458,
       "Protein (g)": 1.04,
@@ -2911,6 +3357,7 @@
   {
     "description": "Mango, Tommy Atkins, peeled, raw",
     "nutrients": {
+      "Energy (kcal)": 68.6,
       "Carbohydrate, by difference (g)": 15.3,
       "Total lipid (fat) (g)": 0.572,
       "Protein (g)": 0.562,
@@ -2921,6 +3368,7 @@
   {
     "description": "Mango, Ataulfo, peeled, raw",
     "nutrients": {
+      "Energy (kcal)": 78.48,
       "Carbohydrate, by difference (g)": 17.4,
       "Total lipid (fat) (g)": 0.681,
       "Protein (g)": 0.688,
@@ -2931,6 +3379,7 @@
   {
     "description": "Corn flour, masa harina, white or yellow, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 376.1,
       "Carbohydrate, by difference (g)": 76.7,
       "Total lipid (fat) (g)": 4.34,
       "Protein (g)": 7.56,
@@ -2941,6 +3390,7 @@
   {
     "description": "Pear, Anjou, green, with skin, raw",
     "nutrients": {
+      "Energy (kcal)": 63.79,
       "Carbohydrate, by difference (g)": 14.8,
       "Total lipid (fat) (g)": 0.371,
       "Protein (g)": 0.312,
@@ -2951,6 +3401,7 @@
   {
     "description": "Plum, black, with skin, raw",
     "nutrients": {
+      "Energy (kcal)": 58.85,
       "Carbohydrate, by difference (g)": 13.5,
       "Total lipid (fat) (g)": 0.282,
       "Protein (g)": 0.578,
@@ -2961,6 +3412,7 @@
   {
     "description": "Rice, red, unenriched, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 370.0,
       "Carbohydrate, by difference (g)": 76.2,
       "Total lipid (fat) (g)": 3.44,
       "Protein (g)": 8.56,
@@ -2971,6 +3423,7 @@
   {
     "description": "Sorghum bran, white, unenriched, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 402.94,
       "Carbohydrate, by difference (g)": 68.7,
       "Total lipid (fat) (g)": 9.26,
       "Protein (g)": 11.2,
@@ -2981,6 +3434,7 @@
   {
     "description": "Sorghum flour, white, pearled, unenriched, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 363.96,
       "Carbohydrate, by difference (g)": 73.5,
       "Total lipid (fat) (g)": 3.24,
       "Protein (g)": 10.2,
@@ -2991,6 +3445,7 @@
   {
     "description": "Sorghum grain, white, pearled, unenriched, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 369.74,
       "Carbohydrate, by difference (g)": 74.9,
       "Total lipid (fat) (g)": 3.26,
       "Protein (g)": 10.2,
@@ -3001,6 +3456,7 @@
   {
     "description": "Sorghum, whole grain, white, dry, raw",
     "nutrients": {
+      "Energy (kcal)": 372.78,
       "Carbohydrate, by difference (g)": 73.6,
       "Total lipid (fat) (g)": 4.22,
       "Protein (g)": 10.1,
@@ -3011,6 +3467,7 @@
   {
     "description": "Plantains, overripe, raw",
     "nutrients": {
+      "Energy (kcal)": 130.39,
       "Carbohydrate, by difference (g)": 29.2,
       "Total lipid (fat) (g)": 0.99,
       "Protein (g)": 1.17,
