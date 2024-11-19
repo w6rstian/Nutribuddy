@@ -59,6 +59,7 @@ namespace Nutribuddy.UI.Console
 
 			var selected = AnsiConsole.Prompt(
 				new SelectionPrompt<string>()
+				.Title("[#A2D2FF]What do you want to do?[/]")
 				.AddChoices(
 				[
 					menuOptions[0], menuOptions[1], menuOptions[2], menuOptions[3]
