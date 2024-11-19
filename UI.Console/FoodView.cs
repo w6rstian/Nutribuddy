@@ -11,6 +11,7 @@ namespace Nutribuddy.UI.Console
 {
     internal class FoodView : IView
     {
+        private readonly EatHistoryController _eatHistoryController;
         private readonly FoodController _foodController;
         private readonly Action _navigateToMainMenu;
         private readonly static Panel foodFigletText = new Panel(
@@ -19,8 +20,9 @@ namespace Nutribuddy.UI.Console
                         VerticalAlignment.Middle))
                 .Expand().Padding(new Padding(0, 2));
 
-		public FoodView(FoodController foodController, Action navigateToMainMenu)
+		public FoodView(EatHistoryController eatHistoryController, FoodController foodController, Action navigateToMainMenu)
         {
+            _eatHistoryController = eatHistoryController;
             _foodController = foodController;
             _navigateToMainMenu = navigateToMainMenu;
         }
@@ -34,6 +36,7 @@ namespace Nutribuddy.UI.Console
 				var options = new List<string>
                 {
                     "View all food items",
+                    "Search for a food item",
                     "Return to main menu"
                 };
 
@@ -48,17 +51,24 @@ namespace Nutribuddy.UI.Console
                 {
                     case "View all food items":
 						AnsiConsole.Clear();
-						DisplayFoodList();
+						DisplayFoodList("");
                         break;
 
-                    case "Return to main menu":
+                    case "Search for a food item":
+						var lookingFor = AnsiConsole.Ask<string>(
+				            $"What do you want to look for? ");
+                        AnsiConsole.Clear();
+                        DisplayFoodList(lookingFor);
+                        break;
+
+					case "Return to main menu":
                         _navigateToMainMenu();
                         return;
                 }
             }
         }
 
-        private void DisplayFoodList()
+        private void DisplayFoodList(string searchPhrase)
         {
             var foodItems = _foodController.GetAllFoods();
 
@@ -70,10 +80,22 @@ namespace Nutribuddy.UI.Console
 
             AnsiConsole.Write(foodFigletText);
 
-            var descriptions = foodItems.ConvertAll(f => f.Description);
+            List<string> descriptions;
+			if (searchPhrase == null)
+			{
+				descriptions = foodItems.ConvertAll(f => f.Description);
+			}
+			else
+			{
+				descriptions = foodItems
+					.Where(f => f.Description.Contains(searchPhrase, StringComparison.OrdinalIgnoreCase))
+					.Select(f => f.Description)
+					.ToList();
+			}
+
             var selectedFood = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
-                    .Title("[#A2D2FF]Select a food item to view its nutritional values:[/]")
+                    .Title("[#A2D2FF]Select a food item:[/]")
                     .AddChoices(descriptions)
 					.HighlightStyle(new Style(foreground: Color.MediumPurple))
 			);
@@ -82,7 +104,30 @@ namespace Nutribuddy.UI.Console
             if (foodItem != null)
             {
                 DisplayNutrientTable(foodItem);
-            }
+				var confirmation = AnsiConsole.Prompt(
+	                new ConfirmationPrompt("Do you want to add this food item as your meal?"));
+
+                if (confirmation)
+                {
+					var quantity = AnsiConsole.Ask<double>(
+				        $"Enter the quantity of [pink1]{foodItem.Description}[/] in grams:");
+
+					var foodWithQuantity = new FoodItem
+					{
+						Description = foodItem.Description,
+						Nutrients = new Dictionary<string, double>(foodItem.Nutrients),
+						QuantityInGrams = quantity
+					};
+
+                    // TODO: ADDING FOOD ITEM ANIMATION
+
+                    _eatHistoryController._eatHistory.FoodItemEatHistory.Add((DateTime.Now, foodWithQuantity));
+					AnsiConsole.MarkupLine($"[bold #A2D2FF]{foodWithQuantity.Description} has been added as a meal![/]");
+                    Thread.Sleep(1000);
+				}
+				AnsiConsole.Clear();
+				AnsiConsole.Write(foodFigletText);
+			}
         }
 
         private static void DisplayNutrientTable(FoodItem foodItem)

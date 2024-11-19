@@ -37,6 +37,5 @@ namespace Nutribuddy.Core.Models
                 }
             }
         }
-
     }
 }

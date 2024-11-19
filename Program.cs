@@ -11,6 +11,7 @@ namespace Nutribuddy
             var userController = new UserController();
 			var foodController = new FoodController("Data/FoodData.json");
 			var dishController = new DishController("Data/DishData.json");
+            var eatHistoryController = new EatHistoryController("Data/EatHistoryData.json");
 
 			var viewManager = new ViewManager();
 			viewManager.RegisterView("IntroSequence", new IntroSequenceView(() => viewManager.ShowView("MainMenu")));
@@ -18,13 +19,15 @@ namespace Nutribuddy
                 () => viewManager.ShowView("UserDetails"),
                 () => viewManager.ShowView("Food"),
                 () => viewManager.ShowView("Dish")));
-			viewManager.RegisterView("UserDetails", new UserDetailsView(userController,
+			viewManager.RegisterView("UserDetails", new UserDetailsView(
+                eatHistoryController,
+                userController,
                 dishController,
                 () => viewManager.ShowView("MainMenu"), 
                 () => viewManager.ShowView("UserConfig")));
 			viewManager.RegisterView("UserConfig", new UserConfigView(userController, () => viewManager.ShowView("UserDetails")));
-            viewManager.RegisterView("Food", new FoodView(foodController, () => viewManager.ShowView("MainMenu")));
-            viewManager.RegisterView("Dish", new DishView(foodController, dishController, () => viewManager.ShowView("MainMenu")));
+            viewManager.RegisterView("Food", new FoodView(eatHistoryController, foodController, () => viewManager.ShowView("MainMenu")));
+            viewManager.RegisterView("Dish", new DishView(eatHistoryController, foodController, dishController, () => viewManager.ShowView("MainMenu")));
 
             viewManager.ShowView("IntroSequence");
             //viewManager.ShowView("MainMenu");

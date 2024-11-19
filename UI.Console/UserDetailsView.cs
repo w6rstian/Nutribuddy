@@ -11,13 +11,20 @@ namespace Nutribuddy.UI.Console
 {
 	internal class UserDetailsView : IView
 	{
+		private readonly EatHistoryController _eatHistoryController;
 		private readonly UserController _userController;
 		private readonly DishController _dishController;
 		private readonly Action _navigateToMainMenu;
 		private readonly Action _navigateToUserConfig;
+		private readonly static Panel userFigletText = new Panel(
+					Align.Center(
+						new FigletText("User Profile").Color(Color.MediumPurple),
+						VerticalAlignment.Middle))
+				.Expand().Padding(new Padding(0, 2));
 
-		public UserDetailsView(UserController userController, DishController dishController, Action navigateToMainMenu, Action navigateToUserConfig)
+		public UserDetailsView(EatHistoryController eatHistoryController, UserController userController, DishController dishController, Action navigateToMainMenu, Action navigateToUserConfig)
 		{
+			_eatHistoryController = eatHistoryController;
 			_userController = userController;
 			_dishController = dishController;
 			_navigateToMainMenu = navigateToMainMenu;
@@ -27,6 +34,7 @@ namespace Nutribuddy.UI.Console
 		public void Show()
 		{
 			AnsiConsole.Clear();
+			AnsiConsole.Write(userFigletText);
 			var user = _userController.GetUser();
 			var table = new Table();
 			table.Caption("User Data", style: null);
@@ -53,8 +61,9 @@ namespace Nutribuddy.UI.Console
 
 			var choice = AnsiConsole.Prompt(
 				new SelectionPrompt<string>()
-					.Title("[green]Choose an option:[/]")
+					.Title("[#A2D2FF]What do you want to do?[/]")
 					.AddChoices(options)
+					.HighlightStyle(new Style(foreground: Color.MediumPurple))
 			);
 			
 			switch (choice)
@@ -74,11 +83,11 @@ namespace Nutribuddy.UI.Console
 			// Personalized kcal counter
 
 			var user = _userController.GetUser();
-			var foreverNutrients = _dishController.GetForeverNutrients();
-			var godDid = foreverNutrients.TryGetValue("Energy (kcal)", out var calories);
+			var todayNutrients = _eatHistoryController.GetTotalNutrientsFromDay(DateTime.Now);
+			var godDid = todayNutrients.TryGetValue("Energy (kcal)", out var calories);
+			Align kcalGuardPanel;
 			if (godDid)
 			{
-				Align kcalGuardPanel;
 				Markup centeredText;
 				if (calories > user.CaloricNeeds * 1.2)
 				{
@@ -110,8 +119,16 @@ namespace Nutribuddy.UI.Console
 					.Centered();
 					kcalGuardPanel = Align.Center(new Panel(centeredText).BorderColor(new Color(162, 210, 255)).Padding(5, 1));
 				}
-				AnsiConsole.Write(kcalGuardPanel);
+				
 			}
+			else
+			{
+				kcalGuardPanel = Align.Center(
+					new Panel(
+						$"[bold #FFAFCC]You haven't eaten anything today.\nYou know how that makes us feel...[/]")
+					.BorderColor(new Color(255, 175, 204)).Padding(5, 1));
+			}
+			AnsiConsole.Write(kcalGuardPanel);
 		}
 	}
 }

@@ -33,10 +33,11 @@ namespace Nutribuddy.Core.Controllers
             return _dishes;
         }
 
-        public Dictionary<string, double> GetForeverNutrients()
-        {
+            
+        public Dictionary<string, double> GetForeverNutrients() // NIE KORZYSTAĆ - DEPRECATED
+		{
 		    // ta funkcja na razie zlicza wszystkie dania.
-		    // TODO: zliczanie dań tylko z dzisiejszego dnia
+		    // INNA IMPLEMENTACJA W EatHistoryController, BIORĄCA NUTRIENTS TYLKO Z JEDNEGO DNIA
             Dictionary<string, double> totalNutrients = new();
             foreach (var dish in _dishes)
             {
