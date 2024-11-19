@@ -218,10 +218,29 @@ namespace Nutribuddy.UI.Console
 
             if (confirmation)
             {
-                DateTime date = DateTime.Now;
-                //_eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, newDish));
-                _eatHistoryController.AddDishToHistory(date, newDish);
-            }
+				AnsiConsole.Progress()
+					.AutoClear(true)
+					.HideCompleted(true)
+				.Start(ctx =>
+				{
+					// Define tasks
+					var task1 = ctx.AddTask("[#9381FF]Adding dish...[/]");
+
+					while (!ctx.IsFinished)
+					{
+						Thread.Sleep(50);
+						task1.Increment(5);
+					}
+
+					if (ctx.IsFinished)
+					{
+						Thread.Sleep(500);
+					}
+				});
+				DateTime date = DateTime.Now;
+				_eatHistoryController.AddDishToHistory(date, newDish);
+				//_eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, newDish));
+			}
 
             // OLD NOTIFICATION
             //AnsiConsole.Markup($"\n[bold gold1]Dish '{newDish.Name}' has been added![/]\n");
@@ -230,6 +249,9 @@ namespace Nutribuddy.UI.Console
       {
           AnsiConsole.Markup($"- {nutrient.Key}: {nutrient.Value}\n");
       }*/
+
+            AnsiConsole.Clear();
+            AnsiConsole.Write(foodFigletText);
 
             var dishAddedPanel = Align.Center(new Panel($"[#FFC8DD] Dish '{newDish.Name}' has been added![/]").BorderColor(new Spectre.Console.Color(255, 200, 221)).Padding(5, 1));
             var tableNutrients = new Table().BorderColor(new Color(162, 210, 255));

@@ -123,13 +123,30 @@ namespace Nutribuddy.UI.Console
                         QuantityInGrams = quantity
                     };
 
-                    // TODO: ADDING FOOD ITEM ANIMATION
+					AnsiConsole.Progress()
+                        .AutoClear(true)
+                        .HideCompleted(true)
+	                .Start(ctx =>
+	                {
+		                // Define tasks
+		                var task1 = ctx.AddTask("[#9381FF]Adding food item...[/]");
+
+		                while (!ctx.IsFinished)
+		                {
+							Thread.Sleep(50);
+							task1.Increment(5);
+		                }
+                        
+                        if (ctx.IsFinished)
+                        {
+                            Thread.Sleep(500);
+                        }
+	                });
 
                     //_eatHistoryController.EatHistory.FoodItemEatHistory.Add((DateTime.Now, foodWithQuantity));
-                    DateTime date = DateTime.Now;
-                    _eatHistoryController.AddFoodItemToHistory(date, foodWithQuantity);
-
-                    AnsiConsole.MarkupLine($"[bold #A2D2FF]{foodWithQuantity.Description} has been added as a meal![/]");
+					DateTime date = DateTime.Now;
+					_eatHistoryController.AddFoodItemToHistory(date, foodWithQuantity);
+					AnsiConsole.MarkupLine($"[bold #A2D2FF]{foodWithQuantity.Description} has been added as a meal![/]");
                     Thread.Sleep(1000);
                 }
                 AnsiConsole.Clear();
