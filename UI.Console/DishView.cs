@@ -38,6 +38,8 @@ namespace Nutribuddy.UI.Console
                 {
                     "Add a Dish",
                     "Show Dishes",
+                    "Edit a Dish",
+                    "Delete a Dish",
                     "Return to main menu"
                 };
 
@@ -58,6 +60,14 @@ namespace Nutribuddy.UI.Console
                         AnsiConsole.Clear();
                         AnsiConsole.Write(foodFigletText);
                         ShowDishes();
+                        break;
+
+                    case "Edit a Dish":
+                        EditDishMenu();
+                        break;
+
+                    case "Delete a Dish":
+                        DeleteDishMenu();
                         break;
 
                     case "Return to main menu":
@@ -266,6 +276,125 @@ namespace Nutribuddy.UI.Console
                     AnsiConsole.MarkupLine($"- {nutrient.Key}: {nutrient.Value}");
                 }*/
 			}
+        }
+
+        private void EditDishMenu()
+        {
+            var dishes = _dishController.GetAllDishes();
+
+            if (!dishes.Any())
+            {
+                AnsiConsole.MarkupLine("[bold red]No dishes available.[/]");
+                return;
+            }
+
+            var dishName = AnsiConsole.Prompt(
+            new SelectionPrompt<string>()
+                .Title("[pink1]Select a dish to edit:[/]")
+                .AddChoices(dishes.Select(d => d.Name))
+                .HighlightStyle(new Style(foreground: Color.MediumPurple))
+    );
+
+            _dishController.EditDish(dishName, dish =>
+            {
+                AnsiConsole.MarkupLine($"Editing dish: [bold gold1]{dish.Name}[/]");
+                var editOptions = new List<string> { "Change Name", "Edit Ingredients", "Back" };
+
+                var choice = AnsiConsole.Prompt(
+                    new SelectionPrompt<string>()
+                        .Title("[gold1]What would you like to edit?[/]")
+                        .AddChoices(editOptions)
+                        .HighlightStyle(new Style(foreground: Color.MediumPurple))
+                );
+
+                switch (choice)
+                {
+                    case "Change Name":
+                        var newName = AnsiConsole.Ask<string>("Enter new name:");
+                        dish.Name = newName;
+                        break;
+
+                    case "Edit Ingredients":
+                        EditIngredientsMenu(dish);
+                        break;
+                }
+            });
+        }
+
+        private void EditIngredientsMenu(Dish dish)
+        {
+            while (true)
+            {
+                var ingredientMenu = new List<string>
+                {
+                    "Add an Ingredient",
+                    "Edit an Ingredient",
+                    "Remove an Ingredient",
+                    "Back"
+                };
+
+                var choice = AnsiConsole.Prompt(
+                    new SelectionPrompt<string>()
+                        .Title("[pink1]What would you like to do with the ingredients?[/]")
+                        .AddChoices(ingredientMenu)
+                        .HighlightStyle(new Style(foreground: Color.MediumPurple))
+                );
+
+                switch (choice)
+                {
+                    case "Add an Ingredient":
+                        AddIngredientToDish(dish, "");
+                        break;
+
+                    case "Edit an Ingredient":
+                        var ingredientToEdit = AnsiConsole.Prompt(
+                            new SelectionPrompt<string>()
+                                .Title("[pink1]Select an ingredient to edit:[/]")
+                                .AddChoices(dish.Ingredients.Select(i => i.Description))
+                                .HighlightStyle(new Style(foreground: Color.MediumPurple))
+                        );
+
+                        var newQuantity = AnsiConsole.Ask<double>("Enter new quantity in grams:");
+                        var ingredient = dish.Ingredients.First(i => i.Description == ingredientToEdit);
+                        ingredient.QuantityInGrams = newQuantity;
+                        break;
+
+                    case "Remove an Ingredient":
+                        var ingredientToRemove = AnsiConsole.Prompt(
+                            new SelectionPrompt<string>()
+                                .Title("[pink1]Select an ingredient to remove:[/]")
+                                .AddChoices(dish.Ingredients.Select(i => i.Description))
+                                .HighlightStyle(new Style(foreground: Color.MediumPurple))
+                        );
+
+                        dish.Ingredients.RemoveAll(i => i.Description == ingredientToRemove);
+                        break;
+
+                    case "Back":
+                        return;
+                }
+            }
+        }
+
+        private void DeleteDishMenu()
+        {
+            var dishes = _dishController.GetAllDishes();
+
+            if (!dishes.Any())
+            {
+                AnsiConsole.MarkupLine("[bold red]No dishes available.[/]");
+                return;
+            }
+
+            var dishName = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("[pink1]Select a dish to delete:[/]")
+                    .AddChoices(dishes.Select(d => d.Name))
+                    .HighlightStyle(new Style(foreground: Color.MediumPurple))
+            );
+
+            _dishController.DeleteDish(dishName);
+            AnsiConsole.MarkupLine($"[bold red]Dish '{dishName}' has been deleted.[/]");
         }
     }
 }
