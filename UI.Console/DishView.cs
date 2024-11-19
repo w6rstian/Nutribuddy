@@ -44,7 +44,7 @@ namespace Nutribuddy.UI.Console
 
                 var mainChoice = AnsiConsole.Prompt(
                     new SelectionPrompt<string>()
-                        .Title("[bold gold1]What do you want to do?[/]")
+                        .Title("[bold #A2D2FF]What do you want to do?[/]")
                         .AddChoices(mainMenuOptions)
                                     .HighlightStyle(new Style(foreground: Color.MediumPurple))
                 );
@@ -63,7 +63,7 @@ namespace Nutribuddy.UI.Console
 
                     case "Search for Dishes":
                         var lookingFor = AnsiConsole.Ask<string>(
-              $"What do you want to look for? ");
+                            $"What do you want to look for? ");
                         AnsiConsole.Clear();
                         AnsiConsole.Write(foodFigletText);
                         ShowDishes(lookingFor);
@@ -86,7 +86,7 @@ namespace Nutribuddy.UI.Console
 
         private void AddDishMenu()
         {
-            AnsiConsole.Markup("[bold gold1]=== Add a Dish ===[/]\n");
+            AnsiConsole.Markup("[bold #A2D2FF]=== Add a Dish ===[/]\n");
 
             var dishName = AnsiConsole.Ask<string>("Enter the name of the dish:");
             var newDish = new Dish { Name = dishName };
@@ -104,7 +104,7 @@ namespace Nutribuddy.UI.Console
 
                 var choice = AnsiConsole.Prompt(
                     new SelectionPrompt<string>()
-                        .Title("[gold1]Is this all?[/]")
+                        .Title("[#A2D2FF]Is this all?[/]")
                         .AddChoices(addDishOptions)
                                     .HighlightStyle(new Style(foreground: Color.MediumPurple))
                         );
@@ -156,8 +156,13 @@ namespace Nutribuddy.UI.Console
                     .ToList();
             }
 
+			if (foodDescriptions.Count == 0)
+			{
+				return;
+			}
 
-            var choice = AnsiConsole.Prompt(
+
+			var choice = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                     .Title("[pink1]Select an ingredient to add:[/]")
                     .AddChoices(foodDescriptions)
@@ -193,7 +198,7 @@ namespace Nutribuddy.UI.Console
             }
 
             var lookingFor = AnsiConsole.Ask<string>(
-                        $"What do you want to look for? ");
+                $"What do you want to look for? ");
 
             return lookingFor;
         }
@@ -209,7 +214,7 @@ namespace Nutribuddy.UI.Console
             newDish.CalculateTotalNutrients();
             _dishController.AddDish(newDish);
             var confirmation = AnsiConsole.Prompt(
-                    new ConfirmationPrompt("Do you want to add this dish as your meal?"));
+                new ConfirmationPrompt("Do you want to add this dish as your meal?"));
 
             if (confirmation)
             {
@@ -266,6 +271,15 @@ namespace Nutribuddy.UI.Console
                 dishes = allDishes
                     .Where(f => f.Name.Contains(searchPhrase, StringComparison.OrdinalIgnoreCase))
                     .ToList();
+            }
+
+            if (dishes.Count == 0)
+            {
+				AnsiConsole.MarkupLine("[bold red]No dishes found.[/]\n");
+                Thread.Sleep(1000);
+				AnsiConsole.Clear();
+				AnsiConsole.Write(foodFigletText);
+				return;
             }
 
             foreach (var dish in dishes)

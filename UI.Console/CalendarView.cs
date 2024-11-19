@@ -52,14 +52,25 @@ namespace Nutribuddy.UI.Console
 							$"Enter the [pink1]day[/]: ");
 
 						var eventList = _eatHistoryController.Calendar.CalendarEvents;
+						var eatHistory = _eatHistoryController.GetTotalNutrientsFromDay(
+							new DateTime(calendar.Year, calendar.Month, selectedDay));
 						var found = false;
 						foreach (var e in eventList)
 						{
 							if (e.Day == selectedDay && e.Month == calendar.Month && e.Year == calendar.Year)
 							{
 								found = true;
-								AnsiConsole.Write(new Markup($"[pink1]{calendar.Year} - {calendar.Month} - {selectedDay}:[/]"));
-								AnsiConsole.Write(new Markup($"\tYou've eaten [pink1]{e.Description} kcal[/]!\n"));
+								AnsiConsole.Write(new Markup($"[pink1]{calendar.Year} - {calendar.Month} - {selectedDay}:[/]\n"));
+								var tableNutrients = new Table().BorderColor(new Color(162, 210, 255));
+								tableNutrients.HideHeaders().Centered();
+								tableNutrients.AddColumn("").AddColumn("");
+								foreach (var nutrient in eatHistory)
+								{
+									tableNutrients.AddRow($"[#BDE0FE]{nutrient.Key}[/]", $"[#BDE0FE]{nutrient.Value}[/]");
+								}
+								tableNutrients.Caption("Total nutritional values");
+								AnsiConsole.Write(tableNutrients);
+								//AnsiConsole.Write(new Markup($"\tYou've eaten [pink1]{e.Description} kcal[/]!\n"));
 							}
 						}
 						if (!found)

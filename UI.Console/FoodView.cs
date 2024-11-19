@@ -88,6 +88,15 @@ namespace Nutribuddy.UI.Console
                     .ToList();
             }
 
+            if (descriptions.Count == 0)
+            {
+				AnsiConsole.MarkupLine("[bold red]No food items found.[/]\n");
+				Thread.Sleep(1000);
+				AnsiConsole.Clear();
+				AnsiConsole.Write(foodFigletText);
+				return;
+            }
+
             var selectedFood = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                     .Title("[#A2D2FF]Select a food item:[/]")
