@@ -41,7 +41,7 @@ namespace Nutribuddy.UI.Console
             table.AddRow("Height (cm)", $"{user.Height}");
             table.AddRow("Weight (kg)", $"{user.Weight}");
             table.AddRow("BMI", $"{Math.Truncate(user.BMI * 100) / 100}");
-            table.AddRow("Your caloric needs", $"{user.CaloricNeeds}");
+            table.AddRow("Your caloric needs", $"{Math.Truncate(user.CaloricNeeds * 100) / 100}");
             table.AddRow("Activity Level", $"{user.PhysicalActivityLevel}");
             table.AddRow("Goal", $"{user.Goal}");
 
