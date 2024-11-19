@@ -35,12 +35,15 @@ namespace Nutribuddy.UI.Console
             table.AddColumn("").Centered();
             table.AddColumn("").Centered();
             table.HideHeaders();
+
             table.AddRow("Gender", $"{user.Gender}");
             table.AddRow("Age", $"{user.Age}");
             table.AddRow("Height (cm)", $"{user.Height}");
             table.AddRow("Weight (kg)", $"{user.Weight}");
             table.AddRow("BMI", $"{Math.Truncate(user.BMI * 100) / 100}");
             table.AddRow("Your caloric needs", $"{user.CaloricNeeds}");
+            table.AddRow("Activity Level", $"{user.PhysicalActivityLevel}");
+            table.AddRow("Goal", $"{user.Goal}");
 
             AnsiConsole.Write(table);
 

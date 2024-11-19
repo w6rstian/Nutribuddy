@@ -26,7 +26,17 @@ namespace Nutribuddy.UI.Console
                     .Title("Select your gender:")
                     .AddChoices("Male", "Female"));
 
-            _userController.UpdateUser(weight, height, age, gender);
+            string activityLevel = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("Select your physical activity level:")
+                    .AddChoices("Sedentary", "Lightly Active", "Moderately Active", "Very Active", "Extra Active"));
+
+            string goal = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("What is your goal?")
+                    .AddChoices("Lose Weight", "Maintain Weight", "Gain Weight"));
+
+            _userController.UpdateUser(weight, height, age, gender, activityLevel, goal);
 
             AnsiConsole.MarkupLine("[bold green]User information updated successfully![/]");
             Thread.Sleep(750);

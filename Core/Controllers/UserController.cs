@@ -16,15 +16,16 @@ namespace Nutribuddy.Core.Controllers
             return _user;
         }
 
-        public void UpdateUser(double weight, double height, int age, string gender)
+        public void UpdateUser(double weight, double height, int age, string gender, string physicalActivityLevel, string goal)
         {
             if (weight > 0) _user.Weight = weight;
             if (height > 0) _user.Height = height;
             if (age > 0) _user.Age = age;
             if (gender == "Male" || gender == "Female") _user.Gender = gender;
+            _user.PhysicalActivityLevel = physicalActivityLevel;
+            _user.Goal = goal;
             _user.BMI = CalculateBMI();
             _user.CaloricNeeds = CalculateCaloricNeeds();
-
         }
 
         public double CalculateBMI()
@@ -36,15 +37,29 @@ namespace Nutribuddy.Core.Controllers
 
         public double CalculateCaloricNeeds()
         {
-            //wzor Mifflina-St Jeora
-            if (_user.Gender == "Male")
+            double bmr = _user.Gender == "Male"
+                ? 10 * _user.Weight + 6.25 * _user.Height - 5 * _user.Age + 5
+                : 10 * _user.Weight + 6.25 * _user.Height - 5 * _user.Age - 161;
+
+            double activityFactor = _user.PhysicalActivityLevel switch
             {
-                return 10 * _user.Weight + 6.25 * _user.Height - 5 * _user.Age + 5; //chop
-            }
-            else
+                "Sedentary" => 1.2,
+                "Lightly Active" => 1.375,
+                "Moderately Active" => 1.55,
+                "Very Active" => 1.725,
+                "Extra Active" => 1.9,
+                _ => 1.2
+            };
+
+            double maintenanceCalories = bmr * activityFactor;
+
+            return _user.Goal switch
             {
-                return 10 * _user.Weight + 6.25 * _user.Height - 5 * _user.Age - 161; //baba
-            }
+                "Lose Weight" => maintenanceCalories - 500,
+                "Maintain Weight" => maintenanceCalories,
+                "Gain Weight" => maintenanceCalories + 500,
+                _ => maintenanceCalories
+            };
         }
     }
 }
