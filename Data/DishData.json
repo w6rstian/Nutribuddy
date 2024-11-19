@@ -25,28 +25,139 @@
     }
   },
   {
-    "Name": "nkenfnfkl",
+    "Name": "Green Salad with Kale and Nuts",
     "Ingredients": [
       {
-        "Description": "Hummus, commercial",
+        "Description": "Kale, raw",
         "Nutrients": {
-          "Energy (kcal)": 229.0,
-          "Carbohydrate, by difference (g)": 14.9,
-          "Total lipid (fat) (g)": 17.1,
-          "Protein (g)": 7.35,
-          "Sodium, Na (mg)": 438.0,
-          "Fiber, total dietary (g)": 5.4
+          "Energy (kcal)": 35.0,
+          "Carbohydrate, by difference (g)": 4.42,
+          "Total lipid (fat) (g)": 1.49,
+          "Protein (g)": 2.92,
+          "Sodium, Na (mg)": 53.0,
+          "Fiber, total dietary (g)": 4.1
         },
-        "QuantityInGrams": 20.0
+        "QuantityInGrams": 100.0
+      },
+      {
+        "Description": "Nuts, almonds, dry roasted, with salt added",
+        "Nutrients": {
+          "Energy (kcal)": 620.0,
+          "Carbohydrate, by difference (g)": 16.2,
+          "Total lipid (fat) (g)": 57.8,
+          "Protein (g)": 20.4,
+          "Sodium, Na (mg)": 256.0,
+          "Fiber, total dietary (g)": 11.0
+        },
+        "QuantityInGrams": 30.0
       }
     ],
     "TotalNutrients": {
-      "Energy (kcal)": 45.8,
-      "Carbohydrate, by difference (g)": 2.98,
-      "Total lipid (fat) (g)": 3.42,
-      "Protein (g)": 1.47,
-      "Sodium, Na (mg)": 87.6,
-      "Fiber, total dietary (g)": 1.08
+      "Energy (kcal)": 221.0,
+      "Carbohydrate, by difference (g)": 9.28,
+      "Total lipid (fat) (g)": 18.03,
+      "Protein (g)": 8.0,
+      "Sodium, Na (mg)": 131.8,
+      "Fiber, total dietary (g)": 7.34
+    }
+  },
+  {
+    "Name": "Tomato Soup",
+    "Ingredients": [
+      {
+        "Description": "Tomatoes, canned, red, ripe, diced",
+        "Nutrients": {
+          "Energy (kcal)": 18.0,
+          "Carbohydrate, by difference (g)": 3.32,
+          "Total lipid (fat) (g)": 0.5,
+          "Protein (g)": 0.84,
+          "Sodium, Na (mg)": 125.0,
+          "Fiber, total dietary (g)": 0.0
+        },
+        "QuantityInGrams": 200.0
+      }
+    ],
+    "TotalNutrients": {
+      "Energy (kcal)": 36.0,
+      "Carbohydrate, by difference (g)": 6.64,
+      "Total lipid (fat) (g)": 1.0,
+      "Protein (g)": 1.68,
+      "Sodium, Na (mg)": 250.0,
+      "Fiber, total dietary (g)": 0.0
+    }
+  },
+  {
+    "Name": "Vegetable Delight",
+    "Ingredients": [
+      {
+        "Description": "Broccoli, raw",
+        "Nutrients": {
+          "Energy (kcal)": 31.0,
+          "Carbohydrate, by difference (g)": 6.27,
+          "Total lipid (fat) (g)": 0.34,
+          "Protein (g)": 2.57,
+          "Sodium, Na (mg)": 36.0,
+          "Fiber, total dietary (g)": 2.4
+        },
+        "QuantityInGrams": 100.0
+      },
+      {
+        "Description": "Carrots, frozen, unprepared",
+        "Nutrients": {
+          "Energy (kcal)": 37.0,
+          "Carbohydrate, by difference (g)": 7.92,
+          "Total lipid (fat) (g)": 0.47,
+          "Protein (g)": 0.81,
+          "Sodium, Na (mg)": 66.0,
+          "Fiber, total dietary (g)": 3.2
+        },
+        "QuantityInGrams": 80.0
+      }
+    ],
+    "TotalNutrients": {
+      "Energy (kcal)": 63.0,
+      "Carbohydrate, by difference (g)": 14.19,
+      "Total lipid (fat) (g)": 0.81,
+      "Protein (g)": 3.38,
+      "Sodium, Na (mg)": 102.0,
+      "Fiber, total dietary (g)": 5.6
+    }
+  },
+  {
+    "Name": "Protein Power",
+    "Ingredients": [
+      {
+        "Description": "Egg, whole, dried",
+        "Nutrients": {
+          "Energy (kcal)": 575.0,
+          "Carbohydrate, by difference (g)": 1.87,
+          "Total lipid (fat) (g)": 39.8,
+          "Protein (g)": 48.1,
+          "Sodium, Na (mg)": 485.0,
+          "Fiber, total dietary (g)": 0.0
+        },
+        "QuantityInGrams": 50.0
+      },
+      {
+        "Description": "Cheese, mozzarella, low moisture, part-skim",
+        "Nutrients": {
+          "Energy (kcal)": 298.0,
+          "Carbohydrate, by difference (g)": 4.44,
+          "Total lipid (fat) (g)": 20.4,
+          "Protein (g)": 23.7,
+          "Sodium, Na (mg)": 699.0,
+          "Fiber, total dietary (g)": 0.0
+        },
+        "QuantityInGrams": 30.0
+      }
+    ],
+    "TotalNutrients": {
+      "Energy (kcal)": 431.0,
+      "Carbohydrate, by difference (g)": 6.54,
+      "Total lipid (fat) (g)": 46.9,
+      "Protein (g)": 56.2,
+      "Sodium, Na (mg)": 590.2,
+      "Fiber, total dietary (g)": 0.0
     }
   }
 ]
