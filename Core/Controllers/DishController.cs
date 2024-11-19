@@ -76,6 +76,35 @@ namespace Nutribuddy.Core.Controllers
             SaveDishes();
         }
 
+        public void EditDish(string dishName, Action<Dish> editAction)
+        {
+            var dish = _dishes.FirstOrDefault(d => d.Name.Equals(dishName, StringComparison.OrdinalIgnoreCase));
+            if (dish != null)
+            {
+                editAction(dish);
+                dish.CalculateTotalNutrients();
+                SaveDishes();
+            }
+            else
+            {
+                Console.WriteLine($"Dish '{dishName}' not found.");
+            }
+        }
+
+        public void DeleteDish(string dishName)
+        {
+            var dish = _dishes.FirstOrDefault(d => d.Name.Equals(dishName, StringComparison.OrdinalIgnoreCase));
+            if (dish != null)
+            {
+                _dishes.Remove(dish);
+                SaveDishes();
+            }
+            else
+            {
+                Console.WriteLine($"Dish '{dishName}' not found.");
+            }
+        }
+
         private void SaveDishes() //zapis do pliku działa tylko przy podaniu sciezki absolutnej :(
         {   
             try

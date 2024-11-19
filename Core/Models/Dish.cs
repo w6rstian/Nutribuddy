@@ -11,13 +11,13 @@ namespace Nutribuddy.Core.Models
         public string Name { get; set; } = String.Empty;
         public List<FoodItem> Ingredients { get; set; }
         public Dictionary<string, double> TotalNutrients { get; set; }
-        public DateTime date { get; set; }
+        public DateTime Date { get; set; }
 
         public Dish()
         {
             Ingredients = new List<FoodItem>();
             TotalNutrients = new Dictionary<string, double>();
-            date = DateTime.Now;
+            Date = DateTime.Now;
         }
 
         public void CalculateTotalNutrients()
