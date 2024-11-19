@@ -1,6 +1,7 @@
 ﻿using Nutribuddy.Core.Controllers;
 using Nutribuddy.Core.Models;
 using Spectre.Console;
+using System;
 
 namespace Nutribuddy.UI.Console
 {
@@ -212,7 +213,9 @@ namespace Nutribuddy.UI.Console
 
             if (confirmation)
             {
-                _eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, newDish));
+                DateTime date = DateTime.Now;
+                //_eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, newDish));
+                _eatHistoryController.AddDishToHistory(date, newDish);
             }
 
             // OLD NOTIFICATION

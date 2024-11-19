@@ -1,0 +1,17 @@
+[
+  {
+    "Item1": "2024-11-19T14:53:09.7958499+01:00",
+    "Item2": {
+      "Description": "Nuts, almonds, dry roasted, with salt added",
+      "Nutrients": {
+        "Energy (kcal)": 620.0,
+        "Carbohydrate, by difference (g)": 16.2,
+        "Total lipid (fat) (g)": 57.8,
+        "Protein (g)": 20.4,
+        "Sodium, Na (mg)": 256.0,
+        "Fiber, total dietary (g)": 11.0
+      },
+      "QuantityInGrams": 100.0
+    }
+  }
+]

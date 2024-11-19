@@ -116,7 +116,10 @@ namespace Nutribuddy.UI.Console
 
                     // TODO: ADDING FOOD ITEM ANIMATION
 
-                    _eatHistoryController.EatHistory.FoodItemEatHistory.Add((DateTime.Now, foodWithQuantity));
+                    //_eatHistoryController.EatHistory.FoodItemEatHistory.Add((DateTime.Now, foodWithQuantity));
+                    DateTime date = DateTime.Now;
+                    _eatHistoryController.AddFoodItemToHistory(date, foodWithQuantity);
+
                     AnsiConsole.MarkupLine($"[bold #A2D2FF]{foodWithQuantity.Description} has been added as a meal![/]");
                     Thread.Sleep(1000);
                 }

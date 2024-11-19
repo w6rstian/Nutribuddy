@@ -22,7 +22,8 @@ namespace Nutribuddy.UI.Console
                 "View my profile",
                 "Browse food",
                 "Browse dishes",
-                "View calendar"
+                "View calendar",
+                "Exit"
             ];
             AnsiConsole.Clear();
 
@@ -53,7 +54,7 @@ namespace Nutribuddy.UI.Console
                 .Title("[#A2D2FF]What do you want to do?[/]")
                 .AddChoices(
                 [
-                    menuOptions[0], menuOptions[1], menuOptions[2], menuOptions[3]
+                    menuOptions[0], menuOptions[1], menuOptions[2], menuOptions[3], menuOptions[4],
                 ])
                 .HighlightStyle(new Style(foreground: Color.MediumPurple)));
 
@@ -84,6 +85,9 @@ namespace Nutribuddy.UI.Console
                 case "View calendar":
                     _navigateToCalendarView();
                     break;
+
+                case "Exit":
+                    return;
             }
         }
     }

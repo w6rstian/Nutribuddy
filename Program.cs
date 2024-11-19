@@ -1,6 +1,9 @@
 using Nutribuddy.Core.Controllers;
+using Nutribuddy.Core.Models;
 using Nutribuddy.UI;
 using Nutribuddy.UI.Console;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.ConstrainedExecution;
 
 namespace Nutribuddy
 {
@@ -10,9 +13,8 @@ namespace Nutribuddy
         {
             var userController = new UserController();
             var foodController = new FoodController("Data/FoodData.json");
-            var dishController = new DishController("Data/DishData.json");
-            var eatHistoryController = new EatHistoryController("Data/EatHistoryData.json");
-
+            var dishController = new DishController("Data/DishData");
+            var eatHistoryController = new EatHistoryController("Data/FoodHistory", "Data/DishHistory");
             var viewManager = new ViewManager();
             viewManager.RegisterView("IntroSequence", new IntroSequenceView(() => viewManager.ShowView("MainMenu")));
             viewManager.RegisterView("MainMenu", new MainMenuView(

@@ -10,5 +10,11 @@
             DishEatHistory = new();
             FoodItemEatHistory = new();
         }
+
+        public EatHistory(List<(DateTime, Dish)> dishEatHistory, List<(DateTime, FoodItem)> foodItemEatHistory)
+        {
+            DishEatHistory = dishEatHistory;
+            FoodItemEatHistory = foodItemEatHistory;
+        }
     }
 }

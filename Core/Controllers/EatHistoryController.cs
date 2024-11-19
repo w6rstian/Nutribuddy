@@ -8,13 +8,26 @@ namespace Nutribuddy.Core.Controllers
     {
         public EatHistory EatHistory { get; private set; }
         public Calendar Calendar { get; private set; }
-        public EatHistoryController(string filePath)
+
+        private readonly string _filePathDish;
+        private readonly string _filePathFood;
+
+        public EatHistoryController(string filePathFood, string filePathDish)
         {
+            _filePathDish = filePathDish;
+            _filePathFood = filePathFood;
+
             try
             {
-                var jsonData = File.Exists(filePath) ? File.ReadAllText(filePath) : "[]";
-                EatHistory = !string.IsNullOrEmpty(jsonData) ?
-                    JsonConvert.DeserializeObject<EatHistory>(jsonData) : new EatHistory();
+                var jsonDataFood = File.Exists(filePathFood) ? File.ReadAllText(filePathFood) : "[]";
+                var jsonDataDish = File.Exists(filePathDish) ? File.ReadAllText(filePathDish) : "[]";
+                /*EatHistory = !string.IsNullOrEmpty(jsonData) ?
+                    JsonConvert.DeserializeObject<EatHistory>(jsonData) : new EatHistory();*/
+                var listFood = JsonConvert.DeserializeObject<List<(DateTime, FoodItem)>>(jsonDataFood) ?? new List<(DateTime, FoodItem)>();
+                var listDish = JsonConvert.DeserializeObject<List<(DateTime, Dish)>>(jsonDataDish) ?? new List<(DateTime, Dish)>();
+                //EatHistory = JsonConvert.DeserializeObject<EatHistory>(jsonData) ?? new EatHistory();
+                EatHistory = new EatHistory(listDish, listFood);
+
             }
             catch (Exception ex)
             {
@@ -24,6 +37,7 @@ namespace Nutribuddy.Core.Controllers
             Calendar = new Calendar(DateTime.Now);
             BuildCalendar(Calendar, DateTime.Now.Year, DateTime.Now.Month);
         }
+
         public Dictionary<string, double> GetTotalNutrientsFromDay(DateTime date)
         {
             var dishesForDay = EatHistory.DishEatHistory
@@ -53,7 +67,7 @@ namespace Nutribuddy.Core.Controllers
             {
                 foreach (var nutrient in food.Item2.Nutrients)
                 {
-                    double quantity = (nutrient.Value * food.Item2.QuantityInGrams) / 100; //przeliczenie ilości składnika potrzebnego do dania
+                    double quantity = (nutrient.Value * food.Item2.QuantityInGrams) / 100;
 
                     if (totalNutrients.ContainsKey(nutrient.Key))
                         totalNutrients[nutrient.Key] += quantity;
@@ -71,7 +85,7 @@ namespace Nutribuddy.Core.Controllers
             var nutrientsDay = new Dictionary<int, Dictionary<string, double>>();
             calendar.HighlightStyle(Style.Parse("bold #A2D2FF"));
 
-			calendar.Year = year;
+            calendar.Year = year;
             calendar.Month = month;
             calendar.Day = 1;
             calendar.CalendarEvents.Clear();
@@ -85,12 +99,40 @@ namespace Nutribuddy.Core.Controllers
                 nutrientsDay[date.Day] = GetTotalNutrientsFromDay(date);
                 if (!nutrientsDay[date.Day].ContainsKey("Energy (kcal)"))
                 {
-					date = date.AddDays(1);
+                    date = date.AddDays(1);
                     continue;
-				}
-                
-				Calendar = calendar.AddCalendarEvent(nutrientsDay[date.Day]["Energy (kcal)"].ToString(), date);
-				date = date.AddDays(1);
+                }
+
+                Calendar = calendar.AddCalendarEvent(nutrientsDay[date.Day]["Energy (kcal)"].ToString(), date);
+                date = date.AddDays(1);
+            }
+        }
+
+        public void AddDishToHistory(DateTime dateTime, Dish dish)
+        {
+            EatHistory.DishEatHistory.Add((dateTime, dish));
+            SaveEatHistory();
+        }
+
+        public void AddFoodItemToHistory(DateTime dateTime, FoodItem foodItem)
+        {
+            EatHistory.FoodItemEatHistory.Add((dateTime, foodItem));
+            SaveEatHistory();
+        }
+
+        private void SaveEatHistory()
+        {
+            try
+            {
+                //var jsonData = JsonConvert.SerializeObject(EatHistory, Formatting.Indented);
+                var jsonDataDish = JsonConvert.SerializeObject(EatHistory.DishEatHistory, Formatting.Indented);
+                var jsonDataFood = JsonConvert.SerializeObject(EatHistory.FoodItemEatHistory, Formatting.Indented);
+                File.WriteAllText(_filePathDish, jsonDataDish);
+                File.WriteAllText(_filePathFood, jsonDataFood);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving eat history: {ex.Message}");
             }
         }
     }
