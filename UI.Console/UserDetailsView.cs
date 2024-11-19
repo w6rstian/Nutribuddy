@@ -50,6 +50,8 @@ namespace Nutribuddy.UI.Console
             // Personalized kcal counter
             DisplayMyKcal();
 
+            DisplayCharts();
+
             var options = new List<string>
                 {
                     "Edit User Info",
@@ -127,5 +129,83 @@ namespace Nutribuddy.UI.Console
             }
             AnsiConsole.Write(kcalGuardPanel);
         }
+
+        public void DisplayCharts()
+        {
+            var user = _userController.GetUser();
+            var chartEnergy = new BarChart().Width(100);
+            chartEnergy.MaxValue = user.CaloricNeeds;
+
+            var chartCarbs = new BarChart().Width(100);
+            chartCarbs.MaxValue = user.CaloricNeeds * 0.5;
+
+			var chartFat = new BarChart().Width(100);
+            chartFat.MaxValue = user.CaloricNeeds * 0.25;
+
+			var chartProtein = new BarChart().Width(100);
+            chartProtein.MaxValue = user.Weight;
+
+			var chartSodium = new BarChart().Width(100);
+            chartSodium.MaxValue = 1750;
+
+			var chartFiber = new BarChart().Width(100);
+            if (user.Gender == "Male")
+            {
+                chartFiber.MaxValue = 38;
+			}
+            else
+            {
+				chartFiber.MaxValue = 25;
+			}
+            
+			var todayNutrients = _eatHistoryController.GetTotalNutrientsFromDay(DateTime.Now);
+
+            if (todayNutrients.Count == 0)
+            {
+                return;
+            }
+
+            string[] nutrients = [
+                "Energy (kcal)",
+                "Carbohydrate, by difference (g)",
+                "Total lipid (fat) (g)",
+                "Protein (g)",
+                "Sodium, Na (mg)",
+                "Fiber, total dietary (g)"
+            ];
+
+            if (todayNutrients.ContainsKey(nutrients[0]))
+            {
+                chartEnergy.AddItem(nutrients[0], todayNutrients[nutrients[0]], color: Color.Yellow);
+            }
+            if (todayNutrients.ContainsKey(nutrients[1]))
+            {
+                chartCarbs.AddItem(nutrients[1], todayNutrients[nutrients[1]], Color.SandyBrown);
+            }
+            if (todayNutrients.ContainsKey(nutrients[2]))
+            {
+                chartFat.AddItem(nutrients[2], todayNutrients[nutrients[2]], Color.NavajoWhite1);
+            }
+            if (todayNutrients.ContainsKey(nutrients[3]))
+            {
+                chartProtein.AddItem(nutrients[3], todayNutrients[nutrients[3]], Color.White);
+            }
+            if (todayNutrients.ContainsKey(nutrients[4]))
+            {
+                chartSodium.AddItem(nutrients[4], todayNutrients[nutrients[4]], Color.Silver);
+            }
+            if (todayNutrients.ContainsKey(nutrients[5]))
+            {
+                chartFiber.AddItem(nutrients[5], todayNutrients[nutrients[5]], Color.DarkOliveGreen1);
+            }
+
+            AnsiConsole.Write(Align.Center(new Panel("[#A2D2FF]Nutrients for today[/]").BorderColor(new Color(162, 210, 255))));
+            AnsiConsole.Write(Align.Center(new Padder(chartEnergy)));
+			AnsiConsole.Write(Align.Center(new Padder(chartCarbs)));
+			AnsiConsole.Write(Align.Center(new Padder(chartFat)));
+			AnsiConsole.Write(Align.Center(new Padder(chartProtein)));
+			AnsiConsole.Write(Align.Center(new Padder(chartSodium)));
+			AnsiConsole.Write(Align.Center(new Padder(chartFiber)));
+		}
     }
 }
