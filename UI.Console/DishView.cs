@@ -155,8 +155,13 @@ namespace Nutribuddy.UI.Console
                     .ToList();
             }
 
+			if (foodDescriptions.Count == 0)
+			{
+				return;
+			}
 
-            var choice = AnsiConsole.Prompt(
+
+			var choice = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                     .Title("[pink1]Select an ingredient to add:[/]")
                     .AddChoices(foodDescriptions)
@@ -263,6 +268,15 @@ namespace Nutribuddy.UI.Console
                 dishes = allDishes
                     .Where(f => f.Name.Contains(searchPhrase, StringComparison.OrdinalIgnoreCase))
                     .ToList();
+            }
+
+            if (dishes.Count == 0)
+            {
+				AnsiConsole.MarkupLine("[bold red]No dishes found.[/]\n");
+                Thread.Sleep(1000);
+				AnsiConsole.Clear();
+				AnsiConsole.Write(foodFigletText);
+				return;
             }
 
             foreach (var dish in dishes)
