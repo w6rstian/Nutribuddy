@@ -212,7 +212,7 @@ namespace Nutribuddy.UI.Console
 
             if (confirmation)
             {
-                _eatHistoryController._eatHistory.DishEatHistory.Add((DateTime.Now, newDish));
+                _eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, newDish));
             }
 
             // OLD NOTIFICATION
@@ -292,7 +292,7 @@ namespace Nutribuddy.UI.Console
                 if (confirmation)
                 {
                     // TODO: ADDING DISH ANIMATION
-                    _eatHistoryController._eatHistory.DishEatHistory.Add((DateTime.Now, theDish));
+                    _eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, theDish));
                     AnsiConsole.MarkupLine($"[bold #A2D2FF]{theDish.Name} has been added as a meal![/]");
                     Thread.Sleep(1000);
                 }

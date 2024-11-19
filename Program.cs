@@ -18,7 +18,8 @@ namespace Nutribuddy
             viewManager.RegisterView("MainMenu", new MainMenuView(
                 () => viewManager.ShowView("UserDetails"),
                 () => viewManager.ShowView("Food"),
-                () => viewManager.ShowView("Dish")));
+                () => viewManager.ShowView("Dish"),
+                () => viewManager.ShowView("Calendar")));
             viewManager.RegisterView("UserDetails", new UserDetailsView(
                 eatHistoryController,
                 userController,
@@ -28,6 +29,7 @@ namespace Nutribuddy
             viewManager.RegisterView("UserConfig", new UserConfigView(userController, () => viewManager.ShowView("UserDetails")));
             viewManager.RegisterView("Food", new FoodView(eatHistoryController, foodController, () => viewManager.ShowView("MainMenu")));
             viewManager.RegisterView("Dish", new DishView(eatHistoryController, foodController, dishController, () => viewManager.ShowView("MainMenu")));
+            viewManager.RegisterView("Calendar", new CalendarView(eatHistoryController, () => viewManager.ShowView("MainMenu")));
 
             viewManager.ShowView("IntroSequence");
             //viewManager.ShowView("MainMenu");

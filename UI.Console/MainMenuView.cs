@@ -7,12 +7,14 @@ namespace Nutribuddy.UI.Console
         public Action _navigateToUserDetails;
         public Action _navigateToFoodView;
         public Action _navigateToDishView;
+        public Action _navigateToCalendarView;
         private readonly Padding menuPad = new Padding(5, 1);
-        public MainMenuView(Action navigateToUserDetails, Action navigateToFoodView, Action navigateToDishView)
+        public MainMenuView(Action navigateToUserDetails, Action navigateToFoodView, Action navigateToDishView, Action navigateToCalendarView)
         {
             _navigateToUserDetails = navigateToUserDetails;
             _navigateToFoodView = navigateToFoodView;
             _navigateToDishView = navigateToDishView;
+            _navigateToCalendarView = navigateToCalendarView;
         }
         public void Show()
         {
@@ -20,7 +22,7 @@ namespace Nutribuddy.UI.Console
                 "View my profile",
                 "Browse food",
                 "Browse dishes",
-                "Opcja4"
+                "View calendar"
             ];
             AnsiConsole.Clear();
 
@@ -44,15 +46,9 @@ namespace Nutribuddy.UI.Console
                         Align.Center(new Panel(menuOptions[3]).Padding(menuPad))
                     ]).Expand());
 
-            AnsiConsole.Write(
-                Align.Center(
-                    new Grid()
-                        .AddColumn()
-                        .Width(90)
-                        .AddRow(new Rule())
-                        ));
+            AnsiConsole.Write(new Rule());
 
-            var selected = AnsiConsole.Prompt(
+			var selected = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                 .Title("[#A2D2FF]What do you want to do?[/]")
                 .AddChoices(
@@ -67,7 +63,7 @@ namespace Nutribuddy.UI.Console
 			 * "View my profile",
 			 * "Browse food",
 			 * "Browse dishes",
-			 * "Opcja4"
+			 * "View calendar"
 			 * ];
 			 */
 
@@ -83,6 +79,10 @@ namespace Nutribuddy.UI.Console
 
                 case "Browse dishes":
                     _navigateToDishView();
+                    break;
+
+                case "View calendar":
+                    _navigateToCalendarView();
                     break;
             }
         }
