@@ -51,6 +51,15 @@ namespace Nutribuddy.UI.Console
 						var selectedDay = AnsiConsole.Ask<int>(
 							$"Enter the [pink1]day[/]: ");
 
+						if (selectedDay == 0)
+						{
+							AnsiConsole.Write(new Markup($"[red]Invalid day[/]"));
+							Thread.Sleep(1000);
+							AnsiConsole.Clear();
+							AnsiConsole.Write(calendarFigletText);
+							continue;
+						}
+
 						var eventList = _eatHistoryController.Calendar.CalendarEvents;
 						var eatHistory = _eatHistoryController.GetTotalNutrientsFromDay(
 							new DateTime(calendar.Year, calendar.Month, selectedDay));
@@ -94,7 +103,16 @@ namespace Nutribuddy.UI.Console
 						var selectedMonth = AnsiConsole.Ask<int>(
 							$"Enter the [pink1]month[/]: ");
 
-						_eatHistoryController.BuildCalendar(calendar, selectedYear, selectedMonth);
+						if (selectedYear < 1 ||  selectedMonth < 1)
+						{
+							AnsiConsole.Write(new Markup("[red]Wrong date.[/]"));
+							Thread.Sleep(1000);
+						}
+						else
+						{
+							_eatHistoryController.BuildCalendar(calendar, selectedYear, selectedMonth);
+						}
+						
 
 						AnsiConsole.Clear();
 						AnsiConsole.Write(calendarFigletText);
