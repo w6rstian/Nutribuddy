@@ -36,16 +36,45 @@ namespace Nutribuddy.UI.Console
             table.AddColumn("").Centered();
             table.HideHeaders();
 
-            table.AddRow("Gender", $"{user.Gender}");
-            table.AddRow("Age", $"{user.Age}");
-            table.AddRow("Height (cm)", $"{user.Height}");
-            table.AddRow("Weight (kg)", $"{user.Weight}");
-            table.AddRow("BMI", $"{Math.Truncate(user.BMI * 100) / 100}");
-            table.AddRow("Your caloric needs", $"{user.CaloricNeeds}");
-            table.AddRow("Activity Level", $"{user.PhysicalActivityLevel}");
-            table.AddRow("Goal", $"{user.Goal}");
+			AnsiConsole.Live(table)
+	        .Start(ctx =>
+	        {
+				table.AddRow("Gender", $"{user.Gender}");
+				ctx.Refresh();
+		        Thread.Sleep(100);
 
-            AnsiConsole.Write(table);
+				table.AddRow("Age", $"{user.Age}");
+				ctx.Refresh();
+		        Thread.Sleep(100);
+
+                table.AddRow("Height (cm)", $"{user.Height}");
+				ctx.Refresh();
+				Thread.Sleep(100);
+
+				table.AddRow("Weight (kg)", $"{user.Weight}");
+				ctx.Refresh();
+				Thread.Sleep(100);
+
+				table.AddRow("BMI", $"{Math.Truncate(user.BMI * 100) / 100}");
+				ctx.Refresh();
+				Thread.Sleep(100);
+
+				table.AddRow("Your caloric needs", $"{user.CaloricNeeds}");
+				ctx.Refresh();
+				Thread.Sleep(100);
+
+				table.AddRow("Activity Level", $"{user.PhysicalActivityLevel}");
+				ctx.Refresh();
+				Thread.Sleep(100);
+
+				table.AddRow("Goal", $"{user.Goal}");
+				ctx.Refresh();
+				Thread.Sleep(100);
+			});
+			
+            
+
+            //AnsiConsole.Write(table);
 
             // Personalized kcal counter
             DisplayMyKcal();
