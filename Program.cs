@@ -8,6 +8,7 @@ namespace Nutribuddy
     {
         static void Main(string[] args)
         {
+            Console.Title = "Nutribuddy";
             var userController = new UserController();
             var foodController = new FoodController("Data/FoodData.json");
             var dishController = new DishController("Data/DishData.json");
