@@ -22,7 +22,8 @@
       "Protein (g)": 3.675,
       "Sodium, Na (mg)": 219.0,
       "Fiber, total dietary (g)": 2.7
-    }
+    },
+    "Date": "2024-11-25T15:34:54.8037499+01:00"
   },
   {
     "Name": "Green Salad with Kale and Nuts",
@@ -59,7 +60,8 @@
       "Protein (g)": 8.0,
       "Sodium, Na (mg)": 131.8,
       "Fiber, total dietary (g)": 7.34
-    }
+    },
+    "Date": "2024-11-25T15:34:54.814317+01:00"
   },
   {
     "Name": "Tomato Soup",
@@ -84,7 +86,8 @@
       "Protein (g)": 1.68,
       "Sodium, Na (mg)": 250.0,
       "Fiber, total dietary (g)": 0.0
-    }
+    },
+    "Date": "2024-11-25T15:34:54.8144247+01:00"
   },
   {
     "Name": "Vegetable Delight",
@@ -121,7 +124,8 @@
       "Protein (g)": 3.38,
       "Sodium, Na (mg)": 102.0,
       "Fiber, total dietary (g)": 5.6
-    }
+    },
+    "Date": "2024-11-25T15:34:54.8144788+01:00"
   },
   {
     "Name": "Protein Power",
@@ -158,6 +162,7 @@
       "Protein (g)": 56.2,
       "Sodium, Na (mg)": 590.2,
       "Fiber, total dietary (g)": 0.0
-    } 
+    },
+    "Date": "2024-11-25T15:34:54.8145594+01:00"
   }
 ]

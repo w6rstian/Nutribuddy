@@ -13,5 +13,20 @@
       },
       "QuantityInGrams": 100.0
     }
+  },
+  {
+    "Item1": "2024-11-25T16:10:07.2335008+01:00",
+    "Item2": {
+      "Description": "Cheese, swiss",
+      "Nutrients": {
+        "Energy (kcal)": 393.0,
+        "Carbohydrate, by difference (g)": 1.44,
+        "Total lipid (fat) (g)": 31.0,
+        "Protein (g)": 27.0,
+        "Sodium, Na (mg)": 185.0,
+        "Fiber, total dietary (g)": 0.0
+      },
+      "QuantityInGrams": 20.0
+    }
   }
 ]
