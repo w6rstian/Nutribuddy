@@ -330,7 +330,8 @@ namespace Nutribuddy.UI.Console
                 if (confirmation)
                 {
                     // TODO: ADDING DISH ANIMATION
-                    _eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, theDish));
+                    //_eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, theDish));
+                    _eatHistoryController.AddDishToHistory(DateTime.Now, theDish);
                     AnsiConsole.MarkupLine($"[bold #A2D2FF]{theDish.Name} has been added as a meal![/]");
                     Thread.Sleep(1000);
                 }
