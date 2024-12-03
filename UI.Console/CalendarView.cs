@@ -50,7 +50,7 @@ namespace Nutribuddy.UI.Console
                         var selectedDay = AnsiConsole.Ask<int>(
                             $"Enter the [pink1]day[/]: ");
 
-                        if (selectedDay == 0)
+                        if (selectedDay < 1 || selectedDay > 31)
                         {
                             AnsiConsole.Write(new Markup($"[red]Invalid day[/]"));
                             Thread.Sleep(1000);
@@ -102,7 +102,7 @@ namespace Nutribuddy.UI.Console
                         var selectedMonth = AnsiConsole.Ask<int>(
                             $"Enter the [pink1]month[/]: ");
 
-                        if (selectedYear < 1 || selectedMonth < 1)
+                        if (selectedYear < 1 || selectedMonth < 1 || selectedMonth > 12)
                         {
                             AnsiConsole.Write(new Markup("[red]Wrong date.[/]"));
                             Thread.Sleep(1000);
