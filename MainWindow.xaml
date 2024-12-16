@@ -57,7 +57,33 @@
                         </Grid>
 
                     </Menu:Btn>
-                    
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                          Command="{Binding UserCommand}"
+                          IsChecked="True">
+
+                        <Grid>
+
+                            <TextBlock Text="User"
+                                        Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding SettingsCommand}"
+                              IsChecked="True">
+
+                        <Grid>
+
+                            <TextBlock Text="Settings"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
                 </StackPanel>
             </Grid>
             
