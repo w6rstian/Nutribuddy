@@ -53,6 +53,23 @@ namespace Nutribuddy.UI.WPF.ViewModel
             set { _goal = value; OnPropertyChanged(); }
         }
 
+        // naprawa braku domyślnych wartości
+        public IEnumerable<string> GenderOptions { get; } = new List<string> { "Male", "Female" };
+        public IEnumerable<string> PhysicalActivityOptions { get; } = new List<string>
+        {
+            "Sedentary",
+            "Lightly Active",
+            "Moderately Active",
+            "Very Active",
+            "Extra Active"
+        };
+        public IEnumerable<string> GoalOptions { get; } = new List<string>
+        {
+            "Lose Weight",
+            "Maintain Weight",
+            "Gain Weight"
+        };
+
         public ICommand SaveCommand { get; }
 
         private readonly UserController _userController;
