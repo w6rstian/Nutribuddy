@@ -24,7 +24,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ICommand SettingsCommand { get; set; }
 
         private void Home(object obj) => CurrentView = new HomeVM();
-        private void User(object obj) => CurrentView = new UserVM();
+        private void User(object obj) => CurrentView = new ProfileVM();
         private void Settings(object obj) => CurrentView = new SettingsVM();
 
         public NavigationVM()

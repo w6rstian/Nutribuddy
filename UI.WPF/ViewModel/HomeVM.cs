@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nutribuddy.UI.WPF.ViewModel
 {
-    internal class HomeVM
+    class HomeVM : ViewModelBase
     {
     }
 }

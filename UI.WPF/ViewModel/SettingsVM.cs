@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Nutribuddy.UI.WPF.ViewModel
 {
-    internal class SettingsVM
+    class SettingsVM : ViewModelBase
     {
+
     }
 }

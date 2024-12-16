@@ -7,7 +7,7 @@
         <view:Home />
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type vm:UserVM}">
+    <DataTemplate DataType="{x:Type vm:ProfileVM}">
         <view:Home />
     </DataTemplate>
 
