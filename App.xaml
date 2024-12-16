@@ -4,5 +4,16 @@
              >
     <Application.Resources>
         
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
+                
+                <ResourceDictionary Source="UI.WPF/Styles/ButtonTheme.xaml" />
+                <ResourceDictionary Source="UI/DataTemplate.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+            
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

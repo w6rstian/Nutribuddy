@@ -1,4 +1,4 @@
-﻿using Nutribuddy.UI.WPF;
+﻿using Nutribuddy;
 using System;
 using System.Windows;
 

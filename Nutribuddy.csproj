@@ -6,11 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<UseWPF>true</UseWPF>
-	<ApplicationIcon>Assets\bonzibuddy.ico</ApplicationIcon>
+	<ApplicationIcon>Assets\Images\bonzibuddy.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Assets\bonzibuddy.ico" />
+    <None Remove="Assets\Fonts\Lato-Regular.ttf" />
+    <None Remove="Assets\Fonts\Poppins-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Images\bonzibuddy.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +43,11 @@
 
   <ItemGroup>
     <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Lato-Regular.ttf" />
+    <Resource Include="Assets\Fonts\Poppins-Regular.ttf" />
   </ItemGroup>
 
 </Project>

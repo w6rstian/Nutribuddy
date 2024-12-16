@@ -1,4 +1,5 @@
 ﻿using Nutribuddy.Core.Controllers;
+using Nutribuddy.UI;
 using Nutribuddy.UI.Console;
 using System;
 using System.Collections.Generic;
@@ -16,13 +17,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Nutribuddy.UI.WPF
+namespace Nutribuddy
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
-	{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
         // Import funkcji WinAPI
         [DllImport("kernel32.dll")]
         private static extern bool AllocConsole();
@@ -31,13 +32,13 @@ namespace Nutribuddy.UI.WPF
         private static extern bool FreeConsole();
 
         [DllImport("kernel32.dll")]
-        private static extern IntPtr GetConsoleWindow();
+        private static extern nint GetConsoleWindow();
 
         [DllImport("user32.dll")]
-        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+        private static extern bool ShowWindow(nint hWnd, int nCmdShow);
 
         [DllImport("kernel32.dll")]
-        private static extern IntPtr GetStdHandle(int nStdHandle);
+        private static extern nint GetStdHandle(int nStdHandle);
 
         private const int SW_HIDE = 0;
         private const int SW_SHOW = 5;
@@ -53,8 +54,8 @@ namespace Nutribuddy.UI.WPF
         private ViewManager viewManager;
 
         public MainWindow()
-		{
-			InitializeComponent();
+        {
+            InitializeComponent();
             if (userController == null)
             {
                 userController = new UserController();
@@ -89,7 +90,7 @@ namespace Nutribuddy.UI.WPF
 
             isConsoleMode = true;
 
-            if (GetConsoleWindow() == IntPtr.Zero)
+            if (GetConsoleWindow() == nint.Zero)
             {
                 if (!EnsureConsoleAllocated())
                 {
@@ -99,11 +100,11 @@ namespace Nutribuddy.UI.WPF
                 }
             }
 
-            this.Close();
+            Close();
 
             ShowConsoleWindow();
 
-            System.Console.Clear();
+            Console.Clear();
 
             viewManager.ShowView("MainMenu");
 
@@ -121,16 +122,16 @@ namespace Nutribuddy.UI.WPF
 
         private void HideConsoleWindow()
         {
-            IntPtr hWnd = GetConsoleWindow();
-            if (hWnd != IntPtr.Zero)
+            nint hWnd = GetConsoleWindow();
+            if (hWnd != nint.Zero)
             {
                 ShowWindow(hWnd, SW_HIDE);  // Ukrywa konsolę
             }
         }
         private void ShowConsoleWindow()
         {
-            IntPtr hWnd = GetConsoleWindow();
-            if (hWnd != IntPtr.Zero)
+            nint hWnd = GetConsoleWindow();
+            if (hWnd != nint.Zero)
             {
                 ShowWindow(hWnd, SW_SHOW);  // Pokazuje konsolę
             }
@@ -142,11 +143,11 @@ namespace Nutribuddy.UI.WPF
             if (AllocConsole())
             {
                 // Sprawdź uchwyty standardowego wejścia i wyjścia
-                IntPtr stdIn = GetStdHandle(STD_INPUT_HANDLE);
-                IntPtr stdOut = GetStdHandle(STD_OUTPUT_HANDLE);
-                IntPtr stdErr = GetStdHandle(STD_ERROR_HANDLE);
+                nint stdIn = GetStdHandle(STD_INPUT_HANDLE);
+                nint stdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+                nint stdErr = GetStdHandle(STD_ERROR_HANDLE);
 
-                if (stdIn == IntPtr.Zero || stdOut == IntPtr.Zero || stdErr == IntPtr.Zero)
+                if (stdIn == nint.Zero || stdOut == nint.Zero || stdErr == nint.Zero)
                 {
                     FreeConsole(); // Zwolnij konsolę, jeśli uchwyty są błędne
                     return false;
