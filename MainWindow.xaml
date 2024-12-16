@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:Nutribuddy.UI.WPF.ViewModel"
         xmlns:Menu="clr-namespace:Nutribuddy.UI"
+        xmlns:local="clr-namespace:Nutribuddy.UI.WPF.Converters"
         mc:Ignorable="d"
         Title="Nutribuddy"
         Height="600"
@@ -18,8 +19,13 @@
     <Window.DataContext>
         <vm:NavigationVM />
     </Window.DataContext>
-    
-    
+
+    <Window.Resources>
+        <!-- StringEqualsConverter to compare strings -->
+        <local:StringEqualsConverter x:Key="StringEqualsConverter" />
+    </Window.Resources>
+
+
     <Grid>
         <!--
         <Button Content="Switch to console mode" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonSwitchToConsole_Click"/>
@@ -70,8 +76,8 @@
                             Width="228">
 
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                          Command="{Binding HomeCommand}"
-                          IsChecked="True">
+                              Command="{Binding HomeCommand}"
+                              IsChecked="{Binding CurrentViewName, Converter={StaticResource StringEqualsConverter}, ConverterParameter=Home}">
 
                         <Grid>
 
@@ -83,7 +89,8 @@
                     </Menu:Btn>
 
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                          Command="{Binding ProfileCommand}">
+                              Command="{Binding ProfileCommand}"
+                              IsChecked="{Binding CurrentViewName, Converter={StaticResource StringEqualsConverter}, ConverterParameter=Profile}">
 
                         <Grid>
 
@@ -95,7 +102,8 @@
                     </Menu:Btn>
 
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                              Command="{Binding SettingsCommand}">
+                              Command="{Binding SettingsCommand}"
+                              IsChecked="{Binding CurrentViewName, Converter={StaticResource StringEqualsConverter}, ConverterParameter=Settings}">
 
                         <Grid>
 
