@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nutribuddy.Core.Controllers;
+using Nutribuddy.UI.WPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,7 @@ namespace Nutribuddy.UI.WPF.View
         public Settings()
         {
             InitializeComponent();
+            //DataContext = new SettingsVM(new UserController());
         }
     }
 }

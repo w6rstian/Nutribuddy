@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nutribuddy.Core.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         private void Home(object obj) => CurrentView = new HomeVM();
         private void Profile(object obj) => CurrentView = new ProfileVM();
-        private void Settings(object obj) => CurrentView = new SettingsVM();
+        private void Settings(object obj) => CurrentView = new SettingsVM(new UserController());
 
         public NavigationVM()
         {

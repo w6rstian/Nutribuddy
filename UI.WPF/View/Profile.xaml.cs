@@ -18,9 +18,9 @@ namespace Nutribuddy.UI.WPF.View
     /// <summary>
     /// Interaction logic for User.xaml
     /// </summary>
-    public partial class User : UserControl
+    public partial class Profile : UserControl
     {
-        public User()
+        public Profile()
         {
             InitializeComponent();
         }

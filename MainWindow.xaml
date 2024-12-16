@@ -59,7 +59,7 @@
                     </Menu:Btn>
 
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                          Command="{Binding UserCommand}"
+                          Command="{Binding ProfileCommand}"
                           IsChecked="True">
 
                         <Grid>
@@ -86,7 +86,14 @@
 
                 </StackPanel>
             </Grid>
-            
+
+            <Grid Grid.Column="1">
+
+                <ContentControl x:Name="Pages"
+                    Content="{Binding CurrentView}" />
+
+            </Grid>
+
         </Grid>
     </Grid>
 </Window>
