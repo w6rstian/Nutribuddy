@@ -8,5 +8,6 @@ namespace Nutribuddy.UI.WPF.ViewModel
 {
     class HomeVM : ViewModelBase
     {
+        public HomeVM() { }
     }
 }
