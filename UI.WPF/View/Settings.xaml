@@ -15,6 +15,76 @@
     </UserControl.DataContext>
 
     <Grid Margin="20">
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" VerticalAlignment="Top">
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Weight (kg):" Width="150" VerticalAlignment="Center" Foreground="#CFCFCF"
+                           Style="{StaticResource Text_Style}"/>
+                <TextBox Text="{Binding Weight, Mode=TwoWay}" Width="200" 
+                         Style="{StaticResource TextBox_Style}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Height (cm):" Width="150" VerticalAlignment="Center" Foreground="#CFCFCF"
+                           Style="{StaticResource Text_Style}"/>
+                <TextBox Text="{Binding Height, Mode=TwoWay}" Width="200" 
+                         Style="{StaticResource TextBox_Style}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Age (years):" Width="150" VerticalAlignment="Center" Foreground="#CFCFCF"
+                           Style="{StaticResource Text_Style}"/>
+                <TextBox Text="{Binding Age, Mode=TwoWay}" Width="200" 
+                         Style="{StaticResource TextBox_Style}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Gender:" Width="150" VerticalAlignment="Center" Foreground="#CFCFCF"
+                           Style="{StaticResource Text_Style}"/>
+                <ComboBox SelectedItem="{Binding Gender, Mode=TwoWay}" Width="200" 
+                          Style="{StaticResource ComboBox_Style}">
+                    <ComboBoxItem Content="Male" />
+                    <ComboBoxItem Content="Female" />
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Physical Activity:" Width="150" VerticalAlignment="Center" Foreground="#CFCFCF"
+                           Style="{StaticResource Text_Style}"/>
+                <ComboBox SelectedItem="{Binding PhysicalActivityLevel, Mode=TwoWay}" Width="200" 
+                          Style="{StaticResource ComboBox_Style}">
+                    <ComboBoxItem Content="Sedentary" />
+                    <ComboBoxItem Content="Lightly Active" />
+                    <ComboBoxItem Content="Moderately Active" />
+                    <ComboBoxItem Content="Very Active" />
+                    <ComboBoxItem Content="Extra Active" />
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Goal:" Width="150" VerticalAlignment="Center" Foreground="#CFCFCF"
+                           Style="{StaticResource Text_Style}"/>
+                <ComboBox SelectedItem="{Binding Goal, Mode=TwoWay}" Width="200" 
+                          Style="{StaticResource ComboBox_Style}">
+                    <ComboBoxItem Content="Lose Weight" />
+                    <ComboBoxItem Content="Maintain Weight" />
+                    <ComboBoxItem Content="Gain Weight" />
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Grid.Row="1" Content="Save"
+                Command="{Binding SaveCommand}"
+                HorizontalAlignment="Right"
+                Width="100"
+                Margin="0,10,0,0" 
+                Foreground="#CFCFCF"
+                Background="#353340" 
+                BorderThickness="0"/>
     </Grid>
 </UserControl>

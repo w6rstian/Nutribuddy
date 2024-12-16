@@ -9,7 +9,9 @@
             <ResourceDictionary.MergedDictionaries>
                 
                 <ResourceDictionary Source="UI.WPF/Styles/ButtonTheme.xaml" />
+                <ResourceDictionary Source="UI.WPF/Styles/ComboBoxTheme.xaml" />
                 <ResourceDictionary Source="UI.WPF/Styles/PageTheme.xaml" />
+                <ResourceDictionary Source="UI.WPF/Styles/TextBoxTheme.xaml" />
                 <ResourceDictionary Source="UI.WPF/Styles/TextTheme.xaml" />
                 <ResourceDictionary Source="UI/DataTemplate.xaml" />
 
