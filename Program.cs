@@ -6,13 +6,14 @@ namespace Nutribuddy
 {
     internal class Program
     {
+        /*
         static void Main(string[] args)
         {
             Console.Title = "Nutribuddy";
             var userController = new UserController();
-            var foodController = new FoodController("Data/FoodData.json");
-            var dishController = new DishController("Data/DishData.json");
-            var eatHistoryController = new EatHistoryController("Data/FoodHistory.json", "Data/DishHistory.json");
+            var foodController = new FoodController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodData.json");
+            var dishController = new DishController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishData.json");
+            var eatHistoryController = new EatHistoryController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishHistory.json");
             var viewManager = new ViewManager();
             viewManager.RegisterView("IntroSequence", new IntroSequenceView(() => viewManager.ShowView("MainMenu")));
             viewManager.RegisterView("MainMenu", new MainMenuView(
@@ -46,5 +47,6 @@ namespace Nutribuddy
             //var userUI = new TestUserView(userController);
             //userUI.Show();
         }
+        */
     }
 }
