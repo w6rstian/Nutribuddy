@@ -6,7 +6,179 @@
              xmlns:local="clr-namespace:Nutribuddy.UI.WPF.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <StackPanel>
+        <TextBlock Text="Welcome"
+                       Foreground="White"
+                       FontSize="28"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,20" />
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,0,0,10">
+            <Border Width="400"
+                    Height="200">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#5bc3ff" Offset="0.0" />
+                        <GradientStop Color="#3aa0ff" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,400,200" />
+                </Border.Clip>
+
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Profile"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="20,10,10,0"/>
+
+                        <TextBlock Text="Check your details and nutrient intake"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Margin="20,10,10,0"/>
+                    </StackPanel>
+
+                    <Image Width="150"
+                           Height="150"
+                           Source="/Assets/Images/blankuser.png"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom" Margin="0,0,-33,-28" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-11.752"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+            </Border>
+
+            <Border Width="200"
+                    Height="200"
+                    CornerRadius="10"
+                    Margin="45,0,0,0">
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#ffc554" Offset="0.0" />
+                        <GradientStop Color="#ffb73a" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,200,200" />
+                </Border.Clip>
+
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Meals"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="20,10,10,0"/>
+
+                        <TextBlock Text="Tell us what you eat"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Margin="20,10,10,0"/>
+                    </StackPanel>
+
+                    <Image Width="100"
+                           Height="100"
+                           Source="/Assets/Images/food-tray.png"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom" Margin="0,0,-5,-4" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-11.752"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <StackPanel>
+
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="15,0,0,0" />
+
+                </Style>
+            </StackPanel.Resources>
             
-    </Grid>
+            <TextBlock Text="Navigate"
+                       Foreground="White"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,10" />
+
+            <StackPanel Orientation="Horizontal">
+
+                <Border Width="150"
+                        Height="150"
+                        Background="#844eff"
+                        CornerRadius="10"
+                        Margin="0">
+
+                    <Grid>
+                        <TextBlock Text="Dishes"
+                               Foreground="White"
+                               FontSize="20"
+                               Margin="20,10,10,0"/>
+                    </Grid>
+                </Border>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="#4e99ff"
+                        CornerRadius="10">
+
+                    <Grid>
+                        <TextBlock Text="Products"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="20,10,10,0"/>
+                    </Grid>
+                </Border>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="#CDB4DB"
+                        CornerRadius="10">
+
+                    <Grid>
+                        <TextBlock Text="Calendar"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="20,10,10,0"/>
+                    </Grid>
+                </Border>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="#FFAFCC"
+                        CornerRadius="10">
+                    
+                    <Grid>
+                        <TextBlock Text="Settings"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="20,10,10,0"/>
+                    </Grid>
+                </Border>
+
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
 </UserControl>
