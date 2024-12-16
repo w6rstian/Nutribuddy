@@ -87,7 +87,7 @@
 
                         <Grid>
 
-                            <TextBlock Text="User"
+                            <TextBlock Text="Profile"
                                         Style="{StaticResource Text_Style}" />
 
                         </Grid>
