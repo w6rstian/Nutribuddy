@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Nutribuddy.UI.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Nutribuddy" Height="450" Width="800">
     <Grid>
         <Button Content="Switch to console mode" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonSwitchToConsole_Click"/>
     </Grid>
