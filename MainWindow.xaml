@@ -59,8 +59,7 @@
                     </Menu:Btn>
 
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                          Command="{Binding ProfileCommand}"
-                          IsChecked="True">
+                          Command="{Binding ProfileCommand}">
 
                         <Grid>
 
@@ -72,8 +71,7 @@
                     </Menu:Btn>
 
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                              Command="{Binding SettingsCommand}"
-                              IsChecked="True">
+                              Command="{Binding SettingsCommand}">
 
                         <Grid>
 
