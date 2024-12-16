@@ -17,5 +17,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         }
 
         public ICommand HomeCommand { get; set; }
+
+        private void Home(object obj) => CurrentView = new HomeVM();
     }
 }
