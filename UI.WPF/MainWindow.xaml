@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Click Me" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonSwitchToConsole_Click"/>
+        <Button Content="Switch to console mode" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonSwitchToConsole_Click"/>
     </Grid>
 </Window>

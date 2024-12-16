@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nutribuddy.Core.Controllers;
+using Nutribuddy.UI.Console;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -44,11 +46,40 @@ namespace Nutribuddy.UI.WPF
         private const int STD_ERROR_HANDLE = -12;  // Standardowe wyjście błędów
 
         private bool isConsoleMode = false; // Flaga przełącznika trybu
+        private UserController userController;
+        private FoodController foodController;
+        private DishController dishController;
+        private EatHistoryController eatHistoryController;
+        private ViewManager viewManager;
 
         public MainWindow()
 		{
 			InitializeComponent();
-		}
+            if (userController == null)
+            {
+                userController = new UserController();
+                foodController = new FoodController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodData.json");
+                dishController = new DishController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishData.json");
+                eatHistoryController = new EatHistoryController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishHistory.json");
+                viewManager = new ViewManager();
+                viewManager.RegisterView("IntroSequence", new IntroSequenceView(() => viewManager.ShowView("MainMenu")));
+                viewManager.RegisterView("MainMenu", new MainMenuView(
+                    () => viewManager.ShowView("UserDetails"),
+                    () => viewManager.ShowView("Food"),
+                    () => viewManager.ShowView("Dish"),
+                    () => viewManager.ShowView("Calendar")));
+                viewManager.RegisterView("UserDetails", new UserDetailsView(
+                    eatHistoryController,
+                    userController,
+                    dishController,
+                    () => viewManager.ShowView("MainMenu"),
+                    () => viewManager.ShowView("UserConfig")));
+                viewManager.RegisterView("UserConfig", new UserConfigView(userController, () => viewManager.ShowView("UserDetails")));
+                viewManager.RegisterView("Food", new FoodView(eatHistoryController, foodController, () => viewManager.ShowView("MainMenu")));
+                viewManager.RegisterView("Dish", new DishView(eatHistoryController, foodController, dishController, () => viewManager.ShowView("MainMenu")));
+                viewManager.RegisterView("Calendar", new CalendarView(eatHistoryController, () => viewManager.ShowView("MainMenu")));
+            }
+        }
 
         // Przełącz do trybu konsolowego
         private void SwitchToConsoleMode()
@@ -73,10 +104,8 @@ namespace Nutribuddy.UI.WPF
             ShowConsoleWindow();
 
             System.Console.Clear();
-            System.Console.WriteLine("Przełączono do trybu konsolowego.");
-            System.Console.WriteLine("Naciśnij Enter, aby wrócić do trybu WPF.");
 
-            System.Console.ReadLine();
+            viewManager.ShowView("MainMenu");
 
             HideConsoleWindow();
 
