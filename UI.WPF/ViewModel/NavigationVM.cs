@@ -14,6 +14,12 @@ namespace Nutribuddy.UI.WPF.ViewModel
     class NavigationVM : ViewModelBase
     {
         private object _currentView;
+        private string _currentViewName;
+        public string CurrentViewName
+        {
+            get { return _currentViewName; }
+            set { _currentViewName = value; OnPropertyChanged(); }
+        }
         public object CurrentView
         {
             get { return _currentView; }
@@ -24,9 +30,21 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ICommand ProfileCommand { get; set; }
         public ICommand SettingsCommand { get; set; }
 
-        private void Home(object obj) => CurrentView = new HomeVM();
-        private void Profile(object obj) => CurrentView = new ProfileVM();
-        private void Settings(object obj) => CurrentView = new SettingsVM(new UserController());
+        private void Home(object obj)
+        {
+            CurrentView = new HomeVM();
+            CurrentViewName = "Home";
+        }
+        private void Profile(object obj)
+        {
+            CurrentView = new ProfileVM();
+            CurrentViewName = "Profile";
+        }
+        private void Settings(object obj)
+        {
+            CurrentView = new SettingsVM(new UserController());
+            CurrentViewName = "Settings";
+        }
 
         public NavigationVM()
         {
@@ -35,6 +53,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
             SettingsCommand = new RelayCommand(Settings);
 
             CurrentView = new HomeVM();
+            CurrentViewName = "Home";
         }
     }
 }
