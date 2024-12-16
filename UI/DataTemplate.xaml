@@ -8,11 +8,11 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type vm:ProfileVM}">
-        <view:Home />
+        <view:Profile />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type vm:SettingsVM}">
-        <view:Home />
+        <view:Settings />
     </DataTemplate>
 
 </ResourceDictionary>
