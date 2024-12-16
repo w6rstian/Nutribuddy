@@ -34,11 +34,11 @@
                                        Rect="0,0,400,200" />
                 </Border.Clip>
 
-                <Button Command="{Binding Profile}"
-        Background="Transparent"
-        Padding="0"
-        HorizontalAlignment="Stretch"
-        VerticalAlignment="Stretch">
+                <Button Command="{Binding ProfileCommand}"
+                        Background="Transparent"
+                        Padding="0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
                     <Grid Width="400" Height="200">
                         <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                             <TextBlock Text="Profile"
@@ -52,12 +52,12 @@
                         </StackPanel>
 
                         <Image Width="150"
-               Height="150"
-               Source="/Assets/Images/blankuser.png"
-               HorizontalAlignment="Right"
-               VerticalAlignment="Bottom" 
-               Margin="0,0,-33,-28"
-               RenderTransformOrigin="0.5,0.5">
+                               Height="150"
+                               Source="/Assets/Images/blankuser.png"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" 
+                               Margin="0,0,-33,-28"
+                               RenderTransformOrigin="0.5,0.5">
                             <Image.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
