@@ -20,7 +20,7 @@
                             BorderThickness="0">
 
                         <Border.Background>
-                            <SolidColorBrush x:Name="BorderBackround"
+                            <SolidColorBrush x:Name="BorderBackground"
                                              Color="#272537" />
                         </Border.Background>
 
