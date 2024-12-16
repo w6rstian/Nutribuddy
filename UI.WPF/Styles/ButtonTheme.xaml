@@ -98,4 +98,38 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="LogoStyle"
+       TargetType="Button">
+
+        <Setter Property="HorizontalAlignment"
+            Value="Left" />
+        <Setter Property="VerticalAlignment"
+            Value="Center" />
+        <Setter Property="Margin"
+            Value="30,5,0,0" />
+        <Setter Property="Height"
+            Value="50" />
+        <Setter Property="MinWidth"
+            Value="0" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                        BorderThickness="0">
+                        <Border.Background>
+                            <SolidColorBrush x:Name="BorderBackground"
+                                         Color="#272537" />
+                        </Border.Background>
+
+                        <Grid>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
