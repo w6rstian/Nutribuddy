@@ -13,10 +13,11 @@
     
     <StackPanel>
         <TextBlock Text="Welcome"
-                       Foreground="White"
-                       FontSize="28"
-                       HorizontalAlignment="Left"
-                       Margin="0,0,0,20" />
+                   Style="{StaticResource Text_Style}"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20" />
         <StackPanel Orientation="Horizontal"
                     Margin="0,0,0,10">
             <Border Width="400"
@@ -42,13 +43,15 @@
                     <Grid Width="400" Height="200">
                         <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                             <TextBlock Text="Profile"
-                       Foreground="White"
-                       FontSize="28"
-                       Margin="20,10,10,0"/>
+                                       Style="{StaticResource Text_Style}"
+                                       Foreground="White"
+                                       FontSize="28"
+                                       Margin="20,10,10,0"/>
                             <TextBlock Text="Check your details and nutrient intake"
-                       Foreground="White"
-                       FontSize="18"
-                       Margin="20,10,10,0"/>
+                                       Style="{StaticResource Text_Style}"
+                                       Foreground="White"
+                                       FontSize="18"
+                                       Margin="20,10,10,0"/>
                         </StackPanel>
 
                         <Image Width="150"
@@ -89,34 +92,42 @@
                                        Rect="0,0,200,200" />
                 </Border.Clip>
 
-                <Grid>
-                    <StackPanel>
-                        <TextBlock Text="Meals"
-                                   Foreground="White"
-                                   FontSize="28"
-                                   Margin="20,10,10,0"/>
+                <Button Command="{Binding MealsCommand}"
+                        Background="Transparent"
+                        Padding="0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                    <Grid Width="200" Height="200">
+                        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <TextBlock Text="Meals"
+                                           Style="{StaticResource Text_Style}"
+                                           Foreground="White"
+                                           FontSize="28"
+                                           Margin="20,10,10,0"/>
 
-                        <TextBlock Text="Tell us what you eat"
-                                   Foreground="White"
-                                   FontSize="18"
-                                   Margin="20,10,10,0"/>
-                    </StackPanel>
+                            <TextBlock Text="Tell us what you eat"
+                                           Style="{StaticResource Text_Style}"
+                                           Foreground="White"
+                                           FontSize="17"
+                                           Margin="20,10,10,0"/>
+                        </StackPanel>
 
-                    <Image Width="100"
-                           Height="100"
-                           Source="/Assets/Images/food-tray.png"
-                           HorizontalAlignment="Right"
-                           VerticalAlignment="Bottom" Margin="0,0,-5,-4" RenderTransformOrigin="0.5,0.5">
-                        <Image.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform Angle="-11.752"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Image.RenderTransform>
-                    </Image>
-                </Grid>
+                        <Image Width="100"
+                                   Height="100"
+                                   Source="/Assets/Images/food-tray.png"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Bottom" Margin="0,0,-5,-4" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-11.752"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                    </Grid>
+                </Button>
             </Border>
         </StackPanel>
 
@@ -130,6 +141,7 @@
             </StackPanel.Resources>
             
             <TextBlock Text="Navigate"
+                       Style="{StaticResource Text_Style}"
                        Foreground="White"
                        FontSize="20"
                        HorizontalAlignment="Left"
@@ -142,54 +154,101 @@
                         Background="#844eff"
                         CornerRadius="10"
                         Margin="0">
-
-                    <Grid>
-                        <TextBlock Text="Dishes"
-                               Foreground="White"
-                               FontSize="20"
-                               Margin="20,10,10,0"/>
-                    </Grid>
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10"
+                                           RadiusY="10"
+                                           Rect="0,0,150,150" />
+                    </Border.Clip>
+                    <Button Command="{Binding DishesCommand}"
+                            Background="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch">
+                        <Grid Width="150" Height="150">
+                            <TextBlock Text="Dishes"
+                                   Style="{StaticResource Text_Style}"
+                                   VerticalAlignment="Top"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="20,10,10,0"/>
+                        </Grid>
+                    </Button>
                 </Border>
 
                 <Border Width="150"
                         Height="150"
                         Background="#4e99ff"
                         CornerRadius="10">
-
-                    <Grid>
-                        <TextBlock Text="Products"
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10"
+                                           RadiusY="10"
+                                           Rect="0,0,150,150" />
+                    </Border.Clip>
+                    <Button Command="{Binding ProductsCommand}"
+                            Background="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch">
+                        <Grid Width="150" Height="150">
+                            <TextBlock Text="Products"
+                                   Style="{StaticResource Text_Style}"
+                                   VerticalAlignment="Top"
                                    Foreground="White"
                                    FontSize="20"
                                    Margin="20,10,10,0"/>
-                    </Grid>
+                        </Grid>
+                    </Button>
                 </Border>
 
                 <Border Width="150"
                         Height="150"
                         Background="#CDB4DB"
                         CornerRadius="10">
-
-                    <Grid>
-                        <TextBlock Text="Calendar"
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10"
+                                           RadiusY="10"
+                                           Rect="0,0,150,150" />
+                    </Border.Clip>
+                    <Button Command="{Binding CalendarCommand}"
+                            Background="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch">
+                        <Grid Width="150" Height="150">
+                            <TextBlock Text="Calendar"
+                                   Style="{StaticResource Text_Style}"
+                                   VerticalAlignment="Top"
                                    Foreground="White"
                                    FontSize="20"
                                    Margin="20,10,10,0"/>
-                    </Grid>
+                        </Grid>
+                    </Button>
                 </Border>
 
                 <Border Width="150"
                         Height="150"
                         Background="#FFAFCC"
                         CornerRadius="10">
-                    
-                    <Grid>
-                        <TextBlock Text="Settings"
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10"
+                                           RadiusY="10"
+                                           Rect="0,0,150,150" />
+                    </Border.Clip>
+                    <Button Command="{Binding SettingsCommand}"
+                            Background="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch">
+                        <Grid Width="150" Height="150">
+                            <TextBlock Text="Settings"
+                                   Style="{StaticResource Text_Style}"
+                                   VerticalAlignment="Top"
                                    Foreground="White"
                                    FontSize="20"
                                    Margin="20,10,10,0"/>
-                    </Grid>
+                        </Grid>
+                    </Button>
                 </Border>
-
             </StackPanel>
         </StackPanel>
     </StackPanel>

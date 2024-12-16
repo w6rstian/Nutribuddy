@@ -18,17 +18,26 @@ namespace Nutribuddy.UI.WPF.ViewModel
         }
 
         public ICommand ProfileCommand { get; set; }
+
+        public ICommand SettingsCommand {  get; set; }
+
         private void Profile(object obj)
         {
             // This will trigger a command in the NavigationVM to update the view.
-            // You can trigger any view navigation here.
             var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
             navigationVM?.ProfileCommand.Execute(null);
+        }
+
+        private void Settings(object obj)
+        {
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.SettingsCommand.Execute(null);
         }
 
         public HomeVM()
         {
             ProfileCommand = new RelayCommand(Profile);
+            SettingsCommand = new RelayCommand(Settings);
 
         }
     }
