@@ -36,8 +36,32 @@
                 <ColumnDefinition Width="622" />
             </Grid.ColumnDefinitions>
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75" />
+                <RowDefinition Height="525" />
+            </Grid.RowDefinitions>
+
             <Grid HorizontalAlignment="Left"
-                  Width="228">
+                  Width="228"
+                  Grid.Row="0">
+                
+                <Button Style="{StaticResource LogoStyle}"
+                        Click="ButtonSwitchToConsole_Click">
+                    <Grid>
+                        <TextBlock Text="NUTRIBUDDY"
+                                   Style="{StaticResource Text_Style}"
+                                   Margin="0,0,0,0"/>
+                        <TextBlock Text="Click me for text-mode" 
+                                   Margin="0,30,0,0"
+                                   Style="{StaticResource Text_Style}"
+                                   FontSize="6"/>
+                    </Grid>
+                </Button>
+            </Grid>
+
+            <Grid HorizontalAlignment="Left"
+                  Width="228"
+                  Grid.Row="1">
 
                 <Border Background="#272537"
                         CornerRadius="20,0,0,20" />
@@ -85,10 +109,12 @@
                 </StackPanel>
             </Grid>
 
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="1"
+                  Grid.Row="1">
 
                 <ContentControl x:Name="Pages"
-                    Content="{Binding CurrentView}" />
+                                Margin="10"
+                                Content="{Binding CurrentView}" />
 
             </Grid>
 
