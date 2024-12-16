@@ -13,7 +13,8 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        Background="Transparent">
+        Background="Transparent"
+        Style="{StaticResource Window_Style}">
 
     
     <Window.DataContext>
