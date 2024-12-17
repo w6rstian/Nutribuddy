@@ -19,6 +19,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
         // TODO: DODAC OBSLUGE RESZTY WIDOKOW JAK POWSTANA WIDOKI
 
         public ICommand SettingsCommand { get; set; }
+        public ICommand UserDataCommand { get; set; }
+        public ICommand NutrientsSummaryCommand { get; set; }
 
         private void Settings(object obj)
         {
@@ -26,9 +28,23 @@ namespace Nutribuddy.UI.WPF.ViewModel
             navigationVM?.SettingsCommand.Execute(null);
         }
 
+        private void UserData(object obj)
+        {
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.UserDataCommand.Execute(null);
+        }
+
+        private void NutrientsSummary(object obj)
+        {
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.NutrientsSummaryCommand.Execute(null);
+        }
+
         public ProfileVM()
         {
             SettingsCommand = new RelayCommand(Settings);
+            UserDataCommand = new RelayCommand(UserData);
+            NutrientsSummaryCommand = new RelayCommand(NutrientsSummary);
         }
     }
 }

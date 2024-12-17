@@ -11,6 +11,10 @@
         <view:Profile />
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:NutrientsSummaryVM}">
+        <view:NutrientsSummary />
+    </DataTemplate>
+
     <DataTemplate DataType="{x:Type vm:MealsVM}">
         <view:Meals />
     </DataTemplate>
@@ -33,6 +37,10 @@
 
     <DataTemplate DataType="{x:Type vm:ProductsVM}">
         <view:Products />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:UserDataVM}">
+        <view:UserData />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type vm:SettingsVM}">
