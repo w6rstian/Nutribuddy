@@ -41,4 +41,31 @@
 
     </Style>
 
+    <Style x:Key="Window_Style" TargetType="{x:Type Window}">
+        <!-- Set the Window's Background to Transparent (optional) -->
+        <Setter Property="Background" Value="Transparent" />
+
+        <!-- Opacity Animation -->
+        <Style.Triggers>
+            <!-- When the Window becomes Collapsed -->
+            <Trigger Property="Visibility" Value="Collapsed">
+                <Setter Property="Opacity" Value="0" />
+            </Trigger>
+
+            <!-- Animate Opacity on Window Loaded -->
+            <EventTrigger RoutedEvent="Window.Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <!-- Animate Window's Opacity from 0 to 1 -->
+                        <DoubleAnimation 
+                        Storyboard.TargetProperty="Opacity" 
+                        Duration="0:0:0.5" 
+                        From="0" 
+                        To="1" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
 </ResourceDictionary>
