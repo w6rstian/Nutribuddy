@@ -11,9 +11,9 @@ namespace Nutribuddy
         {
             Console.Title = "Nutribuddy";
             var userController = new UserController();
-            var foodController = new FoodController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodData.json");
-            var dishController = new DishController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishData.json");
-            var eatHistoryController = new EatHistoryController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishHistory.json");
+            var foodController = new FoodController("C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\FoodData.json");
+            var dishController = new DishController("C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\DishData.json");
+            var eatHistoryController = new EatHistoryController("C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", "C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\DishHistory.json");
             var viewManager = new ViewManager();
             viewManager.RegisterView("IntroSequence", new IntroSequenceView(() => viewManager.ShowView("MainMenu")));
             viewManager.RegisterView("MainMenu", new MainMenuView(

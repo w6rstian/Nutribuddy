@@ -20,8 +20,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public NutrientsSummaryVM()
         {
             _eatHistoryController = new EatHistoryController(
-                "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
-                "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishHistory.json" // Path to DishHistory.json
+                "C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
+                "C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\DishHistory.json" // Path to DishHistory.json
                 );
             _userController = new UserController();
 

@@ -44,7 +44,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         {
             _dishController = new DishController("C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\DishData.json"); // Path to file DishData
             _eatHistoryController = new EatHistoryController(
-                "C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
+                "C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
                 "C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\DishHistory.json" // Path to DishHistory.json
                 );
 

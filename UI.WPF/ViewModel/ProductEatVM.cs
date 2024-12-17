@@ -61,8 +61,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
             Nutrients = selectedProduct.Nutrients;
 
             _eatHistoryController = new EatHistoryController(
-                "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
-                "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishHistory.json" // Path to DishHistory.json
+                "C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
+                "C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\DishHistory.json" // Path to DishHistory.json
                 );
 
             ConfirmEatProductCommand = new RelayCommand(ConfirmEatProduct);
