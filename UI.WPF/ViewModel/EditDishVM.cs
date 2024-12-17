@@ -108,7 +108,9 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         private void AddIngredient(object obj)
         {
-            // Logic to navigate to Add Ingredient view
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.SaveTempDishCommand.Execute(Dish);
+            navigationVM?.AddIngredientForEditCommand.Execute(null);
         }
 
         private void EditIngredient(object obj)
@@ -143,6 +145,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
                 d.Name = Dish.Name;
                 d.Ingredients = Dish.Ingredients;
             });
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.DishesCommand.Execute(null);
         }
     }
 }

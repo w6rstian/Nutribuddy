@@ -137,7 +137,7 @@
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch">
                     <Grid Width="125" Height="75">
-                        <TextBlock Text="Eat Dish"
+                        <TextBlock Text="Details"
                                    Style="{StaticResource Text_Style}"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"

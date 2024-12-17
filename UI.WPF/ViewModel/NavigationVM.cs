@@ -14,9 +14,10 @@ namespace Nutribuddy.UI.WPF.ViewModel
 {
     class NavigationVM : ViewModelBase
     {
+        public int createOrEditState = 0;
         private object _currentView;
         private string _currentViewName;
-        private Dish _tempDish;
+        public Dish _tempDish;
         public string CurrentViewName
         {
             get { return _currentViewName; }
@@ -31,7 +32,11 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public Dish TempDish
         {
             get { return _tempDish; }
-            set { _tempDish = value; OnPropertyChanged(); }
+            set
+            {
+                _tempDish = value;
+                OnPropertyChanged();
+            }
         }
 
         public ICommand HomeCommand { get; set; }
@@ -49,6 +54,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ICommand ContinueCreatingDishCommand { get; set; }
         public ICommand SaveTempDishCommand { get; set; }
         public ICommand AddIngredientCommand { get; set; }
+        public ICommand AddIngredientForEditCommand { get; set; }
 
         private void Home(object obj)
         {
@@ -137,6 +143,14 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         private void AddIngredient(object obj)
         {
+            createOrEditState = 0;
+            CurrentView = new DishChooseProductVM();
+            CurrentViewName = "Dishes";
+        }
+
+        private void AddIngredientForEdit(object obj)
+        {
+            createOrEditState = 1;
             CurrentView = new DishChooseProductVM();
             CurrentViewName = "Dishes";
         }
@@ -166,6 +180,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
             SaveTempDishCommand = new RelayCommand(SaveTemporaryDish);
             AddIngredientCommand = new RelayCommand(AddIngredient);
             ContinueCreatingDishCommand = new RelayCommand(ContinueCreatingDish);
+            AddIngredientForEditCommand = new RelayCommand(AddIngredientForEdit);
 
             CurrentView = new HomeVM();
             CurrentViewName = "Home";

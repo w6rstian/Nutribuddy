@@ -101,7 +101,14 @@ namespace Nutribuddy.UI.WPF.ViewModel
                 addedProduct.QuantityInGrams = _quantity;
                 var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
                 navigationVM?.TempDish.Ingredients.Add(addedProduct);
-                navigationVM?.ContinueCreatingDishCommand.Execute(null);
+                if (navigationVM?.createOrEditState == 0)
+                {
+                    navigationVM?.ContinueCreatingDishCommand.Execute(null);
+                }
+                else
+                {
+                    navigationVM?.EditDishCommand.Execute(navigationVM?.TempDish);
+                }
             }
         }
     }
