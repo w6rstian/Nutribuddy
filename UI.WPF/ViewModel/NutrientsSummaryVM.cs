@@ -23,7 +23,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
                 "C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
                 "C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\DishHistory.json" // Path to DishHistory.json
                 );
-            _userController = new UserController();
+            _userController = new UserController("C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\UserData.json");
 
             RequiredCalories = _userController.CalculateCaloricNeeds();
             Nutrients = _eatHistoryController.GetTotalNutrientsFromDay(DateTime.Now);

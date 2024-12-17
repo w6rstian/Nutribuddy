@@ -94,7 +94,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         }*/
         public SettingsVM()
         {
-            _userController = new UserController();
+            _userController = new UserController("C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\UserData.json");
 
             // aktualne dane usera
             var user = _userController.GetUser();

@@ -1,14 +1,18 @@
-﻿using Nutribuddy.Core.Models;
+﻿using Newtonsoft.Json;
+using Nutribuddy.Core.Models;
+using System.IO;
 
 namespace Nutribuddy.Core.Controllers
 {
     internal class UserController
     {
         private User _user;
+        private readonly string _filePath;
 
-        public UserController()
+        public UserController(string filePath)
         {
-            _user = new User();
+            _filePath = filePath;
+            _user = LoadUser();
         }
 
         public User GetUser()
@@ -26,11 +30,12 @@ namespace Nutribuddy.Core.Controllers
             _user.Goal = goal;
             _user.BMI = CalculateBMI();
             _user.CaloricNeeds = CalculateCaloricNeeds();
+
+            SaveUser();
         }
 
         public double CalculateBMI()
         {
-            //wzor BMI: waga (kg) / (wzrost (m) ^ 2)
             double heightInMeters = _user.Height / 100.0;
             return _user.Weight / (heightInMeters * heightInMeters);
         }
@@ -60,6 +65,36 @@ namespace Nutribuddy.Core.Controllers
                 "Gain Weight" => maintenanceCalories + 500,
                 _ => maintenanceCalories
             };
+        }
+
+        private User LoadUser()
+        {
+            try
+            {
+                if (File.Exists(_filePath))
+                {
+                    var jsonData = File.ReadAllText(_filePath);
+                    return JsonConvert.DeserializeObject<User>(jsonData) ?? new User();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading user data: {ex.Message}");
+            }
+            return new User();
+        }
+
+        private void SaveUser()
+        {
+            try
+            {
+                var jsonData = JsonConvert.SerializeObject(_user, Formatting.Indented);
+                File.WriteAllText(_filePath, jsonData);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving user data: {ex.Message}");
+            }
         }
     }
 }
