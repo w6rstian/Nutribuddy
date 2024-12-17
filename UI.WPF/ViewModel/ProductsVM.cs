@@ -38,10 +38,10 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         public ProductsVM()
         {
-            _foodController = new FoodController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodData.json"); // Path to file FoodData
+            _foodController = new FoodController("C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\FoodData.json"); // Path to file FoodData
             _eatHistoryController = new EatHistoryController(
-                "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
-                "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishHistory.json" // Path to DishHistory.json
+                "C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
+                "C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\DishHistory.json" // Path to DishHistory.json
                 );
 
             AllProducts = new ObservableCollection<FoodItem>(_foodController.GetAllFoods());
