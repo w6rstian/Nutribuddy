@@ -68,6 +68,8 @@
                 Value="/Assets/Fonts/#Poppins" />
         <Setter Property="Foreground"
                 Value="#DBDBDB" />
+        <Setter Property="Margin"
+                Value="70,0,0,0" />
         <Setter Property="Padding"
                 Value="5" />
         <Setter Property="BorderThickness"
