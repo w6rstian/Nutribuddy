@@ -28,7 +28,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ObservableCollection<Dish> FilteredDishes { get; set; }
 
         public ICommand AddDishCommand { get; set; }
-        public ICommand EditDishCommand { get; set; }
+        public ICommand EditDishCommand { get; set; } // może tu zamiast edit to view (skład) i tam możliwośc edycji itp
         public ICommand DeleteDishCommand { get; }
 
         public DishesVM()
