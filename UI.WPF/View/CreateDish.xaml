@@ -16,22 +16,16 @@
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Formularz nazwy -->
             <RowDefinition Height="*"/>
-            <!-- Lista składników -->
             <RowDefinition Height="Auto"/>
-            <!-- Przyciski dodawania/usuwania składników -->
             <RowDefinition Height="Auto"/>
-            <!-- Przyciski akcji -->
         </Grid.RowDefinitions>
 
-        <!-- Formularz nazwy -->
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
             <TextBlock Text="Dish Name:" Style="{StaticResource Text_Style}" Margin="0,0,10,0"/>
             <TextBox Text="{Binding DishName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBox_Style}" Width="300"/>
         </StackPanel>
 
-        <!-- Lista składników -->
         <ListView Grid.Row="1" ItemsSource="{Binding Ingredients}" SelectedItem="{Binding SelectedIngredient}" 
                   Style="{StaticResource ListView_Style}">
             <ListView.ItemTemplate>
@@ -51,7 +45,6 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <!-- Przyciski dodawania/usuwania składników -->
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="10,10,10,0">
             <Button Content="Add Ingredient" Command="{Binding AddIngredientCommand}" 
                     Style="{StaticResource Button_Style}" Margin="10,0"/>
@@ -59,7 +52,6 @@
                     Style="{StaticResource Button_Style}" Margin="10,0"/>
         </StackPanel>
 
-        <!-- Przyciski akcji -->
         <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" Margin="10">
             <Button Content="Save Dish" Command="{Binding SaveDishCommand}" Style="{StaticResource Button_Style}" Margin="10" />
             <Button Content="Cancel" Command="{Binding CancelCommand}" Style="{StaticResource Button_Style}" Margin="10" />

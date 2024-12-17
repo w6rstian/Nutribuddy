@@ -54,7 +54,6 @@
         </ListView>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
-            <!-- Add Ingredient Button -->
             <Border Width="150"
             Height="75"
             Background="#844eff"
@@ -82,7 +81,6 @@
                 </Button>
             </Border>
 
-            <!-- Edit Quantity Button -->
             <Border Width="150"
             Height="75"
             Background="#4e99ff"
@@ -110,7 +108,6 @@
                 </Button>
             </Border>
 
-            <!-- Remove Ingredient Button -->
             <Border Width="150"
             Height="75"
             Background="#CDB4DB"
@@ -136,7 +133,6 @@
                 </Button>
             </Border>
 
-            <!-- Save Button -->
             <Border Width="150"
             Height="75"
             Background="#FFAFCC"
