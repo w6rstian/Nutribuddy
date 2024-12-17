@@ -23,6 +23,10 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         public ICommand MealsCommand { get; set; }
 
+        public ICommand DishesCommand { get; set; }
+
+        public ICommand ProductsCommand { get; set; }
+
         // TODO: DODAC OBSLUGE RESZTY PRZYCISKOW JAK POWSTANA WIDOKI
         private void Profile(object obj)
         {
@@ -37,6 +41,18 @@ namespace Nutribuddy.UI.WPF.ViewModel
             navigationVM?.MealsCommand.Execute(null);
         }
 
+        private void Dishes(object obj)
+        {
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.DishesCommand.Execute(null);
+        }
+
+        private void Products(object obj)
+        {
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.ProductsCommand.Execute(null);
+        }
+
         private void Settings(object obj)
         {
             var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
@@ -48,6 +64,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
             ProfileCommand = new RelayCommand(Profile);
             SettingsCommand = new RelayCommand(Settings);
             MealsCommand = new RelayCommand(Meals);
+            DishesCommand = new RelayCommand(Dishes);
+            ProductsCommand = new RelayCommand(Products);
 
         }
     }

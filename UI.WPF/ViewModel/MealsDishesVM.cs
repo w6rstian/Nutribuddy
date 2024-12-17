@@ -1,6 +1,5 @@
 ﻿using Nutribuddy.Core.Controllers;
 using Nutribuddy.Core.Models;
-using Nutribuddy.UI.WPF.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Nutribuddy.UI.WPF.ViewModel
 {
-    class DishesVM : ViewModelBase
+    class MealsDishesVM : ViewModelBase
     {
         private object _currentView;
         private string _currentViewName;
@@ -35,12 +35,9 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ObservableCollection<Dish> AllDishes { get; set; }
         public ObservableCollection<Dish> FilteredDishes { get; set; }
 
-        public ICommand AddDishCommand { get; set; }
-        public ICommand EditDishCommand { get; set; } // może tu zamiast edit to view (skład) i tam możliwośc edycji itp
-        public ICommand DeleteDishCommand { get; }
         public ICommand EatDishCommand { get; set; }
 
-        public DishesVM()
+        public MealsDishesVM()
         {
             _dishController = new DishController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishData.json"); // Path to file DishData
             _eatHistoryController = new EatHistoryController(
@@ -51,9 +48,6 @@ namespace Nutribuddy.UI.WPF.ViewModel
             AllDishes = new ObservableCollection<Dish>(_dishController.GetAllDishes());
             FilteredDishes = new ObservableCollection<Dish>(AllDishes);
 
-            AddDishCommand = new RelayCommand(AddDish);
-            EditDishCommand = new RelayCommand(EditDish);
-            DeleteDishCommand = new RelayCommand(DeleteDish);
             EatDishCommand = new RelayCommand(EatDish);
         }
 
@@ -89,21 +83,6 @@ namespace Nutribuddy.UI.WPF.ViewModel
                 FilteredDishes.Add(dish);
         }
 
-        // w przyszlosci przejscia do widokow wlasciwych
-        private void AddDish(object obj) => CurrentView = new DishesVM();
-
-        private void EditDish(object obj) => CurrentView = new DishesVM();
-
-        private void DeleteDish(object obj)
-        {
-            if (SelectedDish != null)
-            {
-                _dishController.DeleteDish(SelectedDish.Name);
-                AllDishes.Remove(SelectedDish);
-                FilterDishes();
-            }
-        }
-
         private void EatDish(object obj)
         {
             if (SelectedDish != null)
@@ -113,4 +92,3 @@ namespace Nutribuddy.UI.WPF.ViewModel
         }
     }
 }
-

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Nutribuddy.UI.WPF.ViewModel
 {
@@ -24,9 +25,25 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         // TODO: DODAC OBSLUGE RESZTY WIDOKOW JAK POWSTANA WIDOKI
 
+        public ICommand DishesCommand { get; set; }
+        public ICommand ProductsCommand { get; set; }
+
+        private void Dishes(object obj)
+        {
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.DishesCommand.Execute(null);
+        }
+
+        private void Products(object obj)
+        {
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.ProductsCommand.Execute(null);
+        }
+
         public MealsVM()
         {
-
+            DishesCommand = new RelayCommand(Dishes);
+            ProductsCommand = new RelayCommand(Products);
         }
     }
 }
