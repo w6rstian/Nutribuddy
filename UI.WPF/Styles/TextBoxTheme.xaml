@@ -23,7 +23,7 @@
                                      x:Name="FillBox"/>
 
                             <TextBlock IsHitTestVisible="False"
-                                       Text="Wpisz"
+                                       Text="Enter value"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="10,0,0,0"
