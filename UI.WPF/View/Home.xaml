@@ -173,6 +173,23 @@
                                    Foreground="White"
                                    FontSize="20"
                                    Margin="20,10,10,0"/>
+
+                            <Image Width="150"
+                                   Height="150"
+                                   Source="/Assets/Images/dish.png"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Bottom" 
+                                   Margin="0,0,-25,-26"
+                                   RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-11.752"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
                         </Grid>
                     </Button>
                 </Border>
@@ -198,6 +215,23 @@
                                    Foreground="White"
                                    FontSize="20"
                                    Margin="20,10,10,0"/>
+
+                            <Image Width="135"
+                                   Height="135"
+                                   Source="/Assets/Images/products.png"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Bottom" 
+                                   Margin="0,0,-25,-26"
+                                   RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-11.752"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
                         </Grid>
                     </Button>
                 </Border>
@@ -223,6 +257,23 @@
                                    Foreground="White"
                                    FontSize="20"
                                    Margin="20,10,10,0"/>
+
+                            <Image Width="125"
+                                   Height="125"
+                                   Source="/Assets/Images/calendar.png"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Bottom" 
+                                   Margin="0,0,-25,-26"
+                                   RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-11.752"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
                         </Grid>
                     </Button>
                 </Border>
@@ -248,6 +299,23 @@
                                    Foreground="White"
                                    FontSize="20"
                                    Margin="20,10,10,0"/>
+
+                            <Image Width="125"
+                                   Height="125"
+                                   Source="/Assets/Images/cog.png"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Bottom" 
+                                   Margin="0,0,-25,-26"
+                                   RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-11.752"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
                         </Grid>
                     </Button>
                 </Border>
