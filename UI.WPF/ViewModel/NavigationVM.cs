@@ -16,6 +16,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
     {
         private object _currentView;
         private string _currentViewName;
+        private Dish _tempDish;
         public string CurrentViewName
         {
             get { return _currentViewName; }
@@ -25,6 +26,12 @@ namespace Nutribuddy.UI.WPF.ViewModel
         {
             get { return _currentView; }
             set { _currentView = value; OnPropertyChanged(); }
+        }
+
+        public Dish TempDish
+        {
+            get { return _tempDish; }
+            set { _tempDish = value; OnPropertyChanged(); }
         }
 
         public ICommand HomeCommand { get; set; }
@@ -38,6 +45,10 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ICommand EatDishCommand { get; set; }
         public ICommand EatProductCommand { get; set; }
         public ICommand ProductsCommand { get; set; }
+        public ICommand CreateDishCommand { get; set; }
+        public ICommand ContinueCreatingDishCommand { get; set; }
+        public ICommand SaveTempDishCommand { get; set; }
+        public ICommand AddIngredientCommand { get; set; }
 
         private void Home(object obj)
         {
@@ -111,6 +122,33 @@ namespace Nutribuddy.UI.WPF.ViewModel
             CurrentViewName = "Settings";
         }
 
+        private void CreateDish(object obj)
+        {
+            _tempDish = new Dish();
+            CurrentView = new CreateDishVM();
+            CurrentViewName = "Dishes";
+        }
+
+        private void ContinueCreatingDish(object obj)
+        {
+            CurrentView = new CreateDishVM();
+            CurrentViewName = "Dishes";
+        }
+
+        private void AddIngredient(object obj)
+        {
+            CurrentView = new DishChooseProductVM();
+            CurrentViewName = "Dishes";
+        }
+
+        private void SaveTemporaryDish(object obj)
+        {
+            if (obj is Dish temporaryDish)
+            {
+                _tempDish = temporaryDish;
+            }
+        }
+
         public NavigationVM()
         {
             HomeCommand = new RelayCommand(Home);
@@ -124,6 +162,10 @@ namespace Nutribuddy.UI.WPF.ViewModel
             EatProductCommand = new RelayCommand(EatProduct);
             ProductsCommand = new RelayCommand(Products);
             NutrientsSummaryCommand = new RelayCommand(NutrientsSummary);
+            CreateDishCommand = new RelayCommand(CreateDish);
+            SaveTempDishCommand = new RelayCommand(SaveTemporaryDish);
+            AddIngredientCommand = new RelayCommand(AddIngredient);
+            ContinueCreatingDishCommand = new RelayCommand(ContinueCreatingDish);
 
             CurrentView = new HomeVM();
             CurrentViewName = "Home";

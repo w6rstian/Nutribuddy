@@ -48,6 +48,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
             if (_dish != null)
             {
                 _eatHistoryController.AddDishToHistory(DateTime.Now, _dish);
+                var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+                navigationVM?.DishesCommand.Execute(null);
             }
         }
 

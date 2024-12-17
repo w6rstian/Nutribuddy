@@ -1,0 +1,108 @@
+﻿using Nutribuddy.Core.Controllers;
+using Nutribuddy.Core.Models;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
+
+namespace Nutribuddy.UI.WPF.ViewModel
+{
+    class DishChooseProductVM : ViewModelBase
+    {
+        private object _currentView;
+        private string _currentViewName;
+        private double _quantity;
+
+        public string CurrentViewName
+        {
+            get { return _currentViewName; }
+            set { _currentViewName = value; OnPropertyChanged(); }
+        }
+        public object CurrentView
+        {
+            get { return _currentView; }
+            set { _currentView = value; OnPropertyChanged(); }
+        }
+
+        private readonly FoodController _foodController;
+        private readonly EatHistoryController _eatHistoryController;
+        private string _searchText;
+        private FoodItem _selectedProduct;
+
+        public ObservableCollection<FoodItem> AllProducts { get; set; }
+        public ObservableCollection<FoodItem> FilteredProducts { get; set; }
+
+        public double Quantity
+        {
+            get => _quantity;
+            set
+            {
+                if (_quantity != value)
+                {
+                    _quantity = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public ICommand AddProductCommand { get; set; }
+
+        public DishChooseProductVM()
+        {
+            _foodController = new FoodController("C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\FoodData.json"); // Path to file FoodData
+            _eatHistoryController = new EatHistoryController(
+                "C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
+                "C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\DishHistory.json" // Path to DishHistory.json
+                );
+
+            AllProducts = new ObservableCollection<FoodItem>(_foodController.GetAllFoods());
+            FilteredProducts = new ObservableCollection<FoodItem>(AllProducts);
+
+            AddProductCommand = new RelayCommand(AddProduct);
+        }
+
+        public string SearchText
+        {
+            get => _searchText;
+            set
+            {
+                _searchText = value;
+                OnPropertyChanged();
+                FilterFoodItems();
+            }
+        }
+
+        public FoodItem SelectedProduct
+        {
+            get => _selectedProduct;
+            set
+            {
+                _selectedProduct = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private void FilterFoodItems()
+        {
+            FilteredProducts.Clear();
+            var filtered = string.IsNullOrWhiteSpace(SearchText)
+                ? AllProducts
+                : AllProducts.Where(d => d.Description.Contains(SearchText, StringComparison.OrdinalIgnoreCase));
+
+            foreach (var foodItem in filtered)
+                FilteredProducts.Add(foodItem);
+        }
+
+        private void AddProduct(object obj)
+        {
+            if (SelectedProduct != null && _quantity > 0)
+            {
+                FoodItem addedProduct = new FoodItem();
+                addedProduct.Description = SelectedProduct.Description;
+                addedProduct.Nutrients = SelectedProduct.Nutrients;
+                addedProduct.QuantityInGrams = _quantity;
+                var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+                navigationVM?.TempDish.Ingredients.Add(addedProduct);
+                navigationVM?.ContinueCreatingDishCommand.Execute(null);
+            }
+        }
+    }
+}

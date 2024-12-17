@@ -70,7 +70,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         public EditDishVM(Dish dish)
         {
-            _dishController = new DishController("C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\DishData.json");
+            _dishController = new DishController("C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\DishData.json");
             Dish = dish;
 
             AllIngredients = new ObservableCollection<FoodItem>(_dish.Ingredients);
@@ -87,15 +87,23 @@ namespace Nutribuddy.UI.WPF.ViewModel
         //do naprawy ale usuwanie i zapisanie zmian działa
         private void FilterIngredients()
         {
-/*            FilteredIngredients.Clear();
+            if (FilteredIngredients != null)
+            {
+                FilteredIngredients.Clear();
+            }
 
             var filtered = string.IsNullOrWhiteSpace(SearchText)
                 ? AllIngredients
                 : new ObservableCollection<FoodItem>(
                     AllIngredients.Where(i => i.Description.Contains(SearchText, System.StringComparison.OrdinalIgnoreCase)));
 
-            foreach (var item in filtered)
-                FilteredIngredients.Add(item);*/
+            if (filtered != null)
+            {
+                foreach (var item in filtered)
+                    FilteredIngredients.Add(item);
+            }
+
+            OnPropertyChanged(nameof(FilteredIngredients));
         }
 
         private void AddIngredient(object obj)
@@ -124,7 +132,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
                 Dish.Ingredients.Remove(SelectedIngredient);
 
                 FilterIngredients();
-                OnPropertyChanged(nameof(Dish));
+                OnPropertyChanged(nameof(FilteredIngredients));
             }
         }
 
