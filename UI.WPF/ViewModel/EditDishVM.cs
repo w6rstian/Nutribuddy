@@ -68,6 +68,23 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ICommand RemoveIngredientCommand { get; }
         public ICommand SaveCommand { get; }
 
+        public EditDishVM()
+        {
+            _dishController = new DishController("C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\DishData.json");
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            Dish = navigationVM?.TempDish;
+
+            AllIngredients = new ObservableCollection<FoodItem>(_dish.Ingredients);
+            FilteredIngredients = new ObservableCollection<FoodItem>(AllIngredients);
+
+            AddIngredientCommand = new RelayCommand(AddIngredient);
+            EditIngredientCommand = new RelayCommand(EditIngredient);
+            RemoveIngredientCommand = new RelayCommand(RemoveIngredient);
+            SaveCommand = new RelayCommand(SaveDish);
+
+            FilterIngredients();
+        }
+
         public EditDishVM(Dish dish)
         {
             _dishController = new DishController("C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\DishData.json");
@@ -117,10 +134,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
         {
             if (SelectedIngredient != null)
             {
-                // Logic to edit ingredient quantity
-                SelectedIngredient.QuantityInGrams += 10; // Example logic to increase quantity
-                Dish.CalculateTotalNutrients();
-                FilterIngredients();
+                var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+                navigationVM?.EditIngredientCommand.Execute(SelectedIngredient);
             }
         }
 
