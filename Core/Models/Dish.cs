@@ -1,6 +1,6 @@
 ﻿namespace Nutribuddy.Core.Models
 {
-    internal class Dish
+    public class Dish
     {
         public string Name { get; set; } = String.Empty;
         public List<FoodItem> Ingredients { get; set; }
