@@ -197,7 +197,8 @@
                 <Border Width="150"
                         Height="150"
                         Background="#4e99ff"
-                        CornerRadius="10">
+                        CornerRadius="10"
+                        Margin="95,0,95,0">
                     <Border.Clip>
                         <RectangleGeometry RadiusX="10"
                                            RadiusY="10"
@@ -236,6 +237,7 @@
                     </Button>
                 </Border>
 
+            <!--
                 <Border Width="150"
                         Height="150"
                         Background="#CDB4DB"
@@ -277,11 +279,12 @@
                         </Grid>
                     </Button>
                 </Border>
-
+            -->
                 <Border Width="150"
                         Height="150"
                         Background="#FFAFCC"
-                        CornerRadius="10">
+                        CornerRadius="10"
+                        Margin="0,0,0,0">
                     <Border.Clip>
                         <RectangleGeometry RadiusX="10"
                                            RadiusY="10"

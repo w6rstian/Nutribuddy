@@ -30,17 +30,24 @@
                   Style="{StaticResource ListView_Style}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
                         <TextBlock Text="{Binding Description}" 
                                    FontSize="16" 
                                    Foreground="#FFFFFF" 
                                    Padding="5,0"
-                                   Margin="0,0,50,0" />
+                                   Margin="0,0,50,0" 
+                                   Grid.Column="0"/>
                         <TextBlock Text="{Binding QuantityInGrams, StringFormat={}{0} g}" 
                                    FontSize="16" 
                                    Foreground="#FFFFFF" 
-                                   Padding="5,0"/>
-                    </StackPanel>
+                                   Padding="5,0"
+                                   HorizontalAlignment="Right"
+                                   Grid.Column="1"/>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
