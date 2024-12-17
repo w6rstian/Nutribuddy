@@ -13,7 +13,10 @@
     <None Remove="Assets\Fonts\Lato-Regular.ttf" />
     <None Remove="Assets\Fonts\Poppins-Regular.ttf" />
     <None Remove="Assets\Images\blankuser.png" />
+    <None Remove="Assets\Images\dish.png" />
     <None Remove="Assets\Images\food-tray.png" />
+    <None Remove="Assets\Images\menu.png" />
+    <None Remove="Assets\Images\products.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,7 +54,10 @@
     <Resource Include="Assets\Fonts\Lato-Regular.ttf" />
     <Resource Include="Assets\Fonts\Poppins-Regular.ttf" />
     <Resource Include="Assets\Images\blankuser.png" />
+    <Resource Include="Assets\Images\dish.png" />
     <Resource Include="Assets\Images\food-tray.png" />
+    <Resource Include="Assets\Images\menu.png" />
+    <Resource Include="Assets\Images\products.png" />
   </ItemGroup>
 
 </Project>
