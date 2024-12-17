@@ -38,21 +38,21 @@
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Border Width="125"
-                    Height="100"
+                    Height="75"
                     Background="#844eff"
                     CornerRadius="10"
                     Margin="0,0,10,0">
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                RadiusY="10"
-                               Rect="0,0,125,100" />
+                               Rect="0,0,125,75" />
                 </Border.Clip>
                 <Button Command="{Binding AddDishCommand}"
                         Background="Transparent"
                         Padding="0"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch">
-                    <Grid Width="125" Height="100">
+                    <Grid Width="125" Height="75">
                         <TextBlock Text="Add Dish"
                                    Style="{StaticResource Text_Style}"
                                    VerticalAlignment="Center"
@@ -65,21 +65,21 @@
             </Border>
 
             <Border Width="125"
-                    Height="100"
+                    Height="75"
                     Background="#4e99ff"
                     CornerRadius="10"
                     Margin="0,0,10,0">
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                RadiusY="10"
-                               Rect="0,0,125,100" />
+                               Rect="0,0,125,75" />
                 </Border.Clip>
                 <Button Command="{Binding EditDishCommand}"
                         Background="Transparent"
                         Padding="0"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch">
-                    <Grid Width="125" Height="100"
+                    <Grid Width="125" Height="75"
                           HorizontalAlignment="Center">
                         <TextBlock Text="Edit Dish"
                                    Style="{StaticResource Text_Style}"
@@ -93,21 +93,21 @@
             </Border>
 
             <Border Width="150"
-                    Height="100"
+                    Height="75"
                     Background="#CDB4DB"
                     CornerRadius="10"
                     Margin="0,0,10,0">
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                RadiusY="10"
-                               Rect="0,0,150,100" />
+                               Rect="0,0,150,75" />
                 </Border.Clip>
                 <Button Command="{Binding DeleteDishCommand}"
                         Background="Transparent"
                         Padding="0"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch">
-                    <Grid Width="150" Height="100">
+                    <Grid Width="150" Height="75">
                         <TextBlock Text="Delete Dish"
                                    Style="{StaticResource Text_Style}"
                                    VerticalAlignment="Center"
@@ -119,20 +119,20 @@
                 </Button>
             </Border>
             <Border Width="125"
-                    Height="100"
+                    Height="75"
                     Background="#FFAFCC"
                     CornerRadius="10">
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                        RadiusY="10"
-                                       Rect="0,0,125,100" />
+                                       Rect="0,0,125,75" />
                 </Border.Clip>
                 <Button Command="{Binding EatDishCommand}"
                         Background="Transparent"
                         Padding="0"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch">
-                    <Grid Width="125" Height="100">
+                    <Grid Width="125" Height="75">
                         <TextBlock Text="Eat Dish"
                                    Style="{StaticResource Text_Style}"
                                    HorizontalAlignment="Center"
