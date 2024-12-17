@@ -15,6 +15,7 @@
                             <Rectangle StrokeThickness="1"/>
                             <ToggleButton IsChecked="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
                                           Background="Transparent"
+                                          Foreground="#DBDBDB"
                                           BorderThickness="0"
                                           Focusable="False"
                                           HorizontalContentAlignment="Stretch"
@@ -31,7 +32,7 @@
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="10,0,0,0"
-                                       FontSize="11"
+                                       FontSize="18"
                                        Foreground="DarkGray">
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
@@ -66,11 +67,13 @@
         <Setter Property="FontFamily"
                 Value="/Assets/Fonts/#Poppins" />
         <Setter Property="Foreground"
-                Value="#CFCFCF" />
+                Value="#DBDBDB" />
         <Setter Property="Padding"
                 Value="5" />
         <Setter Property="BorderThickness"
                 Value="0" />
+        <Setter Property="FontSize"
+                Value="18" />
     </Style>
 
 </ResourceDictionary>

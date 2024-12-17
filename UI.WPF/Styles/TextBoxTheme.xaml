@@ -19,7 +19,7 @@
                                      Background="Transparent"
                                      VerticalAlignment="Center"
                                      Padding="5"
-                                     Foreground="#CFCFCF"
+                                     Foreground="#DBDBDB"
                                      x:Name="FillBox"/>
 
                             <TextBlock IsHitTestVisible="False"
@@ -52,6 +52,10 @@
                 
         <Setter Property="FontFamily"
             Value="/Assets/Fonts/#Poppins" />
+        <Setter Property="FontSize"
+                Value="18" />
+        <Setter Property="Foreground"
+                Value="#DBDBDB" />
     </Style>
 
 </ResourceDictionary>

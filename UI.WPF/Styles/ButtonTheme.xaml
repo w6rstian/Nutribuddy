@@ -132,4 +132,43 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="Button_Style" TargetType="Button">
+        <Setter Property="FontFamily" Value="/Assets/Fonts/#Poppins" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="#DBDBDB" />
+        <Setter Property="Padding" Value="5" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                        CornerRadius="10"
+                        Background="#353340"
+                        BorderBrush="Transparent"
+                        BorderThickness="1"
+                        Width="200" Height="40">
+                        <ContentPresenter VerticalAlignment="Center"
+                                      HorizontalAlignment="Center"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#56527A" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#44474F" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Background" Value="#2A2A2A" />
+                            <Setter Property="Foreground" Value="#666666" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>
