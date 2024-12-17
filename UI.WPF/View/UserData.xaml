@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="Nutribuddy.UI.WPF.View.UserData"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Nutribuddy.UI.WPF.View"
+             xmlns:vm="clr-namespace:Nutribuddy.UI.WPF.ViewModel"
+             mc:Ignorable="d" 
+                      d:DesignHeight="600"
+         d:DesignWidth="622"
+         Style="{StaticResource Page_Style}">
+
+    <UserControl.DataContext>
+        <vm:UserDataVM />
+    </UserControl.DataContext>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" VerticalAlignment="Top">
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Weight (kg):" Width="150" VerticalAlignment="Center"
+                       Style="{StaticResource Text_Style}" />
+                <TextBlock Text="{Binding Weight}" Width="200" 
+                     Style="{StaticResource Text_Style}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Height (cm):" Width="150" VerticalAlignment="Center"
+                       Style="{StaticResource Text_Style}"/>
+                <TextBlock Text="{Binding Height}" Width="200" 
+                     Style="{StaticResource Text_Style}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Age (years):" Width="150" VerticalAlignment="Center"
+                       Style="{StaticResource Text_Style}"/>
+                <TextBlock Text="{Binding Age}" Width="200" 
+                     Style="{StaticResource Text_Style}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Gender:" Width="150" VerticalAlignment="Center"
+                       Style="{StaticResource Text_Style}"/>
+                <TextBlock Text="{Binding Gender}" Width="200" 
+                      Style="{StaticResource Text_Style}">
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Physical Activity:" Width="150" VerticalAlignment="Center"
+                       Style="{StaticResource Text_Style}"/>
+                <TextBlock Text="{Binding PhysicalActivityLevel}" Width="200" 
+                           Style="{StaticResource Text_Style}">
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Goal:" Width="150" VerticalAlignment="Center"
+                       Style="{StaticResource Text_Style}"/>
+                <TextBlock Text="{Binding Goal}" Width="200" 
+                           Style="{StaticResource Text_Style}">
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="BMI:" Width="150" VerticalAlignment="Center"
+                           Style="{StaticResource Text_Style}"/>
+                <TextBlock Text="{Binding BMI}" Width="200" 
+                           Style="{StaticResource Text_Style}">
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Caloric needs:" Width="150" VerticalAlignment="Center"
+           Style="{StaticResource Text_Style}"/>
+                <TextBlock Text="{Binding CaloricNeeds}" Width="200" 
+               Style="{StaticResource Text_Style}">
+                </TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Grid.Row="1" Content="Edit"
+            Command="{Binding SettingsCommand}"
+            HorizontalAlignment="Center"
+            Margin="0,10,0,0"
+            Style="{StaticResource Button_Style}" />
+    </Grid>
+</UserControl>

@@ -38,14 +38,14 @@
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Border Width="125"
-                    Height="50"
+                    Height="75"
                     Background="#844eff"
                     CornerRadius="10">
                 
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                        RadiusY="10"
-                                       Rect="0,0,125,50" />
+                                       Rect="0,0,125,75" />
                 </Border.Clip>
                 
                 <Button Command="{Binding EatProductCommand}"
@@ -54,7 +54,7 @@
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch">
 
-                    <Grid Width="125" Height="50">
+                    <Grid Width="125" Height="75">
                         <TextBlock Text="Eat Product"
                                    Style="{StaticResource Text_Style}"
                                    VerticalAlignment="Center"

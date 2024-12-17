@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace Nutribuddy.UI.WPF.ViewModel
 {
-    class SettingsVM : ViewModelBase
+    class UserDataVM : ViewModelBase
     {
         private double _weight;
         private double _height;
@@ -16,6 +16,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
         private string _gender;
         private string _physicalActivityLevel;
         private string _goal;
+        private double _bmi;
+        private double _caloricNeeds;
 
         public double Weight
         {
@@ -53,46 +55,41 @@ namespace Nutribuddy.UI.WPF.ViewModel
             set { _goal = value; OnPropertyChanged(); }
         }
 
-        // opcje do wyboru w comboboxach
-        public IEnumerable<string> GenderOptions { get; } = new List<string> { "Male", "Female" };
-        public IEnumerable<string> PhysicalActivityOptions { get; } = new List<string>
+        public double BMI
         {
-            "Sedentary",
-            "Lightly Active",
-            "Moderately Active",
-            "Very Active",
-            "Extra Active"
-        };
-        public IEnumerable<string> GoalOptions { get; } = new List<string>
-        {
-            "Lose Weight",
-            "Maintain Weight",
-            "Gain Weight"
-        };
+            get => _bmi;
+            set { _bmi = value; OnPropertyChanged(); }
+        }
 
-        public ICommand SaveCommand { get; }
+        public double CaloricNeeds
+        {
+            get => _caloricNeeds;
+            set { _caloricNeeds = value; OnPropertyChanged(); }
+        }
+
+        public ICommand SettingsCommand { get; set; }
 
         private readonly UserController _userController;
 
-/*        // pusty konstruktor zeby dzialal xml?
-        public SettingsVM() : this(new UserController()) { }
+        /*        // pusty konstruktor zeby dzialal xml?
+                public SettingsVM() : this(new UserController()) { }
 
-        public SettingsVM(UserController userController)
-        {
-            _userController = userController;
+                public SettingsVM(UserController userController)
+                {
+                    _userController = userController;
 
-            // aktualne dane usera
-            var user = _userController.GetUser();
-            Weight = user.Weight;
-            Height = user.Height;
-            Age = user.Age;
-            Gender = user.Gender;
-            PhysicalActivityLevel = user.PhysicalActivityLevel;
-            Goal = user.Goal;
+                    // aktualne dane usera
+                    var user = _userController.GetUser();
+                    Weight = user.Weight;
+                    Height = user.Height;
+                    Age = user.Age;
+                    Gender = user.Gender;
+                    PhysicalActivityLevel = user.PhysicalActivityLevel;
+                    Goal = user.Goal;
 
-            SaveCommand = new RelayCommand(SaveUserDetails);
-        }*/
-        public SettingsVM()
+                    SaveCommand = new RelayCommand(SaveUserDetails);
+                }*/
+        public UserDataVM()
         {
             _userController = new UserController();
 
@@ -104,15 +101,16 @@ namespace Nutribuddy.UI.WPF.ViewModel
             Gender = user.Gender;
             PhysicalActivityLevel = user.PhysicalActivityLevel;
             Goal = user.Goal;
+            BMI = Math.Truncate(_userController.CalculateBMI() * 100) / 100;
+            CaloricNeeds = Math.Truncate(_userController.CalculateCaloricNeeds() * 100) / 100;
 
-            SaveCommand = new RelayCommand(SaveUserDetails);
+            SettingsCommand = new RelayCommand(Settings);
         }
 
-        private void SaveUserDetails(object obj)
+        private void Settings(object obj)
         {
-            _userController.UpdateUser(Weight, Height, Age, Gender, PhysicalActivityLevel, Goal);
             var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
-            navigationVM?.UserDataCommand.Execute(null);
+            navigationVM?.SettingsCommand.Execute(null);
         }
     }
 }

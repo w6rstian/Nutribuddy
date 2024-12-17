@@ -36,7 +36,7 @@
                                    RadiusY="10"
                                    Rect="0,0,175,175" />
             </Border.Clip>
-            <Button Command="{Binding ProfileDataCommand}"
+            <Button Command="{Binding UserDataCommand}"
                     Background="#FFAFCC"
                     Padding="0"
                     HorizontalAlignment="Stretch"
@@ -113,7 +113,7 @@
                                    RadiusY="10"
                                    Rect="0,0,175,175" />
             </Border.Clip>
-            <Button Command="{Binding CaloriesCommand}"
+            <Button Command="{Binding NutrientsSummaryCommand}"
                     Background="Transparent"
                     Padding="0"
                     HorizontalAlignment="Stretch"
