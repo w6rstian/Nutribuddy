@@ -27,7 +27,8 @@
 
         <ListView Grid.Row="1" ItemsSource="{Binding FilteredProducts}" 
                   SelectedItem="{Binding SelectedProduct}"
-                  Style="{StaticResource ListView_Style}">
+                  Style="{StaticResource ListView_Style}"
+                  Margin="0,0,0,10">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Products" DisplayMemberBinding="{Binding Description}" Width="400"/>
@@ -36,15 +37,15 @@
         </ListView>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Border Width="150"
-                    Height="100"
+            <Border Width="125"
+                    Height="50"
                     Background="#844eff"
                     CornerRadius="10">
                 
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                        RadiusY="10"
-                                       Rect="0,0,150,100" />
+                                       Rect="0,0,125,50" />
                 </Border.Clip>
                 
                 <Button Command="{Binding EatProductCommand}"
@@ -53,15 +54,15 @@
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch">
 
-                    <Grid Width="150" Height="100">
+                    <Grid Width="125" Height="50">
                         <TextBlock Text="Eat Product"
                                    Style="{StaticResource Text_Style}"
                                    VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
                                    Foreground="White"
                                    FontSize="20"
-                                   Margin="10,0,0,0"/>
+                                   Margin="0,0,0,0"/>
                     </Grid>
-                    
                 </Button>
             </Border>
         </StackPanel>
