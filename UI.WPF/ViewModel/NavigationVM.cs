@@ -27,12 +27,18 @@ namespace Nutribuddy.UI.WPF.ViewModel
         }
 
         public ICommand HomeCommand { get; set; }
+        public ICommand DishesCommand { get; set; }
         public ICommand ProfileCommand { get; set; }
         public ICommand SettingsCommand { get; set; }
 
         private void Home(object obj)
         {
             CurrentView = new HomeVM();
+            CurrentViewName = "Home";
+        }
+        private void Dishes(object obj)
+        {
+            CurrentView = new DishesVM();
             CurrentViewName = "Home";
         }
         private void Profile(object obj)
@@ -49,6 +55,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public NavigationVM()
         {
             HomeCommand = new RelayCommand(Home);
+            DishesCommand = new RelayCommand(Dishes);
             ProfileCommand = new RelayCommand(Profile);
             SettingsCommand = new RelayCommand(Settings);
 

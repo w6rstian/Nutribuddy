@@ -90,6 +90,19 @@
                     </Menu:Btn>
 
                     <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding DishesCommand}"
+                              IsChecked="{Binding CurrentViewName, Converter={StaticResource StringEqualsConverter}, ConverterParameter=Dishes}">
+
+                        <Grid>
+
+                            <TextBlock Text="Dishes"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
                               Command="{Binding ProfileCommand}"
                               IsChecked="{Binding CurrentViewName, Converter={StaticResource StringEqualsConverter}, ConverterParameter=Profile}">
 
