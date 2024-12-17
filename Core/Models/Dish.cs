@@ -5,7 +5,7 @@
         public string Name { get; set; } = String.Empty;
         public List<FoodItem> Ingredients { get; set; }
         public Dictionary<string, double> TotalNutrients { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } // a do czego ta data tu???????
 
         public Dish()
         {
