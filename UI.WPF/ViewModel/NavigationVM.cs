@@ -55,7 +55,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         }
         private void Settings(object obj)
         {
-            CurrentView = new SettingsVM(new UserController());
+            CurrentView = new SettingsVM();
             CurrentViewName = "Settings";
         }
 

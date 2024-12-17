@@ -74,12 +74,27 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         private readonly UserController _userController;
 
-        // pusty konstruktor zeby dzialal xml?
+/*        // pusty konstruktor zeby dzialal xml?
         public SettingsVM() : this(new UserController()) { }
 
         public SettingsVM(UserController userController)
         {
             _userController = userController;
+
+            // aktualne dane usera
+            var user = _userController.GetUser();
+            Weight = user.Weight;
+            Height = user.Height;
+            Age = user.Age;
+            Gender = user.Gender;
+            PhysicalActivityLevel = user.PhysicalActivityLevel;
+            Goal = user.Goal;
+
+            SaveCommand = new RelayCommand(SaveUserDetails);
+        }*/
+        public SettingsVM()
+        {
+            _userController = new UserController();
 
             // aktualne dane usera
             var user = _userController.GetUser();
