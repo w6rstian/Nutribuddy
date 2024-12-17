@@ -5,13 +5,13 @@
         public string Name { get; set; } = String.Empty;
         public List<FoodItem> Ingredients { get; set; }
         public Dictionary<string, double> TotalNutrients { get; set; }
-        public DateTime Date { get; set; } // a do czego ta data tu???????
+        //public DateTime Date { get; set; } // a do czego ta data tu???????
 
         public Dish()
         {
             Ingredients = new List<FoodItem>();
             TotalNutrients = new Dictionary<string, double>();
-            Date = DateTime.Now;
+            //Date = DateTime.Now;
         }
 
         public void CalculateTotalNutrients()
