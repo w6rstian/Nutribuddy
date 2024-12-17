@@ -15,8 +15,20 @@
         <view:Meals />
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:DishEatVM}">
+        <view:DishEatConfirmation />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:ProductEatVM}">
+        <view:ProductEatConfirmation />
+    </DataTemplate>
+    
     <DataTemplate DataType="{x:Type vm:DishesVM}">
         <view:Dishes />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:ProductsVM}">
+        <view:Products />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type vm:SettingsVM}">
