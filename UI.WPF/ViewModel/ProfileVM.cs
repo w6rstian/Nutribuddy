@@ -16,7 +16,6 @@ namespace Nutribuddy.UI.WPF.ViewModel
             set { _currentView = value; OnPropertyChanged(); }
         }
 
-        // TODO: DODAC OBSLUGE RESZTY WIDOKOW JAK POWSTANA WIDOKI
 
         public ICommand SettingsCommand { get; set; }
         public ICommand UserDataCommand { get; set; }

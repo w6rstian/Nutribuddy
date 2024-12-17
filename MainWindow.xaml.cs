@@ -58,10 +58,10 @@ namespace Nutribuddy
             InitializeComponent();
             if (userController == null)
             {
-                userController = new UserController("C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\UserData.json");
-                foodController = new FoodController("C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\FoodData.json");
-                dishController = new DishController("C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\DishData.json");
-                eatHistoryController = new EatHistoryController("C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", "C:\\Users\\kszym\\source\\repos\\Nutribuddy\\Data\\DishHistory.json");
+                userController = new UserController("C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\UserData.json");
+                foodController = new FoodController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodData.json");
+                dishController = new DishController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishData.json");
+                eatHistoryController = new EatHistoryController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishHistory.json");
                 viewManager = new ViewManager();
                 viewManager.RegisterView("IntroSequence", new IntroSequenceView(() => viewManager.ShowView("MainMenu")));
                 viewManager.RegisterView("MainMenu", new MainMenuView(
