@@ -27,7 +27,8 @@
 
         <ListView Grid.Row="1" ItemsSource="{Binding FilteredDishes}" 
                   SelectedItem="{Binding SelectedDish}"
-                  Style="{StaticResource ListView_Style}">
+                  Style="{StaticResource ListView_Style}"
+                  Margin="0,0,0,10">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Dishes" DisplayMemberBinding="{Binding Name}" Width="400"/>
@@ -36,77 +37,109 @@
         </ListView>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Border Width="150"
-            Height="100"
-            Background="#844eff"
-            CornerRadius="10">
+            <Border Width="125"
+                    Height="100"
+                    Background="#844eff"
+                    CornerRadius="10"
+                    Margin="0,0,10,0">
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                RadiusY="10"
-                               Rect="0,0,150,100" />
+                               Rect="0,0,125,100" />
                 </Border.Clip>
                 <Button Command="{Binding AddDishCommand}"
-                Background="Transparent"
-                Padding="0"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch">
-                    <Grid Width="150" Height="100">
+                        Background="Transparent"
+                        Padding="0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                    <Grid Width="125" Height="100">
                         <TextBlock Text="Add Dish"
-                           Style="{StaticResource Text_Style}"
-                           VerticalAlignment="Center"
-                           Foreground="White"
-                           FontSize="20"
-                           Margin="10,0,0,0"/>
+                                   Style="{StaticResource Text_Style}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="0,0,0,0"/>
                     </Grid>
                 </Button>
             </Border>
 
-            <Border Width="150"
-            Height="100"
-            Background="#4e99ff"
-            CornerRadius="10">
+            <Border Width="125"
+                    Height="100"
+                    Background="#4e99ff"
+                    CornerRadius="10"
+                    Margin="0,0,10,0">
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                RadiusY="10"
-                               Rect="0,0,150,100" />
+                               Rect="0,0,125,100" />
                 </Border.Clip>
                 <Button Command="{Binding EditDishCommand}"
-                Background="Transparent"
-                Padding="0"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch">
-                    <Grid Width="150" Height="100">
+                        Background="Transparent"
+                        Padding="0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                    <Grid Width="125" Height="100"
+                          HorizontalAlignment="Center">
                         <TextBlock Text="Edit Dish"
-                           Style="{StaticResource Text_Style}"
-                           VerticalAlignment="Center"
-                           Foreground="White"
-                           FontSize="20"
-                           Margin="10,0,0,0"/>
+                                   Style="{StaticResource Text_Style}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="0,0,0,0"/>
                     </Grid>
                 </Button>
             </Border>
 
             <Border Width="150"
-            Height="100"
-            Background="#CDB4DB"
-            CornerRadius="10">
+                    Height="100"
+                    Background="#CDB4DB"
+                    CornerRadius="10"
+                    Margin="0,0,10,0">
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                RadiusY="10"
                                Rect="0,0,150,100" />
                 </Border.Clip>
                 <Button Command="{Binding DeleteDishCommand}"
-                Background="Transparent"
-                Padding="0"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch">
+                        Background="Transparent"
+                        Padding="0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
                     <Grid Width="150" Height="100">
                         <TextBlock Text="Delete Dish"
-                           Style="{StaticResource Text_Style}"
-                           VerticalAlignment="Center"
-                           Foreground="White"
-                           FontSize="20"
-                           Margin="10,0,0,0"/>
+                                   Style="{StaticResource Text_Style}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="0,0,0,0"/>
+                    </Grid>
+                </Button>
+            </Border>
+            <Border Width="125"
+                    Height="100"
+                    Background="#CDB4DB"
+                    CornerRadius="10">
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,125,100" />
+                </Border.Clip>
+                <Button Command="{Binding EatDishCommand}"
+                        Background="Transparent"
+                        Padding="0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                    <Grid Width="125" Height="100">
+                        <TextBlock Text="Eat Dish"
+                                   Style="{StaticResource Text_Style}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="0,0,0,0"/>
                     </Grid>
                 </Button>
             </Border>
