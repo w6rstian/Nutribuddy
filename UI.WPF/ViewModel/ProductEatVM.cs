@@ -51,6 +51,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
                 addedProduct.Nutrients = Nutrients;
                 addedProduct.QuantityInGrams = _quantity;
                 _eatHistoryController.AddFoodItemToHistory(DateTime.Now, addedProduct);
+                var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+                navigationVM?.ProductsCommand.Execute(null);
             }
         }
 

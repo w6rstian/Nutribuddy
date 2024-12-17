@@ -90,7 +90,11 @@ namespace Nutribuddy.UI.WPF.ViewModel
         }
 
         // w przyszlosci przejscia do widokow wlasciwych
-        private void AddDish(object obj) => CurrentView = new DishesVM();
+        private void AddDish(object obj)
+        {
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.CreateDishCommand.Execute(null);
+        }
 
         private void EditDish(object obj)
         {
