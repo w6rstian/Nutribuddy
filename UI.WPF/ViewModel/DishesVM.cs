@@ -36,13 +36,13 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ObservableCollection<Dish> FilteredDishes { get; set; }
 
         public ICommand AddDishCommand { get; set; }
-        public ICommand EditDishCommand { get; set; } // może tu zamiast edit to view (skład) i tam możliwośc edycji itp
+        public ICommand EditDishCommand { get; set; }
         public ICommand DeleteDishCommand { get; }
         public ICommand EatDishCommand { get; set; }
 
         public DishesVM()
         {
-            _dishController = new DishController("C:\\Users\\Acer\\Source\\Repos\\Nutribuddy\\Data\\DishData.json"); // Path to file DishData
+            _dishController = new DishController("C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\DishData.json"); // Path to file DishData
             _eatHistoryController = new EatHistoryController(
                 "C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\FoodHistory.json", // Path to FoodHistory.json
                 "C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\DishHistory.json" // Path to DishHistory.json

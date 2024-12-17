@@ -10,7 +10,52 @@
              d:DesignWidth="622"
              Style="{StaticResource Page_Style}">
 
-    <Grid Margin="20">
 
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Dish Name -->
+            <RowDefinition Height="Auto"/>
+            <!-- Search -->
+            <RowDefinition Height="*"/>
+            <!-- Ingredients List -->
+            <RowDefinition Height="Auto"/>
+            <!-- Buttons -->
+        </Grid.RowDefinitions>
+
+        <!-- Dish Name Section -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Dish Name:" Width="100" VerticalAlignment="Center"
+                       Style="{StaticResource Text_Style}"/>
+            <TextBox Text="{Binding DishName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="300"
+                     Style="{StaticResource TextBox_Style}"/>
+        </StackPanel>
+
+        <!-- Search Ingredients -->
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,10">
+            <TextBlock Text="Search Ingredients:" Width="150" VerticalAlignment="Center"
+                       Style="{StaticResource Text_Style}"/>
+            <TextBox Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="300"
+                     Style="{StaticResource TextBox_Style}"/>
+        </StackPanel>
+
+        <!-- Ingredients List -->
+        <ListView Grid.Row="2" ItemsSource="{Binding FilteredIngredients}" SelectedItem="{Binding SelectedIngredient}"
+                  Style="{StaticResource ListView_Style}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Ingredient" DisplayMemberBinding="{Binding Description}" Width="300"/>
+                    <GridViewColumn Header="Quantity (g)" DisplayMemberBinding="{Binding QuantityInGrams}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!-- Action Buttons -->
+        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button Content="Add Ingredient" Command="{Binding AddIngredientCommand}" Width="150" Margin="5"/>
+            <Button Content="Edit Quantity" Command="{Binding EditIngredientCommand}" Width="150" Margin="5"/>
+            <Button Content="Remove Ingredient" Command="{Binding RemoveIngredientCommand}" Width="150" Margin="5"/>
+            <Button Content="Save" Command="{Binding SaveCommand}" Width="150" Margin="5"/>
+        </StackPanel>
     </Grid>
 </UserControl>

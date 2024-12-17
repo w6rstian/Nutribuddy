@@ -13,8 +13,10 @@ namespace Nutribuddy.UI.WPF.ViewModel
 {
     class EditDishVM : ViewModelBase
     {
-        private DishController _dishController;
+        private readonly DishController _dishController;
         private Dish _dish;
+        private FoodItem _selectedIngredient;
+        private string _searchText;
 
         public Dish Dish
         {
@@ -23,6 +25,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
             {
                 _dish = value;
                 OnPropertyChanged();
+                FilterIngredients();
             }
         }
 
@@ -36,9 +39,102 @@ namespace Nutribuddy.UI.WPF.ViewModel
             }
         }
 
-        public EditDishVM(Dish selectedDish)
+        public FoodItem SelectedIngredient
         {
-            Dish = selectedDish;
+            get => _selectedIngredient;
+            set
+            {
+                _selectedIngredient = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string SearchText
+        {
+            get => _searchText;
+            set
+            {
+                _searchText = value;
+                OnPropertyChanged();
+                FilterIngredients();
+            }
+        }
+
+        public ObservableCollection<FoodItem> FilteredIngredients { get; set; }
+        public ObservableCollection<FoodItem> AllIngredients { get; set; }
+
+        public ICommand AddIngredientCommand { get; }
+        public ICommand EditIngredientCommand { get; }
+        public ICommand RemoveIngredientCommand { get; }
+        public ICommand SaveCommand { get; }
+
+        public EditDishVM(Dish dish)
+        {
+            _dishController = new DishController("C:\\Users\\kszym\\Source\\Repos\\Nutribuddy\\Data\\DishData.json");
+            Dish = dish;
+
+            AllIngredients = new ObservableCollection<FoodItem>(_dish.Ingredients);
+            FilteredIngredients = new ObservableCollection<FoodItem>(AllIngredients);
+
+            AddIngredientCommand = new RelayCommand(AddIngredient);
+            EditIngredientCommand = new RelayCommand(EditIngredient);
+            RemoveIngredientCommand = new RelayCommand(RemoveIngredient);
+            SaveCommand = new RelayCommand(SaveDish);
+
+            FilterIngredients();
+        }
+
+        //do naprawy ale usuwanie i zapisanie zmian działa
+        private void FilterIngredients()
+        {
+/*            FilteredIngredients.Clear();
+
+            var filtered = string.IsNullOrWhiteSpace(SearchText)
+                ? AllIngredients
+                : new ObservableCollection<FoodItem>(
+                    AllIngredients.Where(i => i.Description.Contains(SearchText, System.StringComparison.OrdinalIgnoreCase)));
+
+            foreach (var item in filtered)
+                FilteredIngredients.Add(item);*/
+        }
+
+        private void AddIngredient(object obj)
+        {
+            // Logic to navigate to Add Ingredient view
+        }
+
+        private void EditIngredient(object obj)
+        {
+            if (SelectedIngredient != null)
+            {
+                // Logic to edit ingredient quantity
+                SelectedIngredient.QuantityInGrams += 10; // Example logic to increase quantity
+                Dish.CalculateTotalNutrients();
+                FilterIngredients();
+            }
+        }
+
+        private void RemoveIngredient(object obj)
+        {
+            if (SelectedIngredient != null)
+            {
+                //Dish.Ingredients.Remove(SelectedIngredient);
+
+                AllIngredients.Remove(SelectedIngredient);
+                Dish.Ingredients.Remove(SelectedIngredient);
+
+                FilterIngredients();
+                OnPropertyChanged(nameof(Dish));
+            }
+        }
+
+        private void SaveDish(object obj)
+        {
+            _dishController.EditDish(Dish.Name, d =>
+            {
+                d.Name = Dish.Name;
+                d.Ingredients = Dish.Ingredients;
+            });
         }
     }
 }
