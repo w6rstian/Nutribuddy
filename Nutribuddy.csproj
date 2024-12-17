@@ -19,6 +19,9 @@
     <None Remove="Assets\Images\food-tray.png" />
     <None Remove="Assets\Images\menu.png" />
     <None Remove="Assets\Images\products.png" />
+    <None Remove="Assets\Images\shutdown_def.png" />
+    <None Remove="Assets\Images\shutdown_mo.png" />
+    <None Remove="Assets\Images\switch.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -62,6 +65,9 @@
     <Resource Include="Assets\Images\food-tray.png" />
     <Resource Include="Assets\Images\menu.png" />
     <Resource Include="Assets\Images\products.png" />
+    <Resource Include="Assets\Images\shutdown_def.png" />
+    <Resource Include="Assets\Images\shutdown_mo.png" />
+    <Resource Include="Assets\Images\switch.png" />
   </ItemGroup>
 
 </Project>

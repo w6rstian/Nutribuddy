@@ -48,6 +48,12 @@
                 <RowDefinition Height="525" />
             </Grid.RowDefinitions>
 
+            <Grid Grid.Row="0"
+                  Grid.Column="1">
+                <Button x:Name="CloseApp"
+                Style="{StaticResource ExitApp}"
+                Click="CloseApp_Click" />
+            </Grid>
             <Grid HorizontalAlignment="Left"
                   Width="228"
                   Grid.Row="0">

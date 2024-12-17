@@ -175,5 +175,10 @@ namespace Nutribuddy
                 Application.Current.Shutdown();
             }
         }
+
+        private void CloseApp_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
