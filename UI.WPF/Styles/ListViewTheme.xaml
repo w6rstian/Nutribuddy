@@ -96,7 +96,9 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ListView">
                     <Border Background="{TemplateBinding Background}" CornerRadius="10" BorderThickness="0">
-                        <ScrollViewer Style="{StaticResource CustomScrollViewer}">
+                        <ScrollViewer Style="{StaticResource CustomScrollViewer}" 
+                                  HorizontalScrollBarVisibility="Hidden" 
+                                  VerticalScrollBarVisibility="Auto">
                             <ItemsPresenter />
                         </ScrollViewer>
                     </Border>
@@ -104,5 +106,5 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    
 </ResourceDictionary>
