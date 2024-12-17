@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="Nutribuddy.UI.WPF.View.Meals"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Nutribuddy.UI.WPF.View"
+             xmlns:vm="clr-namespace:Nutribuddy.UI.WPF.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Style="{StaticResource Page_Style}">
+    <UserControl.DataContext>
+        <vm:MealsVM />
+    </UserControl.DataContext>
+
+    <StackPanel Orientation="Vertical">
+        <Border Width="400"
+                Height="200"
+                Margin="-200,0,0,50">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                    <GradientStop Color="#5bc3ff" Offset="0.0" />
+                    <GradientStop Color="#3aa0ff" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Border.Clip>
+                <RectangleGeometry RadiusX="10"
+                           RadiusY="10"
+                           Rect="0,0,400,200" />
+            </Border.Clip>
+
+            <Button Command="{Binding DishesCommand}"
+                    Background="Transparent"
+                    Padding="0"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
+                <Grid Width="400" Height="200">
+                    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <TextBlock Text="Dishes"
+                           Style="{StaticResource Text_Style}"
+                           Foreground="White"
+                           FontSize="28"
+                           Margin="20,10,10,0"/>
+                        <TextBlock Text="Add dishes to your meal"
+                           Style="{StaticResource Text_Style}"
+                           Foreground="White"
+                           FontSize="18"
+                           Margin="20,10,10,0"/>
+                    </StackPanel>
+
+                    <Image Width="150"
+                           Height="150"
+                           Source="/Assets/Images/dish.png"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom" 
+                           Margin="0,0,271,-32"
+                           RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="11.752"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+            </Button>
+        </Border>
+        <Border Width="400"
+                Height="200"
+                Margin="200,0,0,0">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                    <GradientStop Color="#ffc554" Offset="0.0" />
+                    <GradientStop Color="#ffb73a" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Border.Clip>
+                <RectangleGeometry RadiusX="10"
+                           RadiusY="10"
+                           Rect="0,0,400,200" />
+            </Border.Clip>
+
+            <Button Command="{Binding ProductsCommand}"
+                    Background="Transparent"
+                    Padding="0"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
+                <Grid Width="400" Height="200">
+                    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <TextBlock Text="Products"
+                           Style="{StaticResource Text_Style}"
+                           Foreground="White"
+                           FontSize="28"
+                           Margin="20,10,10,0"/>
+                        <TextBlock Text="Add products to your meal"
+                           Style="{StaticResource Text_Style}"
+                           Foreground="White"
+                           FontSize="18"
+                           Margin="20,10,10,0"/>
+                    </StackPanel>
+
+                    <Image Width="150"
+                   Height="150"
+                   Source="/Assets/Images/products.png"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom" 
+                   Margin="0,0,-33,-28"
+                   RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-11.752"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+            </Button>
+        </Border>
+    </StackPanel>
+</UserControl>
