@@ -53,7 +53,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
             set { _goal = value; OnPropertyChanged(); }
         }
 
-        // naprawa braku domyślnych wartości
+        // opcje do wyboru w comboboxach
         public IEnumerable<string> GenderOptions { get; } = new List<string> { "Male", "Female" };
         public IEnumerable<string> PhysicalActivityOptions { get; } = new List<string>
         {
@@ -75,10 +75,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         private readonly UserController _userController;
 
         // pusty konstruktor zeby dzialal xml?
-        public SettingsVM() : this(new UserController())
-        {
-
-        }
+        public SettingsVM() : this(new UserController()) { }
 
         public SettingsVM(UserController userController)
         {
