@@ -130,6 +130,19 @@
                     </Menu:Btn>
 
                     <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding ProductsCommand}"
+                              IsChecked="{Binding CurrentViewName, Converter={StaticResource StringEqualsConverter}, ConverterParameter=Products}">
+
+                        <Grid>
+
+                            <TextBlock Text="Products"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
                               Command="{Binding SettingsCommand}"
                               IsChecked="{Binding CurrentViewName, Converter={StaticResource StringEqualsConverter}, ConverterParameter=Settings}">
 
