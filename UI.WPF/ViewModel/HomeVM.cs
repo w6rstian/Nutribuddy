@@ -21,11 +21,20 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         public ICommand SettingsCommand {  get; set; }
 
+        public ICommand MealsCommand { get; set; }
+
+        // TODO: DODAC OBSLUGE RESZTY PRZYCISKOW JAK POWSTANA WIDOKI
         private void Profile(object obj)
         {
             // This will trigger a command in the NavigationVM to update the view.
             var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
             navigationVM?.ProfileCommand.Execute(null);
+        }
+
+        private void Meals(object obj)
+        {
+            var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+            navigationVM?.MealsCommand.Execute(null);
         }
 
         private void Settings(object obj)
@@ -38,6 +47,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         {
             ProfileCommand = new RelayCommand(Profile);
             SettingsCommand = new RelayCommand(Settings);
+            MealsCommand = new RelayCommand(Meals);
 
         }
     }
