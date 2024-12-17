@@ -26,7 +26,11 @@
     <DataTemplate DataType="{x:Type vm:ProductEatVM}">
         <view:ProductEatConfirmation />
     </DataTemplate>
-    
+
+    <DataTemplate DataType="{x:Type vm:ProductEditVM}">
+        <view:ProductEditConfirmation />
+    </DataTemplate>
+
     <DataTemplate DataType="{x:Type vm:DishesVM}">
         <view:Dishes />
     </DataTemplate>

@@ -42,6 +42,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ICommand HomeCommand { get; set; }
         public ICommand DishesCommand { get; set; }
         public ICommand EditDishCommand { get; set; }
+        public ICommand ContinueEditingDishCommand { get; set; }
         public ICommand ProfileCommand { get; set; }
         public ICommand UserDataCommand { get; set; }
         public ICommand NutrientsSummaryCommand { get; set; }
@@ -55,6 +56,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ICommand SaveTempDishCommand { get; set; }
         public ICommand AddIngredientCommand { get; set; }
         public ICommand AddIngredientForEditCommand { get; set; }
+        public ICommand EditIngredientCommand { get; set; }
 
         private void Home(object obj)
         {
@@ -70,10 +72,21 @@ namespace Nutribuddy.UI.WPF.ViewModel
         {
             if (obj is Dish selectedDish)
             {
+                _tempDish = selectedDish;
                 CurrentView = new EditDishVM(selectedDish);
                 CurrentViewName = "Dishes";
             }
         }
+
+        private void ContinueEditingDish(object obj)
+        {
+            if (obj is Dish selectedDish)
+            {
+                CurrentView = new EditDishVM();
+                CurrentViewName = "Dishes";
+            }
+        }
+
         private void Profile(object obj)
         {
             CurrentView = new ProfileVM();
@@ -100,6 +113,15 @@ namespace Nutribuddy.UI.WPF.ViewModel
             if (obj is FoodItem selectedProduct)
             {
                 CurrentView = new ProductEatVM(selectedProduct);
+                CurrentViewName = "Products";
+            }
+        }
+
+        private void EditIngredient(object obj)
+        {
+            if (obj is FoodItem selectedProduct)
+            {
+                CurrentView = new ProductEditVM(selectedProduct);
                 CurrentViewName = "Products";
             }
         }
@@ -181,6 +203,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
             AddIngredientCommand = new RelayCommand(AddIngredient);
             ContinueCreatingDishCommand = new RelayCommand(ContinueCreatingDish);
             AddIngredientForEditCommand = new RelayCommand(AddIngredientForEdit);
+            EditIngredientCommand = new RelayCommand(EditIngredient);
+            ContinueEditingDishCommand = new RelayCommand(ContinueEditingDish);
 
             CurrentView = new HomeVM();
             CurrentViewName = "Home";
