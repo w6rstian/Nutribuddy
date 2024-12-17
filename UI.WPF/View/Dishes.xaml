@@ -25,10 +25,12 @@
                  Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
                  Style="{StaticResource TextBox_Style}"/>
 
-        <ListView Grid.Row="1" ItemsSource="{Binding FilteredDishes}" SelectedItem="{Binding SelectedDish}">
+        <ListView Grid.Row="1" ItemsSource="{Binding FilteredDishes}" 
+                  SelectedItem="{Binding SelectedDish}"
+                  Style="{StaticResource ListView_Style}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Dish Name" DisplayMemberBinding="{Binding Name}" Width="400"/>
+                    <GridViewColumn Header="Dishes" DisplayMemberBinding="{Binding Name}" Width="400"/>
                 </GridView>
             </ListView.View>
         </ListView>
