@@ -10,10 +10,6 @@
              d:DesignWidth="622"
              Style="{StaticResource Page_Style}">
 
-    <UserControl.DataContext>
-        <vm:EditDishVM />
-    </UserControl.DataContext>
-
     <Grid Margin="20">
 
     </Grid>

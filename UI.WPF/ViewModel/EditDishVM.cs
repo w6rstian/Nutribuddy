@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Xml.Linq;
 
 namespace Nutribuddy.UI.WPF.ViewModel
 {
@@ -14,6 +15,16 @@ namespace Nutribuddy.UI.WPF.ViewModel
     {
         private DishController _dishController;
         private Dish _dish;
+
+        public Dish Dish
+        {
+            get => _dish;
+            set
+            {
+                _dish = value;
+                OnPropertyChanged();
+            }
+        }
 
         public string DishName
         {
@@ -25,5 +36,9 @@ namespace Nutribuddy.UI.WPF.ViewModel
             }
         }
 
+        public EditDishVM(Dish selectedDish)
+        {
+            Dish = selectedDish;
+        }
     }
 }
