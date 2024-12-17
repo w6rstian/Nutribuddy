@@ -27,10 +27,11 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,10">
-            <TextBlock Text="Search Ingredients:" Width="150" VerticalAlignment="Center"
+            <TextBlock Text="Search Ingredients:" MinWidth="150" VerticalAlignment="Center"
                        Style="{StaticResource Text_Style}"/>
             <TextBox Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="300"
-                     Style="{StaticResource TextBox_Style}"/>
+                     Style="{StaticResource TextBox_Style}"
+                     Margin="-2,0,0,0"/>
         </StackPanel>
 
         <ListView Grid.Row="2" ItemsSource="{Binding FilteredIngredients}" SelectedItem="{Binding SelectedIngredient}"
