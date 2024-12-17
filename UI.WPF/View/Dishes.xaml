@@ -13,8 +13,101 @@
     <UserControl.DataContext>
         <vm:DishesVM />
     </UserControl.DataContext>
-    
-    <Grid>
-            
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" Height="30" Margin="0,0,0,10"
+                 Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <ListView Grid.Row="1" ItemsSource="{Binding FilteredDishes}" SelectedItem="{Binding SelectedDish}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Dish Name" DisplayMemberBinding="{Binding Name}" Width="400"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Border Width="150"
+            Height="100"
+            Background="#844eff"
+            CornerRadius="10">
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                               RadiusY="10"
+                               Rect="0,0,150,100" />
+                </Border.Clip>
+                <Button Command="{Binding AddDishCommand}"
+                Background="Transparent"
+                Padding="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch">
+                    <Grid Width="150" Height="100">
+                        <TextBlock Text="Add Dish"
+                           Style="{StaticResource Text_Style}"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontSize="20"
+                           Margin="10,0,0,0"/>
+                    </Grid>
+                </Button>
+            </Border>
+
+            <Border Width="150"
+            Height="100"
+            Background="#4e99ff"
+            CornerRadius="10">
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                               RadiusY="10"
+                               Rect="0,0,150,100" />
+                </Border.Clip>
+                <Button Command="{Binding EditDishCommand}"
+                Background="Transparent"
+                Padding="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch">
+                    <Grid Width="150" Height="100">
+                        <TextBlock Text="Edit Dish"
+                           Style="{StaticResource Text_Style}"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontSize="20"
+                           Margin="10,0,0,0"/>
+                    </Grid>
+                </Button>
+            </Border>
+
+            <Border Width="150"
+            Height="100"
+            Background="#CDB4DB"
+            CornerRadius="10">
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                               RadiusY="10"
+                               Rect="0,0,150,100" />
+                </Border.Clip>
+                <Button Command="{Binding DeleteDishCommand}"
+                Background="Transparent"
+                Padding="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch">
+                    <Grid Width="150" Height="100">
+                        <TextBlock Text="Delete Dish"
+                           Style="{StaticResource Text_Style}"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontSize="20"
+                           Margin="10,0,0,0"/>
+                    </Grid>
+                </Button>
+            </Border>
+        </StackPanel>
+
     </Grid>
 </UserControl>

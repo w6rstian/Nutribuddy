@@ -27,7 +27,7 @@
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="10,0,0,0"
-                                       FontSize="11"
+                                       FontSize="18"
                                        Foreground="DarkGray"
                                        Grid.Column="1">
 
