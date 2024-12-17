@@ -36,12 +36,21 @@
 
         <ListView Grid.Row="2" ItemsSource="{Binding FilteredIngredients}" SelectedItem="{Binding SelectedIngredient}"
                   Style="{StaticResource ListView_Style}">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Ingredient" DisplayMemberBinding="{Binding Description}" Width="300"/>
-                    <GridViewColumn Header="Quantity (g)" DisplayMemberBinding="{Binding QuantityInGrams}" Width="100"/>
-                </GridView>
-            </ListView.View>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Description}" 
+                       FontSize="16" 
+                       Foreground="#FFFFFF" 
+                       Padding="5,0"
+                       Margin="0,0,50,0" />
+                        <TextBlock Text="{Binding QuantityInGrams, StringFormat={}{0} g}" 
+                       FontSize="16" 
+                       Foreground="#FFFFFF" 
+                       Padding="5,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">

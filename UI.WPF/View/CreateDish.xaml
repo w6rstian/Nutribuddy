@@ -16,47 +16,51 @@
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <!-- Formularz nazwy -->
             <RowDefinition Height="*"/>
+            <!-- Lista składników -->
             <RowDefinition Height="Auto"/>
+            <!-- Przyciski dodawania/usuwania składników -->
+            <RowDefinition Height="Auto"/>
+            <!-- Przyciski akcji -->
         </Grid.RowDefinitions>
 
         <!-- Formularz nazwy -->
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
-            <TextBlock Text="Dish Name:" Style="{StaticResource Text_Style}" />
-            <TextBox Text="{Binding DishName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBox_Style}" />
+            <TextBlock Text="Dish Name:" Style="{StaticResource Text_Style}" Margin="0,0,10,0"/>
+            <TextBox Text="{Binding DishName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBox_Style}" Width="300"/>
         </StackPanel>
 
         <!-- Lista składników -->
-        <GroupBox Header="Ingredients" Grid.Row="1">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <ListView ItemsSource="{Binding Ingredients}" SelectedItem="{Binding SelectedIngredient}" 
-                          Style="{StaticResource ListView_Style}">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Description}" />
-                            <GridViewColumn Header="Quantity (g)" DisplayMemberBinding="{Binding QuantityInGrams}" />
-                        </GridView>
-                    </ListView.View>
-                </ListView>
+        <ListView Grid.Row="1" ItemsSource="{Binding Ingredients}" SelectedItem="{Binding SelectedIngredient}" 
+                  Style="{StaticResource ListView_Style}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Description}" 
+                                   FontSize="16" 
+                                   Foreground="#FFFFFF" 
+                                   Padding="5,0"
+                                   Margin="0,0,50,0" />
+                        <TextBlock Text="{Binding QuantityInGrams, StringFormat={}{0} g}" 
+                                   FontSize="16" 
+                                   Foreground="#FFFFFF" 
+                                   Padding="5,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
-                <!-- Dodawanie składników -->
-                <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Margin="10">
-                    <Button Content="Add Ingredient" Command="{Binding AddIngredientCommand}" 
-                            Style="{StaticResource Button_Style}" Margin="10,0"/>
-                    <!--<Button Content="Edit Ingredient" Command="{Binding AddIngredientCommand}" 
-                            Style="{StaticResource Button_Style}" Margin="10,0"/>-->
-                    <Button Content="Remove Ingredient" Command="{Binding RemoveIngredientCommand}" 
-                            Style="{StaticResource Button_Style}" Margin="10,0"/>
-                </StackPanel>
-            </Grid>
-        </GroupBox>
+        <!-- Przyciski dodawania/usuwania składników -->
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="10,10,10,0">
+            <Button Content="Add Ingredient" Command="{Binding AddIngredientCommand}" 
+                    Style="{StaticResource Button_Style}" Margin="10,0"/>
+            <Button Content="Remove Ingredient" Command="{Binding RemoveIngredientCommand}" 
+                    Style="{StaticResource Button_Style}" Margin="10,0"/>
+        </StackPanel>
 
         <!-- Przyciski akcji -->
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" Margin="10">
             <Button Content="Save Dish" Command="{Binding SaveDishCommand}" Style="{StaticResource Button_Style}" Margin="10" />
             <Button Content="Cancel" Command="{Binding CancelCommand}" Style="{StaticResource Button_Style}" Margin="10" />
         </StackPanel>

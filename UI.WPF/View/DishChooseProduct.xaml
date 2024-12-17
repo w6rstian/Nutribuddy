@@ -24,11 +24,15 @@
           SelectedItem="{Binding SelectedProduct}"
           Style="{StaticResource ListView_Style}"
           Margin="0,0,0,10">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Products" DisplayMemberBinding="{Binding Description}" Width="400"/>
-                </GridView>
-            </ListView.View>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Description}" 
+                               FontSize="16" 
+                               Foreground="#FFFFFF" 
+                               VerticalAlignment="Center" 
+                               Padding="5,0"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
         <StackPanel Grid.Row="2">
             <TextBox x:Name="QuantityTextBox"
