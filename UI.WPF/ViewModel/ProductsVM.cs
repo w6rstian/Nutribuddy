@@ -86,8 +86,9 @@ namespace Nutribuddy.UI.WPF.ViewModel
         {
             if (SelectedProduct != null)
             {
-                // TODO: ZMIENIC, ABY PRZEKIEROWYWALO DO WIDOKU MealsProducts, GDZIE BEDA WYPISANE SKLADNIKI ODZYWCZE PRODUKTU I ZAPYTANIE O ILOSC
-                _eatHistoryController.AddFoodItemToHistory(DateTime.Now, SelectedProduct);
+                var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+                navigationVM?.EatProductCommand.Execute(SelectedProduct);
+                //_eatHistoryController.AddFoodItemToHistory(DateTime.Now, SelectedProduct);
             }
         }
     }

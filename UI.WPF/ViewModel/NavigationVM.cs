@@ -1,4 +1,5 @@
 ﻿using Nutribuddy.Core.Controllers;
+using Nutribuddy.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
         public ICommand ProfileCommand { get; set; }
         public ICommand SettingsCommand { get; set; }
         public ICommand MealsCommand { get; set; }
-        public ICommand MealsDishesCommand { get; set; }
+        public ICommand EatDishCommand { get; set; }
+        public ICommand EatProductCommand { get; set; }
         public ICommand ProductsCommand { get; set; }
 
         private void Home(object obj)
@@ -56,10 +58,22 @@ namespace Nutribuddy.UI.WPF.ViewModel
             CurrentViewName = "Meals";
         }
 
-        private void MealsDishes(object obj)
+        private void EatDish(object obj)
         {
-            CurrentView = new MealsDishesVM();
-            CurrentViewName = "Meals";
+            if (obj is Dish selectedDish)
+            {
+                CurrentView = new DishEatVM(selectedDish);
+                CurrentViewName = "Dishes";
+            }
+        }
+
+        private void EatProduct(object obj)
+        {
+            if (obj is FoodItem selectedProduct)
+            {
+                CurrentView = new ProductEatVM(selectedProduct);
+                CurrentViewName = "Products";
+            }
         }
 
         private void Products(object obj)
@@ -81,7 +95,8 @@ namespace Nutribuddy.UI.WPF.ViewModel
             ProfileCommand = new RelayCommand(Profile);
             SettingsCommand = new RelayCommand(Settings);
             MealsCommand = new RelayCommand(Meals);
-            MealsDishesCommand = new RelayCommand(MealsDishes);
+            EatDishCommand = new RelayCommand(EatDish);
+            EatProductCommand = new RelayCommand(EatProduct);
             ProductsCommand = new RelayCommand(Products);
 
             CurrentView = new HomeVM();

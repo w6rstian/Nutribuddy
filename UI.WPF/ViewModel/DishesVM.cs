@@ -108,7 +108,9 @@ namespace Nutribuddy.UI.WPF.ViewModel
         {
             if (SelectedDish != null)
             {
-                _eatHistoryController.AddDishToHistory(DateTime.Now, SelectedDish);
+                // Przekierować SelectedDish do DishEatVM, gdzie użytkownik zobaczy wszystkie detale SelectedDish
+                var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
+                navigationVM?.EatDishCommand.Execute(SelectedDish);
             }
         }
     }
