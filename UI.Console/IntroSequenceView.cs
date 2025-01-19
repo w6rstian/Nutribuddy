@@ -1,14 +1,15 @@
-﻿using Spectre.Console;
+﻿using Nutribuddy.UI;
+using Spectre.Console;
 
 namespace Nutribuddy.UI.Console
 {
     internal class IntroSequenceView : IView
     {
-        private readonly Action _navigateToMainMenu;
+        private readonly ViewManager _viewManager;
 
-        public IntroSequenceView(Action navigateToMainMenu)
+        public IntroSequenceView(ViewManager viewManager)
         {
-            _navigateToMainMenu = navigateToMainMenu;
+            _viewManager = viewManager;
         }
 
         public void Show()
@@ -37,17 +38,18 @@ namespace Nutribuddy.UI.Console
 
                     while (!ctx.IsFinished)
                     {
-                        Thread.Sleep(50);
+                        Thread.Sleep(5);
                         task.Increment(1.5);
                     }
 
                     if (ctx.IsFinished)
                     {
-                        Thread.Sleep(50);
+                        Thread.Sleep(5);
                     }
                 });
             AnsiConsole.Clear();
-            _navigateToMainMenu();
+            //_navigateToMainMenu();
+            _viewManager.ShowView("MainMenu");
         }
     }
 }

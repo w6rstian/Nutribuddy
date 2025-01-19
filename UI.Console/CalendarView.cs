@@ -6,16 +6,16 @@ namespace Nutribuddy.UI.Console
     internal class CalendarView : IView
     {
         private EatHistoryController _eatHistoryController;
-        private Action _navigateToMainMenu;
+        private readonly ViewManager _viewManager;
         private readonly static Panel calendarFigletText = new Panel(
                 Align.Center(
                     new FigletText("Calendar").Color(Color.MediumPurple),
                     VerticalAlignment.Middle))
             .Expand().Padding(new Padding(0, 2));
-        public CalendarView(EatHistoryController eatHistoryController, Action navigateToMainMenu)
+        public CalendarView(EatHistoryController eatHistoryController, ViewManager viewManager)
         {
             _eatHistoryController = eatHistoryController;
-            _navigateToMainMenu = navigateToMainMenu;
+            _viewManager = viewManager;
         }
 
         public void Show()
@@ -118,7 +118,8 @@ namespace Nutribuddy.UI.Console
                         break;
 
                     case "Return to main menu":
-                        _navigateToMainMenu();
+                        //_navigateToMainMenu();
+                        _viewManager.ShowView("MainMenu");
                         return;
 
                     default:

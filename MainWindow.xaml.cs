@@ -1,6 +1,7 @@
 ﻿using Nutribuddy.Core.Controllers;
 using Nutribuddy.UI;
 using Nutribuddy.UI.Console;
+using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -63,22 +64,17 @@ namespace Nutribuddy
                 dishController = new DishController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishData.json");
                 eatHistoryController = new EatHistoryController("C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\FoodHistory.json", "C:\\Users\\Administrator\\source\\repos\\Nutribuddy\\Data\\DishHistory.json");
                 viewManager = new ViewManager();
-                viewManager.RegisterView("IntroSequence", new IntroSequenceView(() => viewManager.ShowView("MainMenu")));
-                viewManager.RegisterView("MainMenu", new MainMenuView(
-                    () => viewManager.ShowView("UserDetails"),
-                    () => viewManager.ShowView("Food"),
-                    () => viewManager.ShowView("Dish"),
-                    () => viewManager.ShowView("Calendar")));
+                viewManager.RegisterView("IntroSequence", new IntroSequenceView(viewManager));
+                viewManager.RegisterView("MainMenu", new MainMenuView(viewManager));
                 viewManager.RegisterView("UserDetails", new UserDetailsView(
                     eatHistoryController,
                     userController,
                     dishController,
-                    () => viewManager.ShowView("MainMenu"),
-                    () => viewManager.ShowView("UserConfig")));
-                viewManager.RegisterView("UserConfig", new UserConfigView(userController, () => viewManager.ShowView("UserDetails")));
-                viewManager.RegisterView("Food", new FoodView(eatHistoryController, foodController, () => viewManager.ShowView("MainMenu")));
-                viewManager.RegisterView("Dish", new DishView(eatHistoryController, foodController, dishController, () => viewManager.ShowView("MainMenu")));
-                viewManager.RegisterView("Calendar", new CalendarView(eatHistoryController, () => viewManager.ShowView("MainMenu")));
+                    viewManager));
+                viewManager.RegisterView("UserConfig", new UserConfigView(userController, viewManager));
+                viewManager.RegisterView("Food", new FoodView(eatHistoryController, foodController, viewManager));
+                viewManager.RegisterView("Dish", new DishView(eatHistoryController, foodController, dishController, viewManager));
+                viewManager.RegisterView("Calendar", new CalendarView(eatHistoryController, viewManager));
             }
         }
 

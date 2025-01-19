@@ -8,13 +8,11 @@ namespace Nutribuddy.UI.Console
         public Action _navigateToFoodView;
         public Action _navigateToDishView;
         public Action _navigateToCalendarView;
+        private readonly ViewManager _viewManager;
         private readonly Padding menuPad = new Padding(5, 1);
-        public MainMenuView(Action navigateToUserDetails, Action navigateToFoodView, Action navigateToDishView, Action navigateToCalendarView)
+        public MainMenuView(ViewManager viewManager)
         {
-            _navigateToUserDetails = navigateToUserDetails;
-            _navigateToFoodView = navigateToFoodView;
-            _navigateToDishView = navigateToDishView;
-            _navigateToCalendarView = navigateToCalendarView;
+            _viewManager = viewManager;
         }
         public void Show()
         {
@@ -29,7 +27,7 @@ namespace Nutribuddy.UI.Console
 
             AnsiConsole.Write(new Panel(
                     Align.Center(
-                        new FigletText("Nutribuddy").Color(Color.MediumPurple),
+                        new FigletText("NutribuddyDP").Color(Color.MediumPurple),
                         VerticalAlignment.Middle))
                 .Expand().Padding(new Padding(0, 2)));
 
@@ -71,19 +69,23 @@ namespace Nutribuddy.UI.Console
             switch (selected)
             {
                 case "View my profile":
-                    _navigateToUserDetails();
+                    //_navigateToUserDetails();
+                    _viewManager.ShowView("UserDetails");
                     break;
 
                 case "Browse food":
-                    _navigateToFoodView();
+                    //_navigateToFoodView();
+                    _viewManager.ShowView("Food");
                     break;
 
                 case "Browse dishes":
-                    _navigateToDishView();
+                    //_navigateToDishView();
+                    _viewManager.ShowView("Dish");
                     break;
 
                 case "View calendar":
-                    _navigateToCalendarView();
+                    //_navigateToCalendarView();
+                    _viewManager.ShowView("Calendar");
                     break;
 
                 case "Exit":

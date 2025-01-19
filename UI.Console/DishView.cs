@@ -9,19 +9,19 @@ namespace Nutribuddy.UI.Console
         private readonly EatHistoryController _eatHistoryController;
         private readonly FoodController _foodController;
         private readonly DishController _dishController;
-        private readonly Action _navigateToMainMenu;
+        private readonly ViewManager _viewManager;
         private readonly static Panel foodFigletText = new Panel(
                 Align.Center(
                     new FigletText("Dishes").Color(Color.MediumPurple),
                     VerticalAlignment.Middle))
             .Expand().Padding(new Padding(0, 2));
 
-        public DishView(EatHistoryController eatHistoryController, FoodController foodController, DishController dishController, Action navigateToMainMenu)
+        public DishView(EatHistoryController eatHistoryController, FoodController foodController, DishController dishController, ViewManager viewManager)
         {
             _eatHistoryController = eatHistoryController;
             _foodController = foodController;
             _dishController = dishController;
-            _navigateToMainMenu = navigateToMainMenu;
+            _viewManager = viewManager;
         }
 
         public void Show()
@@ -77,7 +77,8 @@ namespace Nutribuddy.UI.Console
                         break;
 
                     case "Return to main menu":
-                        _navigateToMainMenu();
+                        //_navigateToMainMenu();
+                        _viewManager.ShowView("MainMenu");
                         return;
                 }
             }
@@ -238,16 +239,7 @@ namespace Nutribuddy.UI.Console
                 });
                 DateTime date = DateTime.Now;
                 _eatHistoryController.AddDishToHistory(date, newDish);
-                //_eatHistoryController.EatHistory.DishEatHistory.Add((DateTime.Now, newDish));
             }
-
-            // OLD NOTIFICATION
-            //AnsiConsole.Markup($"\n[bold gold1]Dish '{newDish.Name}' has been added![/]\n");
-            //AnsiConsole.Markup("[pink1]Total Nutritional Values:[/]\n");
-            /*foreach (var nutrient in newDish.TotalNutrients)
-      {
-          AnsiConsole.Markup($"- {nutrient.Key}: {nutrient.Value}\n");
-      }*/
 
             AnsiConsole.Clear();
             AnsiConsole.Write(foodFigletText);

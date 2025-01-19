@@ -6,12 +6,12 @@ namespace Nutribuddy.UI.Console
     internal class UserConfigView : IView
     {
         private readonly UserController _userController;
-        private readonly Action _navigateToUserDetails;
+        private readonly ViewManager _viewManager;
 
-        public UserConfigView(UserController userController, Action navigateToUserDetails)
+        public UserConfigView(UserController userController, ViewManager viewManager)
         {
             _userController = userController;
-            _navigateToUserDetails = navigateToUserDetails;
+            _viewManager = viewManager;
         }
 
         public void Show()
@@ -41,7 +41,8 @@ namespace Nutribuddy.UI.Console
             AnsiConsole.MarkupLine("[bold green]User information updated successfully![/]");
             Thread.Sleep(750);
 
-            _navigateToUserDetails();
+            //_navigateToUserDetails();
+            _viewManager.ShowView("UserDetails");
         }
     }
 }

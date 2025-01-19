@@ -8,21 +8,19 @@ namespace Nutribuddy.UI.Console
         private readonly EatHistoryController _eatHistoryController;
         private readonly UserController _userController;
         private readonly DishController _dishController;
-        private readonly Action _navigateToMainMenu;
-        private readonly Action _navigateToUserConfig;
+        private readonly ViewManager _viewManager;
         private readonly static Panel userFigletText = new Panel(
                     Align.Center(
                         new FigletText("User Profile").Color(Color.MediumPurple),
                         VerticalAlignment.Middle))
                 .Expand().Padding(new Padding(0, 2));
 
-        public UserDetailsView(EatHistoryController eatHistoryController, UserController userController, DishController dishController, Action navigateToMainMenu, Action navigateToUserConfig)
+        public UserDetailsView(EatHistoryController eatHistoryController, UserController userController, DishController dishController, ViewManager viewManager)
         {
             _eatHistoryController = eatHistoryController;
             _userController = userController;
             _dishController = dishController;
-            _navigateToMainMenu = navigateToMainMenu;
-            _navigateToUserConfig = navigateToUserConfig;
+            _viewManager = viewManager;
         }
 
         public void Show()
@@ -98,11 +96,13 @@ namespace Nutribuddy.UI.Console
             switch (choice)
             {
                 case "Edit User Info":
-                    _navigateToUserConfig();
+                    //_navigateToUserConfig();
+                    _viewManager.ShowView("UserConfig");
                     break;
 
                 case "Return to main menu":
-                    _navigateToMainMenu();
+                    //_navigateToMainMenu();
+                    _viewManager.ShowView("MainMenu");
                     break;
             }
         }

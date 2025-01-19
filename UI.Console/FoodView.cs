@@ -1,5 +1,6 @@
 ﻿using Nutribuddy.Core.Controllers;
 using Nutribuddy.Core.Models;
+using Nutribuddy.UI;
 using Spectre.Console;
 
 namespace Nutribuddy.UI.Console
@@ -8,18 +9,18 @@ namespace Nutribuddy.UI.Console
     {
         private readonly EatHistoryController _eatHistoryController;
         private readonly FoodController _foodController;
-        private readonly Action _navigateToMainMenu;
+        private readonly ViewManager _viewManager;
         private readonly static Panel foodFigletText = new Panel(
                     Align.Center(
                         new FigletText("Food").Color(Color.MediumPurple),
                         VerticalAlignment.Middle))
                 .Expand().Padding(new Padding(0, 2));
 
-        public FoodView(EatHistoryController eatHistoryController, FoodController foodController, Action navigateToMainMenu)
+        public FoodView(EatHistoryController eatHistoryController, FoodController foodController, ViewManager viewManager)
         {
             _eatHistoryController = eatHistoryController;
             _foodController = foodController;
-            _navigateToMainMenu = navigateToMainMenu;
+            _viewManager = viewManager;
         }
 
         public void Show()
@@ -57,7 +58,8 @@ namespace Nutribuddy.UI.Console
                         break;
 
                     case "Return to main menu":
-                        _navigateToMainMenu();
+                        //_navigateToMainMenu();
+                        _viewManager.ShowView("MainMenu");
                         return;
                 }
             }
@@ -67,13 +69,14 @@ namespace Nutribuddy.UI.Console
         {
             var foodItems = _foodController.GetAllFoods();
 
+            AnsiConsole.Write(foodFigletText);
+
             if (foodItems.Count == 0)
             {
                 AnsiConsole.MarkupLine("[bold red]No food items available.[/]");
                 return;
             }
 
-            AnsiConsole.Write(foodFigletText);
 
             List<string> descriptions;
             if (searchPhrase == null)
