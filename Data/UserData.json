@@ -1,0 +1,10 @@
+{
+  "Weight": 80.0,
+  "Height": 180.0,
+  "Age": 20,
+  "Gender": "Male",
+  "PhysicalActivityLevel": "Sedentary",
+  "Goal": "Maintain Weight",
+  "BMI": 24.691358024691358,
+  "CaloricNeeds": 2196.0
+}
