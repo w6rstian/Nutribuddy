@@ -29,7 +29,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         public ICommand ProductsCommand { get; set; }
 
-        // TODO: DODAC OBSLUGE RESZTY PRZYCISKOW JAK POWSTANA WIDOKI
+        
         private void Profile(object obj)
         {
             // This will trigger a command in the NavigationVM to update the view.
