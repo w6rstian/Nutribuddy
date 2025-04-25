@@ -58,6 +58,8 @@ namespace Nutribuddy.Core.Controllers
                     {
                         totalNutrients[nutrient.Key] = nutrient.Value;
                     }
+
+                    totalNutrients[nutrient.Key] = Math.Truncate(totalNutrients[nutrient.Key] * 100) / 100;
                 }
             }
 
@@ -68,12 +70,14 @@ namespace Nutribuddy.Core.Controllers
             {
                 foreach (var nutrient in food.Item2.Nutrients)
                 {
-                    double quantity = (nutrient.Value * food.Item2.QuantityInGrams) / 100;
+                    double quantity = nutrient.Value * food.Item2.QuantityInGrams / 100;
 
                     if (totalNutrients.ContainsKey(nutrient.Key))
                         totalNutrients[nutrient.Key] += quantity;
                     else
                         totalNutrients[nutrient.Key] = quantity;
+
+                    totalNutrients[nutrient.Key] = Math.Truncate(totalNutrients[nutrient.Key] * 100) / 100;
                 }
             }
             return totalNutrients;
