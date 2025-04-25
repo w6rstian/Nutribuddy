@@ -19,17 +19,17 @@
         <StackPanel Grid.Row="0">
             <TextBlock Text="Dish Name:"
                        FontWeight="Bold"
-                       FontSize="16"
+                       FontSize="20"
                        Margin="0,0,0,10"
                        Style="{StaticResource Text_Style}"/>
 
             <TextBlock Text="{Binding Name}"
-                       FontSize="14"
+                       FontSize="16"
                        Style="{StaticResource Text_Style}"/>
 
             <TextBlock Text="Ingredients:"
                        FontWeight="Bold"
-                       FontSize="14"
+                       FontSize="20"
                        Margin="0,10,0,5"
                        Style="{StaticResource Text_Style}"/>
             <ItemsControl ItemsSource="{Binding Ingredients}">
@@ -38,10 +38,10 @@
                         <StackPanel Orientation="Horizontal">
                             
                             <TextBlock Text="{Binding Description}"
-                                       FontSize="12"
+                                       FontSize="16"
                                        Style="{StaticResource Text_Style}"/>
                             <TextBlock Text="{Binding QuantityInGrams}"
-                                       FontSize="12"
+                                       FontSize="16"
                                        Style="{StaticResource Text_Style}"/>
                         </StackPanel>
                     </DataTemplate>
@@ -50,7 +50,7 @@
 
             <TextBlock Text="Nutrients:"
                        FontWeight="Bold"
-                       FontSize="14"
+                       FontSize="20"
                        Margin="0,10,0,5"
                        Style="{StaticResource Text_Style}" />
             <ItemsControl ItemsSource="{Binding TotalNutrients}">

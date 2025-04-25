@@ -18,17 +18,17 @@
         <StackPanel Grid.Row="0">
             <TextBlock Text="Ingredient Name:"
                    FontWeight="Bold"
-                   FontSize="16"
+                   FontSize="20"
                    Margin="0,0,0,10"
                    Style="{StaticResource Text_Style}"/>
 
             <TextBlock Text="{Binding Description}"
-                   FontSize="14"
+                   FontSize="16"
                    Style="{StaticResource Text_Style}"/>
 
             <TextBlock Text="Nutrients per 100g:"
                    FontWeight="Bold"
-                   FontSize="14"
+                   FontSize="20"
                    Margin="0,10,0,5"
                    Style="{StaticResource Text_Style}" />
             <ItemsControl ItemsSource="{Binding Nutrients}">
@@ -68,7 +68,7 @@
                                        VerticalAlignment="Center"
                                        Foreground="White"
                                        HorizontalAlignment="Center"
-                                       FontSize="20"
+                                       FontSize="16"
                                        Margin="0,0,0,0"/>
                         </Grid>
                     </Button>
