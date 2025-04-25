@@ -136,7 +136,7 @@
           "Sodium, Na (mg)": 485.0,
           "Fiber, total dietary (g)": 0.0
         },
-        "QuantityInGrams": 50.0
+        "QuantityInGrams": 66.0
       },
       {
         "Description": "Cheese, mozzarella, low moisture, part-skim",
@@ -152,16 +152,16 @@
       }
     ],
     "TotalNutrients": {
-      "Energy (kcal)": 431.0,
-      "Carbohydrate, by difference (g)": 6.54,
-      "Total lipid (fat) (g)": 46.9,
-      "Protein (g)": 56.2,
-      "Sodium, Na (mg)": 590.2,
+      "Energy (kcal)": 468.9,
+      "Carbohydrate, by difference (g)": 2.5662000000000003,
+      "Total lipid (fat) (g)": 32.388,
+      "Protein (g)": 38.856,
+      "Sodium, Na (mg)": 529.8,
       "Fiber, total dietary (g)": 0.0
     }
   },
   {
-    "Name": "hotdog",
+    "Name": "Hotdog",
     "Ingredients": [
       {
         "Description": "Sausage, Italian, pork, mild, cooked, pan-fried",
@@ -222,7 +222,7 @@
     }
   },
   {
-    "Name": "pizza kurwa zajebista",
+    "Name": "Super Pizza",
     "Ingredients": [
       {
         "Description": "Flour, wheat, all-purpose, enriched, bleached",
