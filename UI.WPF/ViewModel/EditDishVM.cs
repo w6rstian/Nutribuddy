@@ -17,6 +17,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         private Dish _dish;
         private FoodItem _selectedIngredient;
         private string _searchText;
+        private string _originalDishName;
 
         public Dish Dish
         {
@@ -38,6 +39,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
                 OnPropertyChanged();
             }
         }
+
 
         public FoodItem SelectedIngredient
         {
@@ -73,6 +75,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
             _dishController = new DishController("C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\DishData.json");
             var navigationVM = App.Current.MainWindow.DataContext as NavigationVM;
             Dish = navigationVM?.TempDish;
+            _originalDishName = _dish.Name;
 
             AllIngredients = new ObservableCollection<FoodItem>(_dish.Ingredients);
             FilteredIngredients = new ObservableCollection<FoodItem>(AllIngredients);
@@ -89,6 +92,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
         {
             _dishController = new DishController("C:\\Users\\Administrator\\Source\\Repos\\Nutribuddy\\Data\\DishData.json");
             Dish = dish;
+            _originalDishName = _dish.Name;
 
             AllIngredients = new ObservableCollection<FoodItem>(_dish.Ingredients);
             FilteredIngredients = new ObservableCollection<FoodItem>(AllIngredients);
@@ -155,7 +159,7 @@ namespace Nutribuddy.UI.WPF.ViewModel
 
         private void SaveDish(object obj)
         {
-            _dishController.EditDish(Dish.Name, d =>
+            _dishController.EditDish(_originalDishName, d =>
             {
                 d.Name = Dish.Name;
                 d.Ingredients = Dish.Ingredients;
