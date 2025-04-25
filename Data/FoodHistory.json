@@ -28,5 +28,20 @@
       },
       "QuantityInGrams": 20.0
     }
+  },
+  {
+    "Item1": "2024-12-17T17:24:08.0196534+01:00",
+    "Item2": {
+      "Description": "Sausage, Italian, pork, mild, cooked, pan-fried",
+      "Nutrients": {
+        "Energy (kcal)": 322.0,
+        "Carbohydrate, by difference (g)": 2.15,
+        "Total lipid (fat) (g)": 26.2,
+        "Protein (g)": 18.2,
+        "Sodium, Na (mg)": 766.0,
+        "Fiber, total dietary (g)": 0.0
+      },
+      "QuantityInGrams": 50.0
+    }
   }
 ]

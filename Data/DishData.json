@@ -22,8 +22,7 @@
       "Protein (g)": 3.675,
       "Sodium, Na (mg)": 219.0,
       "Fiber, total dietary (g)": 2.7
-    },
-    "Date": "2024-11-25T15:34:54.8037499+01:00"
+    }
   },
   {
     "Name": "Green Salad with Kale and Nuts",
@@ -60,8 +59,7 @@
       "Protein (g)": 8.0,
       "Sodium, Na (mg)": 131.8,
       "Fiber, total dietary (g)": 7.34
-    },
-    "Date": "2024-11-25T15:34:54.814317+01:00"
+    }
   },
   {
     "Name": "Tomato Soup",
@@ -86,8 +84,7 @@
       "Protein (g)": 1.68,
       "Sodium, Na (mg)": 250.0,
       "Fiber, total dietary (g)": 0.0
-    },
-    "Date": "2024-11-25T15:34:54.8144247+01:00"
+    }
   },
   {
     "Name": "Vegetable Delight",
@@ -118,14 +115,13 @@
       }
     ],
     "TotalNutrients": {
-      "Energy (kcal)": 63.0,
-      "Carbohydrate, by difference (g)": 14.19,
-      "Total lipid (fat) (g)": 0.81,
-      "Protein (g)": 3.38,
-      "Sodium, Na (mg)": 102.0,
-      "Fiber, total dietary (g)": 5.6
-    },
-    "Date": "2024-11-25T15:34:54.8144788+01:00"
+      "Energy (kcal)": 60.6,
+      "Carbohydrate, by difference (g)": 12.606,
+      "Total lipid (fat) (g)": 0.716,
+      "Protein (g)": 3.218,
+      "Sodium, Na (mg)": 88.8,
+      "Fiber, total dietary (g)": 4.96
+    }
   },
   {
     "Name": "Protein Power",
@@ -162,7 +158,152 @@
       "Protein (g)": 56.2,
       "Sodium, Na (mg)": 590.2,
       "Fiber, total dietary (g)": 0.0
-    },
-    "Date": "2024-11-25T15:34:54.8145594+01:00"
+    }
+  },
+  {
+    "Name": "hotdog",
+    "Ingredients": [
+      {
+        "Description": "Sausage, Italian, pork, mild, cooked, pan-fried",
+        "Nutrients": {
+          "Energy (kcal)": 322.0,
+          "Carbohydrate, by difference (g)": 2.15,
+          "Total lipid (fat) (g)": 26.2,
+          "Protein (g)": 18.2,
+          "Sodium, Na (mg)": 766.0,
+          "Fiber, total dietary (g)": 0.0
+        },
+        "QuantityInGrams": 40.0
+      },
+      {
+        "Description": "Garlic, raw",
+        "Nutrients": {
+          "Energy (kcal)": 143.0,
+          "Carbohydrate, by difference (g)": 28.2,
+          "Total lipid (fat) (g)": 0.38,
+          "Protein (g)": 6.62,
+          "Sodium, Na (mg)": 0.0,
+          "Fiber, total dietary (g)": 2.7
+        },
+        "QuantityInGrams": 10.0
+      },
+      {
+        "Description": "Bread, white, commercially prepared",
+        "Nutrients": {
+          "Energy (kcal)": 270.0,
+          "Carbohydrate, by difference (g)": 49.2,
+          "Total lipid (fat) (g)": 3.59,
+          "Protein (g)": 9.43,
+          "Sodium, Na (mg)": 477.0,
+          "Fiber, total dietary (g)": 2.3
+        },
+        "QuantityInGrams": 70.0
+      },
+      {
+        "Description": "Cheese, cheddar",
+        "Nutrients": {
+          "Energy (kcal)": 408.0,
+          "Carbohydrate, by difference (g)": 2.44,
+          "Total lipid (fat) (g)": 34.0,
+          "Protein (g)": 23.3,
+          "Sodium, Na (mg)": 654.0,
+          "Fiber, total dietary (g)": 0.0
+        },
+        "QuantityInGrams": 20.0
+      }
+    ],
+    "TotalNutrients": {
+      "Energy (kcal)": 413.70000000000005,
+      "Carbohydrate, by difference (g)": 38.608,
+      "Total lipid (fat) (g)": 19.831,
+      "Protein (g)": 19.203,
+      "Sodium, Na (mg)": 771.0999999999999,
+      "Fiber, total dietary (g)": 1.8800000000000001
+    }
+  },
+  {
+    "Name": "pizza kurwa zajebista",
+    "Ingredients": [
+      {
+        "Description": "Flour, wheat, all-purpose, enriched, bleached",
+        "Nutrients": {
+          "Energy (kcal)": 366.0,
+          "Carbohydrate, by difference (g)": 77.3,
+          "Total lipid (fat) (g)": 1.48,
+          "Protein (g)": 10.9,
+          "Sodium, Na (mg)": 2.0,
+          "Fiber, total dietary (g)": 0.0
+        },
+        "QuantityInGrams": 100.0
+      },
+      {
+        "Description": "Tomato, sauce, canned, with salt added",
+        "Nutrients": {
+          "Energy (kcal)": 34.16,
+          "Carbohydrate, by difference (g)": 6.33,
+          "Total lipid (fat) (g)": 0.382,
+          "Protein (g)": 1.35,
+          "Sodium, Na (mg)": 417.0,
+          "Fiber, total dietary (g)": 1.64
+        },
+        "QuantityInGrams": 20.0
+      },
+      {
+        "Description": "Cheese, mozzarella, low moisture, part-skim",
+        "Nutrients": {
+          "Energy (kcal)": 298.0,
+          "Carbohydrate, by difference (g)": 4.44,
+          "Total lipid (fat) (g)": 20.4,
+          "Protein (g)": 23.7,
+          "Sodium, Na (mg)": 699.0,
+          "Fiber, total dietary (g)": 0.0
+        },
+        "QuantityInGrams": 50.0
+      },
+      {
+        "Description": "Ham, sliced, pre-packaged, deli meat (96%fat free, water added)",
+        "Nutrients": {
+          "Energy (kcal)": 106.0,
+          "Carbohydrate, by difference (g)": 0.27,
+          "Total lipid (fat) (g)": 3.73,
+          "Protein (g)": 16.7,
+          "Sodium, Na (mg)": 1040.0,
+          "Fiber, total dietary (g)": 0.0
+        },
+        "QuantityInGrams": 20.0
+      },
+      {
+        "Description": "Tomatoes, canned, red, ripe, diced",
+        "Nutrients": {
+          "Energy (kcal)": 18.0,
+          "Carbohydrate, by difference (g)": 3.32,
+          "Total lipid (fat) (g)": 0.5,
+          "Protein (g)": 0.84,
+          "Sodium, Na (mg)": 125.0,
+          "Fiber, total dietary (g)": 0.0
+        },
+        "QuantityInGrams": 20.0
+      },
+      {
+        "Description": "Cheese, feta, whole milk, crumbled",
+        "Nutrients": {
+          "Energy (kcal)": 273.02,
+          "Carbohydrate, by difference (g)": 5.58,
+          "Total lipid (fat) (g)": 19.1,
+          "Protein (g)": 19.7,
+          "Sodium, Na (mg)": 1030.0,
+          "Fiber, total dietary (g)": 0.0
+        },
+        "QuantityInGrams": 20.0
+      }
+    ],
+    "TotalNutrients": {
+      "Energy (kcal)": 601.2360000000001,
+      "Carbohydrate, by difference (g)": 82.62,
+      "Total lipid (fat) (g)": 16.4224,
+      "Protein (g)": 30.468,
+      "Sodium, Na (mg)": 873.9,
+      "Fiber, total dietary (g)": 0.32799999999999996
+    }
   }
 ]
