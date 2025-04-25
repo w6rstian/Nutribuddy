@@ -20,6 +20,36 @@
                                           Focusable="False"
                                           HorizontalContentAlignment="Stretch"
                                           VerticalContentAlignment="Stretch">
+                                <ToggleButton.Style>
+                                    <Style TargetType="ToggleButton">
+                                        <Setter Property="Background" Value="Gray"/>
+                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="ToggleButton">
+                                                    <Border x:Name="ToggleBorder"
+                                                            Background="{TemplateBinding Background}"
+                                                            CornerRadius="10">
+                                                        <ContentPresenter HorizontalAlignment="Left"
+                                                                          VerticalAlignment="Center"
+                                                                          Margin="0,0,0,0"/>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter TargetName="ToggleBorder" Property="Background" Value="#403D4F"/>
+                                                        </Trigger>
+                                                        <Trigger Property="IsPressed" Value="True">
+                                                            <Setter TargetName="ToggleBorder" Property="Background" Value="#4C4960"/>
+                                                        </Trigger>
+                                                        <Trigger Property="IsChecked" Value="True">
+                                                            <Setter TargetName="ToggleBorder" Property="Background" Value="#4C4960"/>
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </ToggleButton.Style>
                                 <ContentPresenter Margin="10,0,40,0"
                                                   VerticalAlignment="Center"
                                                   HorizontalAlignment="Left"
