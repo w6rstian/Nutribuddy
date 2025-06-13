@@ -5,8 +5,6 @@ VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutribuddy", "Nutribuddy.csproj", "{B1F4B418-5475-478E-9CD3-3453B161887D}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NutribuddyInstaller", "..\NutribuddyInstaller\NutribuddyInstaller.vdproj", "{91E64390-085E-2DB5-B408-FE790D5911C4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{B1F4B418-5475-478E-9CD3-3453B161887D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1F4B418-5475-478E-9CD3-3453B161887D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1F4B418-5475-478E-9CD3-3453B161887D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91E64390-085E-2DB5-B408-FE790D5911C4}.Debug|Any CPU.ActiveCfg = Debug
-		{91E64390-085E-2DB5-B408-FE790D5911C4}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
